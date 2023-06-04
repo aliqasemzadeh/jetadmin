@@ -1,0 +1,62 @@
+{
+  "name": "aliqasemzadeh/jetadmin",
+  "description": "Laravel Bootstrap Admin Panel with all basic features by using livewire.",
+  "keywords": ["admin", "bootstrap", "admin-panel", "laravel", "dashboard", "ticketing", "bootstrap", "tabler", "admin-ui"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ali Qasemzadeh",
+      "email": "AliQasemzadeh7@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^8.0|^8.1|^8.2",
+    "aliqasemzadeh/livewire-bootstrap-modal": "dev-master",
+    "arcanedev/log-viewer": "^10.0",
+    "creativeorange/gravatar": "^1.0",
+    "cybercog/laravel-ban": "^4.7",
+    "guzzlehttp/guzzle": "^7.7",
+    "jantinnerezo/livewire-alert": "*",
+    "laravel/framework": "10.*",
+    "laravel/jetstream": "^2.6",
+    "laravel/sanctum": "^3.0",
+    "laravel/tinker": "^2.7",
+    "league/commonmark": "^2.4",
+    "livewire/livewire": "^2.5",
+    "maatwebsite/excel": "^3.1",
+    "mcamara/laravel-localization": "^1.7",
+    "morilog/jalali": "^3.2",
+    "nesbot/carbon": "^2.54",
+    "questocat/laravel-referral": "^1.0",
+    "spatie/laravel-activitylog": "^4.5",
+    "spatie/laravel-medialibrary": "^10.1",
+    "spatie/laravel-permission": "^5.5",
+    "spatie/laravel-tags": "^4.3",
+    "tucker-eric/eloquentfilter": "^3.0",
+    "yadahan/laravel-authentication-log": "^1.4"
+  },
+  "require-dev": {
+    "spatie/laravel-ignition": "^2.0",
+    "fakerphp/faker": "^1.9.1",
+    "laravel/sail": "^1.0.1",
+    "mockery/mockery": "^1.4.4",
+    "nunomaduro/collision": "^6.1",
+    "phpunit/phpunit": "^9.5.10"
+  },
+  "autoload": {
+    "psr-4": {
+      "Database\\Factories\\": "database/factories/",
+      "Database\\Seeders\\": "database/seeders/",
+      "AliQasemzadeh\\": "src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "AliQasemzadeh\\JetAdmin\\Providers\\JetAdminServiceProvider"
+      ]
+    }
+  }
+}
