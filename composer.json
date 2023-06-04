@@ -12,8 +12,8 @@
   ],
   "minimum-stability": "dev",
   "require": {
-    "php": "^8.0|^8.1|^8.2",
-    "aliqasemzadeh/livewire-bootstrap-modal": "^1.*",
+    "php": "~8.0.0 || ~8.1.0 || ~8.2.0",
+    "aliqasemzadeh/livewire-bootstrap-modal": "^1.0",
     "arcanedev/log-viewer": "^10.0",
     "creativeorange/gravatar": "^1.0",
     "cybercog/laravel-ban": "^4.7",
