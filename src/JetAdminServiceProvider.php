@@ -10,7 +10,7 @@ class JetAdminServiceProvider extends ServiceProvider {
         $this->publishes([
             __DIR__.'/../config/jetadmin.php' => config_path('jetadmin.php'),
         ]);
-        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
+        $this->loadRoutesFrom(__DIR__.'/../routes/jetadmin.php');
 
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         $this->publishes([
