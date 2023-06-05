@@ -7,7 +7,7 @@
 
         <title>@if(isset($title)){{ $title }} - @endif{{ config('jetadmin.name', 'BAP') }}</title>
 
-        @include('layouts.global.favicon')
+        @include('jetadmin::layouts.global.favicon')
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
@@ -31,7 +31,7 @@
                         <img src="{{ asset('images/logo-dark.svg') }}" width="110" height="32" alt="{{ config('app.name', 'Laravel') }}" class="navbar-brand-image">
                     </a>
                 </h1>
-                @include('layouts.global.user-navbar')
+                @include('jetadmin::layouts.global.user-navbar')
             </div>
         </header>
 
@@ -118,10 +118,10 @@
                     {{ $slot }}
                 </div>
             </main>
-            @include('layouts.global.footer', ['container' => config('jetadmin.container-app')])
+            @include('jetadmin::layouts.global.footer', ['container' => config('jetadmin.container-app')])
         </div>
     </div>
 
-    @include('layouts.global.foot-js')
+    @include('jetadmin::layouts.global.foot-js')
     </body>
 </html>

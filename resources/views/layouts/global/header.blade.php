@@ -3,7 +3,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
             <span class="navbar-toggler-icon"></span>
         </button>
-        @include('layouts.global.user-navbar')
+        @include('jetadmin::layouts.global.user-navbar')
         <div class="collapse navbar-collapse" id="navbar-menu">
             <div>
                 <form action="." method="get">

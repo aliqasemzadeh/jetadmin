@@ -7,7 +7,7 @@
 
         <title>@if(isset($title)){{ $title }} - @endif{{ config('jetadmin.name', 'BAP') }}</title>
 
-        @include('layouts.global.favicon')
+        @include('jetadmin::layouts.global.favicon')
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
@@ -24,6 +24,6 @@
         {{ $slot }}
     </div>
 
-    @include('layouts.global.foot-js')
+    @include('jetadmin::layouts.global.foot-js')
     </body>
 </html>
