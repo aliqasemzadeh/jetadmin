@@ -29,6 +29,16 @@
 3. `composer require aliqasemzadeh/jetadmin`
 4. Install dependencies:
    `npm install`
+5. Set middleware routes to Kernel.php
+   ```php
+        'referral' => \Questocat\Referral\Http\Middleware\CheckReferral::class,
+
+        'localize'                => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRoutes::class,
+        'localizationRedirect'    => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter::class,
+        'localeSessionRedirect'   => \Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect::class,
+        'localeCookieRedirect'    => \Mcamara\LaravelLocalization\Middleware\LocaleCookieRedirect::class,
+        'localeViewPath'          => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationViewPath::class
+```
 4. `cp .env.example .env`
 5. `php artisan key:generate`
 6. Set your `.env` with credentials to your database server (`DB_*` settings) and your domain config (`APP_URL`).
