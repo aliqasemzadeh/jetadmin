@@ -22,6 +22,6 @@ class Index extends Component
             $displayItems['articles'] = $articles;
         }
 
-        return view('jetadmin::livewire.app.main.index', $displayItems);
+        return view('jetadmin::livewire.app.main.index', $displayItems)->layout('jetadmin:layouts.app');
     }
 }

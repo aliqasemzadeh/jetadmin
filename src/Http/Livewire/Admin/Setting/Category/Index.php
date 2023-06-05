@@ -153,6 +153,6 @@ class Index extends Component
             return abort(403);
         }
         $categories = Category::filter(['search' => $this->search])->orderBy($this->sortColumn, $this->sortDirection)->paginate($this->perPage);
-        return view('jetadmin::livewire.admin.setting.category.index', compact('categories'))->layout('layouts.admin');
+        return view('jetadmin::livewire.admin.setting.category.index', compact('categories'))->layout('jetadmin::layouts.admin');
     }
 }

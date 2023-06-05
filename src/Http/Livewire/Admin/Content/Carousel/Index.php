@@ -151,6 +151,6 @@ class Index extends Component
         }
 
         $carousels = Carousel::with(['user'])->filter(['search' => $this->search])->orderBy($this->sortColumn, $this->sortDirection)->paginate($this->perPage);
-        return view('jetadmin::livewire.admin.content.carousel.index', compact('carousels'))->layout('layouts.admin');
+        return view('jetadmin::livewire.admin.content.carousel.index', compact('carousels'))->layout('jetadmin::layouts.admin');
     }
 }

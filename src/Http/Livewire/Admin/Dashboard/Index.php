@@ -12,6 +12,6 @@ class Index extends Component
             return abort(403);
         }
 
-        return view('jetadmin::livewire.admin.dashboard.index')->layout('layouts.admin');
+        return view('jetadmin::livewire.admin.dashboard.index')->layout('jetadmin::layouts.admin');
     }
 }

@@ -25,6 +25,6 @@ class Index extends Component
 
     public function render()
     {
-        return view('jetadmin::livewire.admin.setting.manage.index')->layout('layouts.admin');
+        return view('jetadmin::livewire.admin.setting.manage.index')->layout('jetadmin::layouts.admin');
     }
 }
