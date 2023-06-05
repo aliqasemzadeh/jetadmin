@@ -61,6 +61,6 @@ class Create extends Component
     public function render()
     {
         $categories = Category::where('type', 'ticket')->get();
-        return view('jetadmin::livewire.panel.support.ticket.create', compact('categories'))->layout('jetadmin:layouts.panel');
+        return view('jetadmin::livewire.panel.support.ticket.create', compact('categories'))->layout('jetadmin::layouts.panel');
     }
 }

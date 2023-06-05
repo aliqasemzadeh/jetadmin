@@ -16,6 +16,6 @@ class View extends Component
 
     public function render()
     {
-        return view('jetadmin::livewire.app.article.view')->layout('jetadmin:layouts.app');
+        return view('jetadmin::livewire.app.article.view')->layout('jetadmin::layouts.app');
     }
 }
