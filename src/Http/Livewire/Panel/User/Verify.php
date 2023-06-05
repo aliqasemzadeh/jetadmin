@@ -42,7 +42,7 @@ class Verify extends Component
             $this->verify = $verify;
         } else {
             $verify = new UserVerify();
-            $verify->random_string= rand(config('bap.verify_code_start'), config('bap.verify_code_finish'));
+            $verify->random_string= rand(config('jetadmin.verify_code_start'), config('jetadmin.verify_code_finish'));
             $verify->user_id = auth()->user()->id;
             $verify->status = 'start';
             $verify->save();
@@ -56,7 +56,7 @@ class Verify extends Component
         ]);
 
         if($verify->status == 'new') {
-            $verify->random_string = rand(config('bap.verify_code_start'), config('bap.verify_code_finish'));
+            $verify->random_string = rand(config('jetadmin.verify_code_start'), config('jetadmin.verify_code_finish'));
             $verify->save();
         }
 
