@@ -13,7 +13,7 @@
   "minimum-stability": "dev",
   "require": {
     "php": "~8.0.0 || ~8.1.0 || ~8.2.0",
-    "aliqasemzadeh/livewire-bootstrap-modal": "*",
+    "aliqasemzadeh/livewire-bootstrap-modal": "dev-master",
     "arcanedev/log-viewer": "*",
     "creativeorange/gravatar": "*",
     "cybercog/laravel-ban": "*",
@@ -36,14 +36,6 @@
     "spatie/laravel-tags": "*",
     "tucker-eric/eloquentfilter": "*",
     "yadahan/laravel-authentication-log": "*"
-  },
-  "require-dev": {
-    "spatie/laravel-ignition": "*",
-    "fakerphp/faker": "*",
-    "laravel/sail": "*",
-    "mockery/mockery": "*",
-    "nunomaduro/collision": "*",
-    "phpunit/phpunit": "*"
   },
   "autoload": {
     "psr-4": {
