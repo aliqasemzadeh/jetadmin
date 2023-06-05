@@ -25,7 +25,7 @@
     "laravel/tinker": "^2.7",
     "league/commonmark": "^2.0",
     "livewire/livewire": "^2.5",
-    "maatwebsite/excel": "^3.1",
+    "maatwebsite/excel": "^3.1.0",
     "mcamara/laravel-localization": "^1.7",
     "morilog/jalali": "^3.2",
     "nesbot/carbon": "^2.54",
