@@ -1,6 +1,6 @@
 <?php
 
-namespace AliQasemzadeh\JetAdmin\Http\Livewire\Article;
+namespace AliQasemzadeh\JetAdmin\Http\Livewire\App\Article;
 
 use AliQasemzadeh\Models\Article;
 use Livewire\Component;
