@@ -1,5 +1,6 @@
 <?php
 
+namespace AliQasemzadeh\JetAdmin\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -9,7 +10,6 @@ class JetAdminServiceProvider extends ServiceProvider {
         $this->publishes([
             __DIR__.'/../config/jetadmin.php' => config_path('jetadmin.php'),
         ]);
-
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
 
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
@@ -23,7 +23,6 @@ class JetAdminServiceProvider extends ServiceProvider {
         ]);
 
         $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'jetadmin');
-
         $this->publishes([
             __DIR__.'/../resources/views' => resource_path('views/vendor/jetadmin'),
         ]);
