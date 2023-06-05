@@ -1,6 +1,6 @@
 <?php
 
-namespace AliQasemzadeh\JetAdmin\Providers;
+namespace AliQasemzadeh\JetAdmin;
 
 use Illuminate\Support\ServiceProvider;
 
