@@ -32,20 +32,19 @@
 5. Set middleware routes to Kernel.php
    ```php
         'referral' => \Questocat\Referral\Http\Middleware\CheckReferral::class,
-
         'localize'                => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRoutes::class,
         'localizationRedirect'    => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter::class,
         'localeSessionRedirect'   => \Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect::class,
         'localeCookieRedirect'    => \Mcamara\LaravelLocalization\Middleware\LocaleCookieRedirect::class,
         'localeViewPath'          => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationViewPath::class
-```
-4. `cp .env.example .env`
-5. `php artisan key:generate`
-6. Set your `.env` with credentials to your database server (`DB_*` settings) and your domain config (`APP_URL`).
-7. `php artisan migrate --seed`
-8. Build frontend with `npm run production` for production.
-9. Run your server `php artisan serve`.
-10. Username:info@jetadmin.local/Password:P@ssw0rd321
+   ```
+6. `cp .env.example .env`
+7. `php artisan key:generate`
+8. Set your `.env` with credentials to your database server (`DB_*` settings) and your domain config (`APP_URL`).
+9. `php artisan migrate --seed`
+10. Build frontend with `npm run production` for production.
+11. Run your server `php artisan serve`.
+12. Username:info@jetadmin.local/Password:P@ssw0rd321
 
 
 Note:
