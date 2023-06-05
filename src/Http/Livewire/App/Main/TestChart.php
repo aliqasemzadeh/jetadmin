@@ -1,6 +1,6 @@
 <?php
 
-namespace AliQasemzadeh\JetAdmin\Http\Livewire\AliQasemzadeh\Main;
+namespace AliQasemzadeh\JetAdmin\Http\Livewire\Main;
 
 use Asantibanez\LivewireCharts\Models\ColumnChartModel;
 use Livewire\Component;

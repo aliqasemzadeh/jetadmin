@@ -1,6 +1,6 @@
 <?php
 
-namespace AliQasemzadeh\JetAdmin\Livewire\Admin\Setting\Manage;
+namespace AliQasemzadeh\JetAdmin\Http\Livewire\Admin\Setting\Manage;
 
 use Illuminate\Support\Facades\Artisan;
 use Jantinnerezo\LivewireAlert\LivewireAlert;

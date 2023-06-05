@@ -1,6 +1,6 @@
 <?php
 
-namespace AliQasemzadeh\JetAdmin\Http\Livewire\AliQasemzadeh\Main;
+namespace AliQasemzadeh\JetAdmin\Http\Livewire\Main;
 
 use AliQasemzadeh\Models\Article;
 use AliQasemzadeh\Models\Carousel;
