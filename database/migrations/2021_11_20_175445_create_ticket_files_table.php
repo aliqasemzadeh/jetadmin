@@ -17,15 +17,11 @@ class CreateTicketFilesTable extends Migration
             $table->id();
             $table->bigInteger('user_id')->index();
             $table->bigInteger('ticket_id')->index();
-            $table->bigInteger('ticket_replay_id')->nullable();
+            $table->bigInteger('ticket_replay_id')->nullable()->index();
             $table->string('file');
             $table->string('title');
             $table->timestamps();
             $table->softDeletes();
-
-            $table->index('user_id');
-            $table->index('ticket_id');
-            $table->index('ticket_replay_id');
         });
     }
 

@@ -21,9 +21,6 @@ class CreateTicketReplaysTable extends Migration
             $table->ipAddress('ip')->nullable();
             $table->timestamps();
             $table->softDeletes();
-
-            $table->index('user_id');
-            $table->index('ticket_id');
         });
     }
 
