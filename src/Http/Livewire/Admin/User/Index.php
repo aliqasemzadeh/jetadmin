@@ -3,7 +3,7 @@
 namespace AliQasemzadeh\JetAdmin\Http\Livewire\Admin\User;
 
 use App\Exports\UsersExport;
-use AliQasemzadeh\Models\User;
+use AliQasemzadeh\JetAdmin\Models\User;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 use Livewire\WithPagination;

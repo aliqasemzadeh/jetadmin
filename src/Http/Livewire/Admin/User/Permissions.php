@@ -2,7 +2,7 @@
 
 namespace AliQasemzadeh\JetAdmin\Http\Livewire\Admin\User;
 
-use AliQasemzadeh\Models\User;
+use AliQasemzadeh\JetAdmin\Models\User;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;

@@ -2,8 +2,8 @@
 
 namespace AliQasemzadeh\JetAdmin\Http\Livewire\App\Main;
 
-use AliQasemzadeh\Models\Article;
-use AliQasemzadeh\Models\Carousel;
+use AliQasemzadeh\JetAdmin\Models\Article;
+use AliQasemzadeh\JetAdmin\Models\Carousel;
 use Livewire\Component;
 
 class Index extends Component

@@ -2,9 +2,9 @@
 
 namespace AliQasemzadeh\JetAdmin\Http\Livewire\Admin\User\Team;
 
-use AliQasemzadeh\Models\Article;
-use AliQasemzadeh\Models\Team;
-use AliQasemzadeh\Models\User;
+use AliQasemzadeh\JetAdmin\Models\Article;
+use AliQasemzadeh\JetAdmin\Models\Team;
+use AliQasemzadeh\JetAdmin\Models\User;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 use Livewire\WithPagination;

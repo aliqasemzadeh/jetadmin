@@ -2,8 +2,8 @@
 
 namespace AliQasemzadeh\JetAdmin\Http\Livewire\Admin\Content\Article;
 
-use AliQasemzadeh\Models\Article;
-use AliQasemzadeh\Models\Category;
+use AliQasemzadeh\JetAdmin\Models\Article;
+use AliQasemzadeh\JetAdmin\Models\Category;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 use Livewire\WithFileUploads;

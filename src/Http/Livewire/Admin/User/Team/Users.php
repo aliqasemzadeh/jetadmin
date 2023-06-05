@@ -2,7 +2,7 @@
 
 namespace AliQasemzadeh\JetAdmin\Http\Livewire\Admin\User\Team;
 
-use AliQasemzadeh\Models\Team;
+use AliQasemzadeh\JetAdmin\Models\Team;
 use Livewire\Component;
 
 class Users extends Component

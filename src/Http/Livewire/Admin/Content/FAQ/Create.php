@@ -2,8 +2,8 @@
 
 namespace AliQasemzadeh\JetAdmin\Http\Livewire\Admin\Content\FAQ;
 
-use AliQasemzadeh\Models\Category;
-use AliQasemzadeh\Models\FrequentlyAskedQuestion;
+use AliQasemzadeh\JetAdmin\Models\Category;
+use AliQasemzadeh\JetAdmin\Models\FrequentlyAskedQuestion;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 

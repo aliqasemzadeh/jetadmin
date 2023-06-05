@@ -2,7 +2,7 @@
 
 namespace AliQasemzadeh\JetAdmin\Http\Livewire\Panel\User;
 
-use AliQasemzadeh\Models\UserVerify;
+use AliQasemzadeh\JetAdmin\Models\UserVerify;
 use Illuminate\Support\Facades\Auth;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;

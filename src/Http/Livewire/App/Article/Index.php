@@ -2,7 +2,7 @@
 
 namespace AliQasemzadeh\JetAdmin\Http\Livewire\App\Article;
 
-use AliQasemzadeh\Models\Article;
+use AliQasemzadeh\JetAdmin\Models\Article;
 use Livewire\Component;
 
 class Index extends Component

@@ -2,7 +2,7 @@
 
 namespace AliQasemzadeh\JetAdmin\Http\Livewire\Admin\Content\Carousel;
 
-use AliQasemzadeh\Models\Carousel;
+use AliQasemzadeh\JetAdmin\Models\Carousel;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 use Livewire\WithFileUploads;
