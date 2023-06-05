@@ -49,7 +49,7 @@
     "psr-4": {
       "Database\\Factories\\": "database/factories/",
       "Database\\Seeders\\": "database/seeders/",
-      "AliQasemzadeh\\": "src"
+      "AliQasemzadeh\\JetAdmin\\": "src"
     }
   },
   "extra": {
