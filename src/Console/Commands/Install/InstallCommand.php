@@ -46,7 +46,7 @@ class InstallCommand extends Command
         (new Filesystem)->copyDirectory(base_path('/vendor/aliqasemzadeh/jetadmin/resources/js'), resource_path('js'));
 
         (new Filesystem)->ensureDirectoryExists(resource_path('scss'));
-        (new Filesystem)->copyDirectory(base_path('/vendor/aliqasemzadeh/jetadmin/resources/scss'), resource_path('sass'));
+        (new Filesystem)->copyDirectory(base_path('/vendor/aliqasemzadeh/jetadmin/resources/scss'), resource_path('scss'));
 
         (new Filesystem)->ensureDirectoryExists(resource_path('views/api'));
         (new Filesystem)->copyDirectory(base_path('/vendor/aliqasemzadeh/jetadmin/resources/views/api'), resource_path('views/api'));
