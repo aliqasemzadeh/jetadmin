@@ -37,28 +37,28 @@ class InstallCommand extends Command
         $this->configureSession();
 
         (new Filesystem)->ensureDirectoryExists(resource_path('favicon'));
-        (new Filesystem)->copyDirectory(__DIR__.'/../../resources/favicon', resource_path('favicon'));
+        (new Filesystem)->copyDirectory(base_path('/vendor/aliqasemzadeh/jetadmin/resources/favicon'), resource_path('favicon'));
 
         (new Filesystem)->ensureDirectoryExists(resource_path('images'));
-        (new Filesystem)->copyDirectory(__DIR__.'/../../resources/images', resource_path('images'));
+        (new Filesystem)->copyDirectory(base_path('/vendor/aliqasemzadeh/jetadmin/resources/images'), resource_path('images'));
 
         (new Filesystem)->ensureDirectoryExists(resource_path('js'));
-        (new Filesystem)->copyDirectory(__DIR__.'/../../resources/js', resource_path('js'));
+        (new Filesystem)->copyDirectory(base_path('/vendor/aliqasemzadeh/jetadmin/resources/js'), resource_path('js'));
 
         (new Filesystem)->ensureDirectoryExists(resource_path('scss'));
-        (new Filesystem)->copyDirectory(__DIR__.'/../../resources/scss', resource_path('sass'));
+        (new Filesystem)->copyDirectory(base_path('/vendor/aliqasemzadeh/jetadmin/resources/scss'), resource_path('sass'));
 
         (new Filesystem)->ensureDirectoryExists(resource_path('views/api'));
-        (new Filesystem)->copyDirectory(__DIR__.'/../../resources/views/api', resource_path('views/api'));
+        (new Filesystem)->copyDirectory(base_path('/vendor/aliqasemzadeh/jetadmin/resources/views/api'), resource_path('views/api'));
 
         (new Filesystem)->ensureDirectoryExists(resource_path('views/auth'));
-        (new Filesystem)->copyDirectory(__DIR__.'/../../resources/views/auth', resource_path('views/auth'));
+        (new Filesystem)->copyDirectory(base_path('/vendor/aliqasemzadeh/jetadmin/resources/views/auth'), resource_path('views/auth'));
 
         (new Filesystem)->ensureDirectoryExists(resource_path('views/profile'));
-        (new Filesystem)->copyDirectory(__DIR__.'/../../resources/views/profile', resource_path('views/profile'));
+        (new Filesystem)->copyDirectory(base_path('/vendor/aliqasemzadeh/jetadmin/resources/views/profile'), resource_path('views/profile'));
 
         (new Filesystem)->ensureDirectoryExists(resource_path('views/layouts/custom'));
-        (new Filesystem)->copyDirectory(__DIR__.'/../../resources/views/layouts/custom', resource_path('views/layouts/custom'));
+        (new Filesystem)->copyDirectory(base_path('/vendor/aliqasemzadeh/jetadmin/resources/views/layouts/custom'), resource_path('views/layouts/custom'));
 
         copy(base_path('/vendor/aliqasemzadeh/jetadmin/resources/stubs/vite.config.js') , base_path('vite.config.js'));
         copy(base_path('/vendor/aliqasemzadeh/jetadmin/resources/stubs/package.json') , base_path('package.json'));
