@@ -29,6 +29,10 @@ class InstallCommand extends Command
      */
     public function handle()
     {
+        (new Filesystem)->ensureDirectoryExists(resource_path('views'));
+        (new Filesystem)->copyDirectory(__DIR__.'/../../stubs/default/resources/views/api', resource_path('views'));
 
+        copy(__DIR__.'/../../stubs/vite.config.js', base_path('vite.config.js'));
+        copy(__DIR__.'/../../stubs/package.json', base_path('package.json'));
     }
 }
