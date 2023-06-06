@@ -66,6 +66,11 @@ class InstallCommand extends Command
         return Command::SUCCESS;
     }
 
+    /**
+     * Configure the session driver for Jetstream.
+     *
+     * @return void
+     */
     protected function configureSession()
     {
         if (! class_exists('CreateSessionsTable')) {
@@ -80,5 +85,19 @@ class InstallCommand extends Command
         $this->replaceInFile('SESSION_DRIVER=file', 'SESSION_DRIVER=database', base_path('.env'));
         $this->replaceInFile('SESSION_DRIVER=file', 'SESSION_DRIVER=database', base_path('.env.example'));
     }
+
+    /**
+     * Replace a given string within a given file.
+     *
+     * @param  string  $search
+     * @param  string  $replace
+     * @param  string  $path
+     * @return void
+     */
+    protected function replaceInFile($search, $replace, $path)
+    {
+        file_put_contents($path, str_replace($search, $replace, file_get_contents($path)));
+    }
+
 
 }
