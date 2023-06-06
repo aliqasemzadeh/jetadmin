@@ -8,6 +8,7 @@ use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use RuntimeException;
+use Symfony\Component\Console\Output\NullOutput;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Process\PhpExecutableFinder;
 use Symfony\Component\Process\Process;
@@ -30,6 +31,10 @@ class InstallCommand extends Command
      */
     public function handle()
     {
+
+        $this->callSilent('storage:link');
+
+        $this->configureSession();
 
         (new Filesystem)->ensureDirectoryExists(resource_path('favicon'));
         (new Filesystem)->copyDirectory(__DIR__.'/../../resources/favicon', resource_path('favicon'));
@@ -55,9 +60,25 @@ class InstallCommand extends Command
         (new Filesystem)->ensureDirectoryExists(resource_path('views/layouts/custom'));
         (new Filesystem)->copyDirectory(__DIR__.'/../../resources/views/layouts/custom', resource_path('views/layouts/custom'));
 
-        Storage::copy(__DIR__.'/../../resources/stubs/vite.config.js', base_path('vite.config.js'));
-        Storage::copy(__DIR__.'/../../resources/stubs/package.json', base_path('package.json'));
+        copy(base_path('/vendor/aliqasemzadeh/jetadmin/resources/stubs/vite.config.js') , base_path('vite.config.js'));
+        copy(base_path('/vendor/aliqasemzadeh/jetadmin/resources/stubs/package.json') , base_path('package.json'));
 
         return Command::SUCCESS;
     }
+
+    protected function configureSession()
+    {
+        if (! class_exists('CreateSessionsTable')) {
+            try {
+                $this->call('session:table');
+            } catch (Exception $e) {
+                //
+            }
+        }
+
+        $this->replaceInFile("'SESSION_DRIVER', 'file'", "'SESSION_DRIVER', 'database'", config_path('session.php'));
+        $this->replaceInFile('SESSION_DRIVER=file', 'SESSION_DRIVER=database', base_path('.env'));
+        $this->replaceInFile('SESSION_DRIVER=file', 'SESSION_DRIVER=database', base_path('.env.example'));
+    }
+
 }
