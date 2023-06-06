@@ -31,28 +31,28 @@ class InstallCommand extends Command
     {
 
         (new Filesystem)->ensureDirectoryExists(resource_path('favicon'));
-        (new Filesystem)->copyDirectory(__DIR__.'/../../resources/views/favicon', resource_path('favicon'));
+        (new Filesystem)->copyDirectory(__DIR__.'/../../resources/favicon', resource_path('favicon'));
 
         (new Filesystem)->ensureDirectoryExists(resource_path('images'));
-        (new Filesystem)->copyDirectory(__DIR__.'/../../resources/views/images', resource_path('images'));
+        (new Filesystem)->copyDirectory(__DIR__.'/../../resources/images', resource_path('images'));
 
         (new Filesystem)->ensureDirectoryExists(resource_path('js'));
-        (new Filesystem)->copyDirectory(__DIR__.'/../../resources/resources/js', resource_path('js'));
+        (new Filesystem)->copyDirectory(__DIR__.'/../../resources/js', resource_path('js'));
 
         (new Filesystem)->ensureDirectoryExists(resource_path('sass'));
-        (new Filesystem)->copyDirectory(__DIR__.'/../../resources/resources/sass', resource_path('sass'));
+        (new Filesystem)->copyDirectory(__DIR__.'/../../resources/sass', resource_path('sass'));
 
         (new Filesystem)->ensureDirectoryExists(resource_path('views/api'));
-        (new Filesystem)->copyDirectory(__DIR__.'/../../resources/resources/views/api', resource_path('views/api'));
+        (new Filesystem)->copyDirectory(__DIR__.'/../../resources/views/api', resource_path('views/api'));
 
         (new Filesystem)->ensureDirectoryExists(resource_path('views/auth'));
-        (new Filesystem)->copyDirectory(__DIR__.'/../../resources/resources/views/auth', resource_path('views/auth'));
+        (new Filesystem)->copyDirectory(__DIR__.'/../../resources/views/auth', resource_path('views/auth'));
 
         (new Filesystem)->ensureDirectoryExists(resource_path('views/profile'));
-        (new Filesystem)->copyDirectory(__DIR__.'/../../resources/resources/views/profile', resource_path('views/profile'));
+        (new Filesystem)->copyDirectory(__DIR__.'/../../resources/views/profile', resource_path('views/profile'));
 
         (new Filesystem)->ensureDirectoryExists(resource_path('views/layouts/custom'));
-        (new Filesystem)->copyDirectory(__DIR__.'/../../resources/resources/views/layouts/custom', resource_path('views/layouts/custom'));
+        (new Filesystem)->copyDirectory(__DIR__.'/../../resources/views/layouts/custom', resource_path('views/layouts/custom'));
 
         copy(__DIR__.'/../../stubs/vite.config.js', base_path('vite.config.js'));
         copy(__DIR__.'/../../stubs/package.json', base_path('package.json'));
