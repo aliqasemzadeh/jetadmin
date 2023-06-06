@@ -56,5 +56,7 @@ class InstallCommand extends Command
 
         copy(__DIR__.'/../../stubs/vite.config.js', base_path('vite.config.js'));
         copy(__DIR__.'/../../stubs/package.json', base_path('package.json'));
+
+        return Command::SUCCESS;
     }
 }

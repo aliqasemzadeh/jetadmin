@@ -2,6 +2,8 @@
 
 namespace AliQasemzadeh\JetAdmin;
 
+use AliQasemzadeh\JetAdmin\Console\Commands\Install\InstallCommand;
+use AliQasemzadeh\JetAdmin\Console\Commands\Update\UpdatePermissionsCommand;
 use Illuminate\Support\ServiceProvider;
 
 class JetAdminServiceProvider extends ServiceProvider {
@@ -9,6 +11,13 @@ class JetAdminServiceProvider extends ServiceProvider {
     {
         parent::register();
         $this->mergeConfigFrom(__DIR__.'/../config/jetadmin.php', 'jetadmin');
+        $this->app->bind('jetadmin:install', InstallCommand::class);
+        $this->app->bind('jetadmin:update_permissions', UpdatePermissionsCommand::class);
+
+        $this->commands([
+            'jetadmin:install',
+            'jetadmin:update_permissions',
+        ]);
     }
 
     public function boot()

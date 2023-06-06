@@ -6,14 +6,14 @@ use Illuminate\Console\Command;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 
-class UpdatePermissionsCommand extends Command
+class  UpdatePermissionsCommand extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'jetadmin:update permissions';
+    protected $signature = 'jetadmin:update_permissions';
 
     /**
      * The console command description.
