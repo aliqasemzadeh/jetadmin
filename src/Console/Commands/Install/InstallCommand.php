@@ -45,8 +45,8 @@ class InstallCommand extends Command
         (new Filesystem)->ensureDirectoryExists(resource_path('js'));
         (new Filesystem)->copyDirectory(__DIR__.'/../../resources/js', resource_path('js'));
 
-        (new Filesystem)->ensureDirectoryExists(resource_path('sass'));
-        (new Filesystem)->copyDirectory(__DIR__.'/../../resources/sass', resource_path('sass'));
+        (new Filesystem)->ensureDirectoryExists(resource_path('scss'));
+        (new Filesystem)->copyDirectory(__DIR__.'/../../resources/scss', resource_path('sass'));
 
         (new Filesystem)->ensureDirectoryExists(resource_path('views/api'));
         (new Filesystem)->copyDirectory(__DIR__.'/../../resources/views/api', resource_path('views/api'));
@@ -99,5 +99,34 @@ class InstallCommand extends Command
         file_put_contents($path, str_replace($search, $replace, file_get_contents($path)));
     }
 
+    /**
+     * Install the middleware to a group in the application Http Kernel.
+     *
+     * @param  string  $after
+     * @param  string  $name
+     * @param  string  $group
+     * @return void
+     */
+    protected function installMiddlewareAfter($after, $name, $group = 'web')
+    {
+        $httpKernel = file_get_contents(app_path('Http/Kernel.php'));
+
+        $middlewareGroups = Str::before(Str::after($httpKernel, '$middlewareGroups = ['), '];');
+        $middlewareGroup = Str::before(Str::after($middlewareGroups, "'$group' => ["), '],');
+
+        if (! Str::contains($middlewareGroup, $name)) {
+            $modifiedMiddlewareGroup = str_replace(
+                $after.',',
+                $after.','.PHP_EOL.'            '.$name.',',
+                $middlewareGroup,
+            );
+
+            file_put_contents(app_path('Http/Kernel.php'), str_replace(
+                $middlewareGroups,
+                str_replace($middlewareGroup, $modifiedMiddlewareGroup, $middlewareGroups),
+                $httpKernel
+            ));
+        }
+    }
 
 }
