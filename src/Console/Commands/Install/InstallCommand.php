@@ -54,8 +54,8 @@ class InstallCommand extends Command
         (new Filesystem)->ensureDirectoryExists(resource_path('views/layouts/custom'));
         (new Filesystem)->copyDirectory(__DIR__.'/../../resources/views/layouts/custom', resource_path('views/layouts/custom'));
 
-        copy(__DIR__.'/../../stubs/vite.config.js', base_path('vite.config.js'));
-        copy(__DIR__.'/../../stubs/package.json', base_path('package.json'));
+        copy(__DIR__.'/../../resources/stubs/vite.config.js', base_path('vite.config.js'));
+        copy(__DIR__.'/../../resources/stubs/package.json', base_path('package.json'));
 
         return Command::SUCCESS;
     }
