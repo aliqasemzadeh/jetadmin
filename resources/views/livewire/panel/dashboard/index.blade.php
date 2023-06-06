@@ -1,7 +1,7 @@
 <div>
     <x-slot name="title">
-        {{ __('jetadmin.dashboard') }}
+        {{ __('jetadmin::bap.dashboard') }}
     </x-slot>
 
-    {{ __('jetadmin.dashboard') }}
+    {{ __('jetadmin::bap.dashboard') }}
 </div>

@@ -1,6 +1,6 @@
 <div>
     <x-slot name="title">
-        {{ __('jetadmin.home') }}
+        {{ __('jetadmin::bap.home') }}
     </x-slot>
 
     <div class="row row-cards">
@@ -9,7 +9,7 @@
             <div class="card mb-2">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">{{ __('jetadmin.carousels') }}</h3>
+                    <h3 class="card-title">{{ __('jetadmin::bap.carousels') }}</h3>
                 </div>
                 <div class="card-body">
                     <div id="home-carousel" class="carousel slide pointer-event" data-bs-ride="carousel">
@@ -44,7 +44,7 @@
         <div class="col-md-12">
             <div class="card mb-2">
             <div class="card-header">
-                <h3 class="card-title">{{ __('jetadmin.articles') }}</h3>
+                <h3 class="card-title">{{ __('jetadmin::bap.articles') }}</h3>
             </div>
             <div class="list-group list-group-flush list-group-hoverable">
                 @foreach($articles as $article)

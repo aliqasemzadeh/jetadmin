@@ -1,13 +1,13 @@
 <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">{{ __('jetadmin.permissions_word') }}</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="{{ __('jetadmin.close') }}"></button>
+                <h5 class="modal-title">{{ __('jetadmin::bap.permissions_word') }}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="{{ __('jetadmin::bap.close') }}"></button>
             </div>
             <div class="modal-body">
                 <div class="row">
                     <div class="col">
-                        {{ __('jetadmin.access_list') }}
+                        {{ __('jetadmin::bap.access_list') }}
                         <ul class="list-group">
                             @foreach($role->permissions as $permission)
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -22,8 +22,8 @@
                     </div>
                     <div class="col">
                         <div class="mb-3">
-                            <label class="form-label" for="search">{{ __('jetadmin.name') }}</label>
-                            <input type="text" wire:model="search" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="{{ __('jetadmin.name') }}">
+                            <label class="form-label" for="search">{{ __('jetadmin::bap.name') }}</label>
+                            <input type="text" wire:model="search" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="{{ __('jetadmin::bap.name') }}">
                             @error('name')
                             <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
