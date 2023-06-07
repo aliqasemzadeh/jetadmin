@@ -16,18 +16,20 @@ export default defineConfig({
             targets: [
                 {
                     src: 'resources/images',
-                    dest: '.././'
+                    dest: '.././images'
                 },
                 {
                     src: 'resources/favicon',
-                    dest: '.././'
+                    dest: '.././favicon'
                 }
             ]
-        })
+        }),
     ],
     resolve: {
         alias: {
             '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap'),
+            '~tabler': path.resolve(__dirname, 'node_modules/@tabler'),
+            '~sweetalert2': path.resolve(__dirname, 'node_modules/sweetalert2'),
         }
     },
     server: {
