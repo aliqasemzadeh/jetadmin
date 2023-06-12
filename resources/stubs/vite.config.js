@@ -31,9 +31,5 @@ export default defineConfig({
             '~tabler': path.resolve(__dirname, 'node_modules/@tabler'),
             '~sweetalert2': path.resolve(__dirname, 'node_modules/sweetalert2'),
         }
-    },
-    server: {
-        port: 8080,
-        hot: true
     }
 });
