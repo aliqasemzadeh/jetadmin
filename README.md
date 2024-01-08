@@ -45,7 +45,7 @@
 11. `php artisan migrate --seed`
 12. Build frontend with `npm run production` for production.
 13. Run your server `php artisan serve`.
-14. Username:info@jetadmin.local/Password:P@ssw0rd321
+14. Username:info@jetadmin.ir/Password:P@ssw0rd321
 
 
 Note:
