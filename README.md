@@ -1,6 +1,6 @@
 !! This is page is under development don't use it in production mode. !!
 
-✔️ Bootstrap Admin Panel (This is new version of bap with simple update and installation.)
+✔️ JetAdmin
 ======================
 >  Easy way to create Admin Panel.
 >
@@ -15,11 +15,11 @@
 
 - Laravel 10
 - Livewire
-- Bootstrap 5
-- Tabler.io
+- TailwindCSS
 - SweetAlert2
 - spatie/laravel-permission
 - Vite Build Tools
+- daisyUI
 
 
 ## 🧾 Installation
@@ -49,4 +49,4 @@
 
 
 Note:
-I decide to change Base Admin Panel to Bootstrap Admin Panel because is much better.
+I am building basic admin panel to make laravel programmer do codes better.
