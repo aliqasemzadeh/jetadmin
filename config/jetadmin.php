@@ -1,6 +1,6 @@
 <?php
 return [
-    'name' => 'Boostrap Admin Panel (JetAdmin)',
+    'name' => 'JetAdmin',
     'container-app' => 'container',
     'container-panel' => 'container-fluid',
     'container-admin' => 'container-fluid',
