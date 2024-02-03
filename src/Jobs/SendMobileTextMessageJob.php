@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Jobs;
+namespace AliQasemzadeh\JetAdmin\Jobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;

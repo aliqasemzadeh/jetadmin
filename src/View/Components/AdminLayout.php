@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components;
+namespace AliQasemzadeh\JetAdmin\View\Components;
 
 use Illuminate\View\Component;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Notifications;
+namespace AliQasemzadeh\JetAdmin\Notifications;
 
-use App\Models\Ticket;
+use AliQasemzadeh\JetAdmin\Models\Ticket;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;

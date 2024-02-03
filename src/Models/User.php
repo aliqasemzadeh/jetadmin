@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace AliQasemzadeh\JetAdmin\Models;
 
 use Cog\Laravel\Ban\Traits\Bannable;
 use EloquentFilter\Filterable;

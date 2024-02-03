@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace AliQasemzadeh\JetAdmin\Models;
 
 use ALajusticia\Expirable\Traits\Expirable;
 use Carbon\Carbon;

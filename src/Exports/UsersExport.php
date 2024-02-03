@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Exports;
+namespace AliQasemzadeh\JetAdmin\Exports;
 
-use App\Models\User;
+use AliQasemzadeh\JetAdmin\Models\User;
 use Maatwebsite\Excel\Concerns\FromCollection;
 
 class UsersExport implements FromCollection

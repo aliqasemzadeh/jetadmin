@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace AliQasemzadeh\JetAdmin\Models;
 
 use EloquentFilter\Filterable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
