@@ -1,6 +1,6 @@
 <?php
 
-namespace AliQasemzadeh\JetAdmin\View\Components;
+namespace App\View\Components;
 
 use Illuminate\View\Component;
 
@@ -23,6 +23,6 @@ class AdminLayout extends Component
      */
     public function render()
     {
-        return view('jetadmin::layouts.admin');
+        return view('layouts.admin');
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace AliQasemzadeh\JetAdmin\Notifications;
+namespace App\Notifications;
 
 use App\Models\Ticket;
 use Illuminate\Bus\Queueable;
@@ -58,7 +58,7 @@ class TicketReplied extends Notification
     public function toArray($notifiable)
     {
         return [
-            'title' => TicketReplied . php__('jetadmin::new_ticket_replied') . $this->ticket->title,
+            'title' => __('bap.new_ticket_replied') . $this->ticket->title,
             'url' => route('panel.support.ticket.view', [$this->ticket->id]),
         ];
     }

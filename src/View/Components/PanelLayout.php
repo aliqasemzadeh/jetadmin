@@ -1,11 +1,14 @@
 <?php
 
-namespace AliQasemzadeh\JetAdmin\View\Components;
+namespace App\View\Components;
 
 use Illuminate\View\Component;
 
 class PanelLayout extends Component
 {
+
+    protected $listeners = ['updateCart' => 'render'];
+
     /**
      * Create a new component instance.
      *
@@ -23,6 +26,6 @@ class PanelLayout extends Component
      */
     public function render()
     {
-        return view('jetadmin::layouts.panel');
+        return view('layouts.panel');
     }
 }

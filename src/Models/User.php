@@ -1,6 +1,6 @@
 <?php
 
-namespace AliQasemzadeh\JetAdmin\Models;
+namespace App\Models;
 
 use Cog\Laravel\Ban\Traits\Bannable;
 use EloquentFilter\Filterable;
@@ -75,7 +75,7 @@ class User extends Authenticatable implements MustVerifyEmail
         if($this->first_name) {
             return "{$this->first_name} {$this->last_name}";
         }
-        return __('jetadmin.user') . ":" . $this->id;
+        return __('bap.user') . ":" . $this->id;
     }
 
     public function getGravatarAttribute()

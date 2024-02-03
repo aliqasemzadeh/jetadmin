@@ -1,6 +1,6 @@
 <?php
 
-namespace AliQasemzadeh\JetAdmin\View\Components;
+namespace App\View\Components;
 
 use Illuminate\View\Component;
 
@@ -13,6 +13,6 @@ class GuestLayout extends Component
      */
     public function render()
     {
-        return view('jetadmin::layouts.guest');
+        return view('layouts.guest');
     }
 }
