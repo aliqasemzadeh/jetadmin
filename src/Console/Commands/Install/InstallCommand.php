@@ -60,8 +60,10 @@ class InstallCommand extends Command
         (new Filesystem)->ensureDirectoryExists(resource_path('views/layouts/custom'));
         (new Filesystem)->copyDirectory(base_path('/vendor/aliqasemzadeh/jetadmin/resources/views/layouts/custom'), resource_path('views/layouts/custom'));
 
-        copy(base_path('/vendor/aliqasemzadeh/jetadmin/resources/stubs/vite.config.js') , base_path('vite.config.js'));
-        copy(base_path('/vendor/aliqasemzadeh/jetadmin/resources/stubs/package.json') , base_path('package.json'));
+        // Webpack Resources
+        copy(base_path('/vendor/aliqasemzadeh/jetadmin/resources/webpack/package.json') , base_path('package.json'));
+        copy(base_path('/vendor/aliqasemzadeh/jetadmin/resources/webpack/webpack.config.js') , base_path('webpack.config.js'));
+        copy(base_path('/vendor/aliqasemzadeh/jetadmin/resources/webpack/webpack.mix.js') , base_path('webpack.mix.js'));
 
         return Command::SUCCESS;
     }
