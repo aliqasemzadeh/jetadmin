@@ -119,6 +119,6 @@ class Index extends Component
         }
 
         $tickets = Ticket::with(['user', 'category'])->filter(['search' => $this->search])->whereIn('status', ['new', 'user'])->orderBy($this->sortColumn, $this->sortDirection)->paginate($this->perPage);
-        return view('jetadmin:livewire.admin.support.ticket.index', compact('tickets'))->layout('layouts.admin');
+        return view('jetadmin::livewire.admin.support.ticket.index', compact('tickets'))->layout('layouts.admin');
     }
 }

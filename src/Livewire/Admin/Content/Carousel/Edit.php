@@ -69,6 +69,6 @@ class Edit extends Component
 
     public function render()
     {
-        return view('jetadmin:livewire.admin.content.carousel.edit');
+        return view('jetadmin::livewire.admin.content.carousel.edit');
     }
 }

@@ -79,6 +79,6 @@ class Verify extends Component
             $verify->save();
         }
 
-        return view('jetadmin:livewire.panel.user.verify', ['random_string'=> $verify->random_string, 'verify' => $verify])->layout('layouts.panel');
+        return view('jetadmin::livewire.panel.user.verify', ['random_string'=> $verify->random_string, 'verify' => $verify])->layout('layouts.panel');
     }
 }

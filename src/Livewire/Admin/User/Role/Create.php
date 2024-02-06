@@ -36,6 +36,6 @@ class Create extends Component
             return abort(403);
         }
 
-        return view('jetadmin:livewire.admin.user.role.create');
+        return view('jetadmin::livewire.admin.user.role.create');
     }
 }

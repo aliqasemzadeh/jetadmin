@@ -23,6 +23,6 @@ class Users extends Component
     #[On('admin.user.role.users')]
     public function render()
     {
-        return view('jetadmin:livewire.admin.user.role.users');
+        return view('jetadmin::livewire.admin.user.role.users');
     }
 }

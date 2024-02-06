@@ -73,6 +73,6 @@ class View extends Component
 
     public function render()
     {
-        return view('jetadmin:livewire.panel.support.ticket.view')->layout('layouts.panel');
+        return view('jetadmin::livewire.panel.support.ticket.view')->layout('layouts.panel');
     }
 }

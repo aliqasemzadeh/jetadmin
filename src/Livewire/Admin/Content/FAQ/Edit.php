@@ -45,6 +45,6 @@ class Edit extends Component
 
     public function render()
     {
-        return view('jetadmin:livewire.admin.content.f-a-q.edit');
+        return view('jetadmin::livewire.admin.content.f-a-q.edit');
     }
 }

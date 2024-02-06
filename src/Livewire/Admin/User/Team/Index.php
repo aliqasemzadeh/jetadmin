@@ -144,6 +144,6 @@ class Index extends Component
 
         $teams = \AliQasemzadeh\JetAdmin\Models\Team::where('name', 'LIKE', '%' . $this->search . '%')->orderBy($this->sortColumn, $this->sortDirection)->paginate($this->perPage);
 
-        return view('jetadmin:livewire.admin.user.team.index', compact('teams'))->layout('layouts.admin');
+        return view('jetadmin::livewire.admin.user.team.index', compact('teams'))->layout('layouts.admin');
     }
 }

@@ -51,6 +51,6 @@ class Ban extends Component
 
     public function render()
     {
-        return view('jetadmin:livewire.admin.user.ban');
+        return view('jetadmin::livewire.admin.user.ban');
     }
 }

@@ -41,6 +41,6 @@ class Create extends Component
 
     public function render()
     {
-        return view('jetadmin:livewire.admin.setting.category.create');
+        return view('jetadmin::livewire.admin.setting.category.create');
     }
 }

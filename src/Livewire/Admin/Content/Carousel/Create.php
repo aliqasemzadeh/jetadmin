@@ -54,6 +54,6 @@ class Create extends Component
 
     public function render()
     {
-        return view('jetadmin:livewire.admin.content.carousel.create');
+        return view('jetadmin::livewire.admin.content.carousel.create');
     }
 }

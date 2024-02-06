@@ -153,6 +153,6 @@ class Index extends Component
         }
 
         $faqs = FrequentlyAskedQuestion::filter(['search' => $this->search])->orderBy($this->sortColumn, $this->sortDirection)->paginate($this->perPage);
-        return view('jetadmin:livewire.admin.content.f-a-q.index', compact('faqs'))->layout('layouts.admin');
+        return view('jetadmin::livewire.admin.content.f-a-q.index', compact('faqs'))->layout('layouts.admin');
     }
 }

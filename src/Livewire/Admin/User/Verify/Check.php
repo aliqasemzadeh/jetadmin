@@ -66,6 +66,6 @@ class Check extends Component
 
     public function render()
     {
-        return view('jetadmin:livewire.admin.user.verify.check');
+        return view('jetadmin::livewire.admin.user.verify.check');
     }
 }

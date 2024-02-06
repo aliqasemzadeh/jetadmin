@@ -117,6 +117,6 @@ class Archive extends Component
         }
 
         $tickets = Ticket::with(['user', 'category'])->filter(['search' => $this->search])->whereNotIn('status', ['new', 'customer'])->orderBy($this->sortColumn, $this->sortDirection)->paginate($this->perPage);
-        return view('jetadmin:livewire.admin.support.ticket.index', compact('tickets'))->layout('layouts.admin');
+        return view('jetadmin::livewire.admin.support.ticket.index', compact('tickets'))->layout('layouts.admin');
     }
 }

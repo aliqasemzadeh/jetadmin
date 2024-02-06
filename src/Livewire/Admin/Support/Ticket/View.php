@@ -86,6 +86,6 @@ class View extends Component
     public function render()
     {
         $replays = TicketReplay::with(['user', 'files'])->where('ticket_id', $this->ticket->id)->latest()->get();
-        return view('jetadmin:livewire.admin.support.ticket.view', compact('replays'))->layout('layouts.admin');
+        return view('jetadmin::livewire.admin.support.ticket.view', compact('replays'))->layout('layouts.admin');
     }
 }

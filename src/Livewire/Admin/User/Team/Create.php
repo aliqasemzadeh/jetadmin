@@ -52,6 +52,6 @@ class Create extends Component
         } else {
             $users = [];
         }
-        return view('jetadmin:livewire.admin.user.team.create', compact('users'));
+        return view('jetadmin::livewire.admin.user.team.create', compact('users'));
     }
 }

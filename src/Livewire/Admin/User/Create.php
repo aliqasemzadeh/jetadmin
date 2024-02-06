@@ -50,6 +50,6 @@ class Create extends Component
         if(!auth()->user()->can('admin_user_create')) {
             return abort(403);
         }
-        return view('jetadmin:livewire.admin.user.create');
+        return view('jetadmin::livewire.admin.user.create');
     }
 }

@@ -10,6 +10,6 @@ class Index extends Component
     public function render()
     {
         $faqs = FrequentlyAskedQuestion::all();
-        return view('jetadmin:livewire.app.f-a-q.index', compact('faqs'));
+        return view('jetadmin::livewire.app.f-a-q.index', compact('faqs'));
     }
 }

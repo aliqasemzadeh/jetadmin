@@ -29,7 +29,7 @@ class Index extends Component
 
         $wallets = collect($wallets);
 
-        return view('jetadmin:livewire.admin.user.wallet.index', compact('wallets', 'user'));
+        return view('jetadmin::livewire.admin.user.wallet.index', compact('wallets', 'user'));
     }
 
     public function exportTransactions($wallet_id)

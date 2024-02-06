@@ -71,6 +71,6 @@ class Mobile extends Component
 
     public function render()
     {
-        return view('jetadmin:livewire.panel.user.mobile')->layout('layouts.panel');
+        return view('jetadmin::livewire.panel.user.mobile')->layout('layouts.panel');
     }
 }

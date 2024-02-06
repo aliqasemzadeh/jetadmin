@@ -93,6 +93,6 @@ class Roles extends Component
             $roles = Role::all();
 
         }
-        return view('jetadmin:livewire.admin.user.roles', compact('roles'));
+        return view('jetadmin::livewire.admin.user.roles', compact('roles'));
     }
 }

@@ -160,6 +160,6 @@ class Index extends Component
         }
 
         $permissions = Permission::where('name', 'LIKE', '%' . $this->search . '%')->orderBy($this->sortColumn, $this->sortDirection)->paginate($this->perPage);
-        return view('jetadmin:livewire.admin.user.permission.index', compact('permissions'))->layout('layouts.admin');
+        return view('jetadmin::livewire.admin.user.permission.index', compact('permissions'))->layout('layouts.admin');
     }
 }

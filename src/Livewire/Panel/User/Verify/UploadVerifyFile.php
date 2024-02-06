@@ -42,6 +42,6 @@ class UploadVerifyFile extends Component
 
     public function render()
     {
-        return view('jetadmin:livewire.panel.user.verify.upload-verify-file');
+        return view('jetadmin::livewire.panel.user.verify.upload-verify-file');
     }
 }

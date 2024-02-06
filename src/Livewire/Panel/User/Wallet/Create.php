@@ -8,6 +8,6 @@ class Create extends Component
 {
     public function render()
     {
-        return view('jetadmin:livewire.panel.user.wallet.create');
+        return view('jetadmin::livewire.panel.user.wallet.create');
     }
 }

@@ -150,6 +150,6 @@ class Index extends Component
             return abort(403);
         }
         $articles = Article::with(['user', 'category'])->filter(['search' => $this->search])->orderBy($this->sortColumn, $this->sortDirection)->paginate($this->perPage);
-        return view('jetadmin:livewire.admin.content.article.index', compact('articles'))->layout('layouts.admin');
+        return view('jetadmin::livewire.admin.content.article.index', compact('articles'))->layout('layouts.admin');
     }
 }

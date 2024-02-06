@@ -26,6 +26,6 @@ class Index extends Component
     #[On('admin.setting.manage.index')]
     public function render()
     {
-        return view('jetadmin:livewire.admin.setting.manage.index')->layout('layouts.admin');
+        return view('jetadmin::livewire.admin.setting.manage.index')->layout('layouts.admin');
     }
 }

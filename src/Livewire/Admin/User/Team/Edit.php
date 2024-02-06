@@ -65,6 +65,6 @@ class Edit extends Component
             $users = [];
         }
 
-        return view('jetadmin:livewire.admin.user.team.edit', compact('users'));
+        return view('jetadmin::livewire.admin.user.team.edit', compact('users'));
     }
 }

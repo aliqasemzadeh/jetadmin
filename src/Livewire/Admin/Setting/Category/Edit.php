@@ -51,6 +51,6 @@ class Edit extends Component
 
     public function render()
     {
-        return view('jetadmin:livewire.admin.setting.category.edit');
+        return view('jetadmin::livewire.admin.setting.category.edit');
     }
 }

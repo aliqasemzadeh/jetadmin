@@ -71,6 +71,6 @@ class Edit extends Component
     public function render()
     {
         $categories = Category::where('type', 'article')->get();
-        return view('jetadmin:livewire.admin.content.article.edit', compact('categories'));
+        return view('jetadmin::livewire.admin.content.article.edit', compact('categories'));
     }
 }

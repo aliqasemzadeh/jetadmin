@@ -62,6 +62,6 @@ class Index extends Component
 
         $verifies = UserVerify::where('national_code', 'LIKE', '%' . $this->search . '%')->orderBy($this->sortColumn, $this->sortDirection)->paginate($this->perPage);
 
-        return view('jetadmin:livewire.admin.user.verify.index', compact('verifies'))->layout('layouts.admin');
+        return view('jetadmin::livewire.admin.user.verify.index', compact('verifies'))->layout('layouts.admin');
     }
 }

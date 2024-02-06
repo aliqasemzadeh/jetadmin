@@ -10,6 +10,6 @@ class Index extends Component
     public function render()
     {
         $articles = Article::with(['user', 'category'])->where('language', app()->getLocale())->paginate(config('jetadmin.per-page'));
-        return view('jetadmin:livewire.app.article.index', compact('articles'));
+        return view('jetadmin::livewire.app.article.index', compact('articles'));
     }
 }
