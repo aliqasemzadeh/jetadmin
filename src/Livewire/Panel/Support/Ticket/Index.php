@@ -67,11 +67,11 @@ class Index extends Component
 
     public function archiveSelected()
     {
-        $this->confirm(__('bap.are_you_sure'), [
+        $this->confirm(__('jetadmin.are_you_sure'), [
             'toast' => false,
             'position' => 'center',
             'showConfirmButton' => true,
-            'cancelButtonText' => __('bap.cancel'),
+            'cancelButtonText' => __('jetadmin.cancel'),
             'onConfirmed' => 'archiveSelectedQuery',
             'onCancelled' => 'cancelledDelete'
         ]);
@@ -88,7 +88,7 @@ class Index extends Component
 
         $this->alert(
             'success',
-            __('bap.removed')
+            __('jetadmin.removed')
         );
     }
 

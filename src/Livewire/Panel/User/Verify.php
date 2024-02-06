@@ -29,9 +29,9 @@ class Verify extends Component
     public function verify_request()
     {
         if(!$this->verify->id_card_file) {
-            $this->alert('warning', __('bap.please_upload_id_card_file'));
+            $this->alert('warning', __('jetadmin.please_upload_id_card_file'));
         } else if(!$this->verify->verify_file) {
-            $this->alert('warning', __('bap.please_upload_verify_file'));
+            $this->alert('warning', __('jetadmin.please_upload_verify_file'));
         } else {
             $this->validate([
                 'first_name' => 'required|string',
@@ -48,10 +48,10 @@ class Verify extends Component
             $this->verify->ip = Request::ip();
             $this->verify->save();
 
-            $this->alert('success', __('bap.request_sent'));
+            $this->alert('success', __('jetadmin.request_sent'));
         }
 
-        $this->alert('warning', __('bap.please_check_data'));
+        $this->alert('warning', __('jetadmin.please_check_data'));
     }
 
     public function mount()

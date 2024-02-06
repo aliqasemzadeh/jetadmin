@@ -45,7 +45,7 @@ class Check extends Component
         $this->dispatch('admin.user.verify.index');
         $this->dispatch('hideModal');
 
-        $this->alert('success', __('bap.accepted'));
+        $this->alert('success', __('jetadmin.accepted'));
     }
 
     public function reject()
@@ -56,7 +56,7 @@ class Check extends Component
         $this->dispatch('admin.user.verify.index');
         $this->dispatch('hideModal');
 
-        $this->alert('success', __('bap.rejected'));
+        $this->alert('success', __('jetadmin.rejected'));
     }
 
     public function inquiry()

@@ -39,7 +39,7 @@ class Edit extends Component
         $this->dispatchTo(\AliQasemzadeh\JetAdmin\Livewire\Admin\Content\FAQ\Index::getName(), 'updateList');
         $this->dispatch('hideModal');
 
-        $this->alert('success', __('bap.edited'));
+        $this->alert('success', __('jetadmin.edited'));
     }
 
 

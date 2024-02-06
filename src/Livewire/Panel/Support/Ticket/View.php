@@ -62,7 +62,7 @@ class View extends Component
         $this->body = null;
         $this->files = [];
         $this->replays = TicketReplay::with(['user', 'files'])->where('ticket_id', $this->ticket->id)->latest()->get();
-        $this->alert('success', __('bap.replied'));
+        $this->alert('success', __('jetadmin.replied'));
     }
 
     public function mount(Ticket $ticket)

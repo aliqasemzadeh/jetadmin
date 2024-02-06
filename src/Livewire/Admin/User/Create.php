@@ -42,7 +42,7 @@ class Create extends Component
         $this->dispatchTo(\AliQasemzadeh\JetAdmin\Livewire\Admin\User\Index::getName(), 'updateList');
         $this->dispatch('hideModal');
 
-        $this->alert('success', __('bap.created'));
+        $this->alert('success', __('jetadmin.created'));
     }
 
     public function render()

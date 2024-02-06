@@ -38,7 +38,7 @@ class Edit extends Component
         $this->dispatch('admin.user.role.index');
         $this->dispatch('hideModal');
 
-        $this->alert('success', __('bap.edited'));
+        $this->alert('success', __('jetadmin.edited'));
     }
 
     public function render()

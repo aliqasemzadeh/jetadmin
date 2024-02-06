@@ -45,7 +45,7 @@ class Mobile extends Component
         $userVerifyCode->save();
         $this->userVerifyCode = $userVerifyCode;
 
-        SendMobileTextMessageJob::dispatch(__('bap.verify_code_is', [$userVerifyCode->code]), $this->mobile);
+        SendMobileTextMessageJob::dispatch(__('jetadmin.verify_code_is', [$userVerifyCode->code]), $this->mobile);
 
         $this->wait = true;
     }
@@ -65,7 +65,7 @@ class Mobile extends Component
         $this->wait = false;
         $this->mobile = Auth::user()->mobile;
 
-        $this->alert('success', __('bap.mobile_verified_successfully'));
+        $this->alert('success', __('jetadmin.mobile_verified_successfully'));
 
     }
 

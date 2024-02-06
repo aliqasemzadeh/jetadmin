@@ -29,11 +29,11 @@ class Permissions extends Component
             return abort(403);
         }
 
-        $this->confirm(__('bap.are_you_sure'), [
+        $this->confirm(__('jetadmin.are_you_sure'), [
             'toast' => false,
             'position' => 'center',
             'showConfirmButton' => true,
-            'cancelButtonText' => __('bap.cancel'),
+            'cancelButtonText' => __('jetadmin.cancel'),
             'onConfirmed' => 'confirmedDeletePermission',
             'onCancelled' => 'cancelledDeletePermission'
         ]);
@@ -60,7 +60,7 @@ class Permissions extends Component
         $this->dispatch('updatePermissionList');
         $this->alert(
             'success',
-            __('bap.added')
+            __('jetadmin.added')
         );
     }
 
@@ -76,7 +76,7 @@ class Permissions extends Component
         $this->dispatch('updatePermissionList');
         $this->alert(
             'success',
-            __('bap.removed')
+            __('jetadmin.removed')
         );
     }
 
@@ -84,7 +84,7 @@ class Permissions extends Component
     {
         $this->alert(
             'success',
-            __('bap.cancelled')
+            __('jetadmin.cancelled')
         );
     }
 

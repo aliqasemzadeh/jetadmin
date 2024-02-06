@@ -35,7 +35,7 @@ class Edit extends Component
         $this->user_id = $user_id;
         $this->alert(
             'success',
-            __('bap.user_selected')
+            __('jetadmin.user_selected')
         );
     }
 
@@ -53,7 +53,7 @@ class Edit extends Component
 
         $this->alert(
             'success',
-            __('bap.edited')
+            __('jetadmin.edited')
         );
     }
 

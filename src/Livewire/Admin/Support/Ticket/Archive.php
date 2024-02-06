@@ -73,11 +73,11 @@ class Archive extends Component
         if(!auth()->user()->can('admin_user_delete')) {
             return abort(403);
         }
-        $this->confirm(__('bap.are_you_sure'), [
+        $this->confirm(__('jetadmin.are_you_sure'), [
             'toast' => false,
             'position' => 'center',
             'showConfirmButton' => true,
-            'cancelButtonText' => __('bap.cancel'),
+            'cancelButtonText' => __('jetadmin.cancel'),
             'onConfirmed' => 'archiveSelectedQuery',
             'onCancelled' => 'cancelledDelete'
         ]);
@@ -96,7 +96,7 @@ class Archive extends Component
 
         $this->alert(
             'success',
-            __('bap.removed')
+            __('jetadmin.removed')
         );
     }
 
