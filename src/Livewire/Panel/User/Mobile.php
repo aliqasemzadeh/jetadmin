@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Panel\User;
+namespace AliQasemzadeh\JetAdmin\Livewire\Panel\User;
 
 use App\Jobs\SendMobileTextMessageJob;
 use App\Models\UserVerifyCode;

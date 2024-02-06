@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Admin\Content\Carousel;
+namespace AliQasemzadeh\JetAdmin\Livewire\Admin\Content\Carousel;
 
 use App\Models\Carousel;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
@@ -46,7 +46,7 @@ class Create extends Component
         $image = $this->image->store('carousels');
         $carousel->addMedia(storage_path('app/' . $image))->toMediaCollection();
 
-        $this->dispatchTo(\App\Livewire\Admin\Content\Carousel\Index::getName(), 'updateList');
+        $this->dispatchTo(\AliQasemzadeh\JetAdmin\Livewire\Admin\Content\Carousel\Index::getName(), 'updateList');
         $this->dispatch('hideModal');
 
         $this->alert('success', __('bap.created'));

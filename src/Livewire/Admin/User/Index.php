@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Admin\User;
+namespace AliQasemzadeh\JetAdmin\Livewire\Admin\User;
 
 use App\Exports\UsersExport;
 use App\Models\User;

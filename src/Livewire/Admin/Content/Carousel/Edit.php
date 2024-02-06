@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Admin\Content\Carousel;
+namespace AliQasemzadeh\JetAdmin\Livewire\Admin\Content\Carousel;
 
 use App\Models\Carousel;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
@@ -61,7 +61,7 @@ class Edit extends Component
         $carousel->save();
 
 
-        $this->dispatchTo(\App\Livewire\Admin\Content\Carousel\Index::getName(), 'updateList');
+        $this->dispatchTo(\AliQasemzadeh\JetAdmin\Livewire\Admin\Content\Carousel\Index::getName(), 'updateList');
         $this->dispatch('hideModal');
 
         $this->alert('success', __('bap.created'));

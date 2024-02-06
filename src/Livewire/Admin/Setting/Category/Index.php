@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Admin\Setting\Category;
+namespace AliQasemzadeh\JetAdmin\Livewire\Admin\Setting\Category;
 
 use App\Models\Category;
 use Jantinnerezo\LivewireAlert\LivewireAlert;

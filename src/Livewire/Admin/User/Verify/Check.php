@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Admin\User\Verify;
+namespace AliQasemzadeh\JetAdmin\Livewire\Admin\User\Verify;
 
 use App\Models\User;
 use App\Models\UserVerify;

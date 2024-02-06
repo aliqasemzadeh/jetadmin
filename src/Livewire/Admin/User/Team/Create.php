@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Admin\User\Team;
+namespace AliQasemzadeh\JetAdmin\Livewire\Admin\User\Team;
 
 use App\Models\Team;
 use App\Models\User;
@@ -36,7 +36,7 @@ class Create extends Component
         $team->personal_team = $this->personal;
         $team->save();
 
-        $this->dispatchTo(\App\Livewire\Admin\User\Team\Index::getName(), 'updateList');
+        $this->dispatchTo(\AliQasemzadeh\JetAdmin\Livewire\Admin\User\Team\Index::getName(), 'updateList');
         $this->dispatch('hideModal');
 
         $this->alert(

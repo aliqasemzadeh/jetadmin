@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Panel\User\Verify;
+namespace AliQasemzadeh\JetAdmin\Livewire\Panel\User\Verify;
 
 use App\Models\UserVerify;
 use Illuminate\Support\Facades\Auth;

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\App\FAQ;
+namespace AliQasemzadeh\JetAdmin\Livewire\App\FAQ;
 
 use App\Models\FrequentlyAskedQuestion;
 use Livewire\Component;

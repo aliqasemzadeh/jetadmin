@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Admin\User\Permission;
+namespace AliQasemzadeh\JetAdmin\Livewire\Admin\User\Permission;
 
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Attributes\On;

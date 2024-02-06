@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Panel\Support\Ticket;
+namespace AliQasemzadeh\JetAdmin\Livewire\Panel\Support\Ticket;
 
 use App\Models\Category;
 use App\Models\Ticket;

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Admin\User\Role;
+namespace AliQasemzadeh\JetAdmin\Livewire\Admin\User\Role;
 
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;

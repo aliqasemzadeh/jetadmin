@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Admin\Setting\Category;
+namespace AliQasemzadeh\JetAdmin\Livewire\Admin\Setting\Category;
 
 use App\Models\Category;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
@@ -33,7 +33,7 @@ class Create extends Component
         $category->description = $this->description;
         $category->save();
 
-        $this->dispatchTo(\App\Livewire\Admin\Setting\Category\Index::getName(), 'updateList');
+        $this->dispatchTo(\AliQasemzadeh\JetAdmin\Livewire\Admin\Setting\Category\Index::getName(), 'updateList');
         $this->dispatch('hideModal');
 
         $this->alert('success', __('bap.created'));

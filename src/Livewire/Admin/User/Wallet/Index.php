@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Admin\User\Wallet;
+namespace AliQasemzadeh\JetAdmin\Livewire\Admin\User\Wallet;
 
 use App\Models\User;
 use App\Models\Wallet;

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Admin\Content\Carousel;
+namespace AliQasemzadeh\JetAdmin\Livewire\Admin\Content\Carousel;
 
 use App\Models\Carousel;
 use Jantinnerezo\LivewireAlert\LivewireAlert;

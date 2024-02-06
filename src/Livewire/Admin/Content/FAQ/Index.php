@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Admin\Content\FAQ;
+namespace AliQasemzadeh\JetAdmin\Livewire\Admin\Content\FAQ;
 
 use App\Models\FrequentlyAskedQuestion;
 use Jantinnerezo\LivewireAlert\LivewireAlert;

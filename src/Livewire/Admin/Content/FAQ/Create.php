@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Admin\Content\FAQ;
+namespace AliQasemzadeh\JetAdmin\Livewire\Admin\Content\FAQ;
 
 use App\Models\FrequentlyAskedQuestion;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
@@ -27,7 +27,7 @@ class Create extends Component
         $faq->answer = $this->answer;
         $faq->save();
 
-        $this->dispatchTo(\App\Livewire\Admin\Content\FAQ\Index::getName(), 'updateList');
+        $this->dispatchTo(\AliQasemzadeh\JetAdmin\Livewire\Admin\Content\FAQ\Index::getName(), 'updateList');
         $this->dispatch('hideModal');
 
         $this->alert('success', __('bap.created'));

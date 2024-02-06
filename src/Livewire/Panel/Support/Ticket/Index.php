@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Panel\Support\Ticket;
+namespace AliQasemzadeh\JetAdmin\Livewire\Panel\Support\Ticket;
 
 use App\Models\Ticket;
 use Jantinnerezo\LivewireAlert\LivewireAlert;

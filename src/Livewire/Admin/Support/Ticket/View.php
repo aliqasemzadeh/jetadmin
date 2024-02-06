@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Admin\Support\Ticket;
+namespace AliQasemzadeh\JetAdmin\Livewire\Admin\Support\Ticket;
 
 use App\Models\Ticket;
 use App\Models\TicketFile;
@@ -73,7 +73,7 @@ class View extends Component
             }
         }
 
-        $this->dispatchTo(\App\Livewire\Admin\Support\Ticket\Index::getName(), 'updateList');
+        $this->dispatchTo(\AliQasemzadeh\JetAdmin\Livewire\Admin\Support\Ticket\Index::getName(), 'updateList');
 
         $this->alert('success', __('bap.replied'));
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Admin\User;
+namespace AliQasemzadeh\JetAdmin\Livewire\Admin\User;
 
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
@@ -39,7 +39,7 @@ class Create extends Component
         $user->last_name = $this->last_name;
         $user->save();
 
-        $this->dispatchTo(\App\Livewire\Admin\User\Index::getName(), 'updateList');
+        $this->dispatchTo(\AliQasemzadeh\JetAdmin\Livewire\Admin\User\Index::getName(), 'updateList');
         $this->dispatch('hideModal');
 
         $this->alert('success', __('bap.created'));

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Admin\User\Permission;
+namespace AliQasemzadeh\JetAdmin\Livewire\Admin\User\Permission;
 
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
@@ -34,7 +34,7 @@ class Edit extends Component
         $this->permission->name = $this->name;
         $this->permission->save();
 
-        $this->dispatchTo(\App\Livewire\Admin\User\Permission\Index::getName(), 'updateList');
+        $this->dispatchTo(\AliQasemzadeh\JetAdmin\Livewire\Admin\User\Permission\Index::getName(), 'updateList');
         $this->dispatch('hideModal');
 
         $this->alert('success', __('bap.edited'));

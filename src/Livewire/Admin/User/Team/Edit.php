@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Admin\User\Team;
+namespace AliQasemzadeh\JetAdmin\Livewire\Admin\User\Team;
 
 use App\Models\Team;
 use App\Models\User;

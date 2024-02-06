@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Admin\Content\Article;
+namespace AliQasemzadeh\JetAdmin\Livewire\Admin\Content\Article;
 
 use App\Models\Article;
 use Illuminate\Support\Facades\Log;

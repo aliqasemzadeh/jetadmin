@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Admin\Dashboard;
+namespace AliQasemzadeh\JetAdmin\Livewire\Admin\Dashboard;
 
 use Livewire\Attributes\On;
 use Livewire\Component;
