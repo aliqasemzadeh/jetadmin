@@ -1,7 +1,7 @@
 {
   "name": "aliqasemzadeh/jetadmin",
-  "description": "Laravel Bootstrap Admin Panel with all basic features by using livewire.",
-  "keywords": ["admin", "bootstrap", "admin-panel", "laravel", "dashboard", "ticketing", "bootstrap", "tabler", "admin-ui"],
+  "description": "JetAdmin has basic functionality for creating admin panel with bootstrap and livewire.",
+  "keywords": ["admin", "bootstrap", "admin-panel", "laravel", "dashboard", "ticketing", "bootstrap", "tabler", "admin-ui", "jetadmin"],
   "license": "MIT",
   "authors": [
     {
