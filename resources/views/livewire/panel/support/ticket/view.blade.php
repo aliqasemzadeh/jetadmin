@@ -4,8 +4,8 @@
     </x-slot>
     <x-slot name="breadcrumb">
         <ol class="breadcrumb breadcrumb-arrows" aria-label="breadcrumbs">
-            <li class="breadcrumb-item"><a href="{{ route('panel.dashboard.index') }}">{{ __('jetadmin::bap.dashboard') }}</a></li>
-            <li class="breadcrumb-item"><a href="{{ route('panel.support.ticket.index') }}">{{ __('jetadmin::bap.tickets') }}</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('panel.dashboard.index') }}">{{ __('jetadmin::dashboard') }}</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('panel.support.ticket.index') }}">{{ __('jetadmin::tickets') }}</a></li>
             <li class="breadcrumb-item active" aria-current="page"><a href="{{ route('panel.support.ticket.view', [$ticket->id]) }}">{{ $ticket->title }}</a></li>
         </ol>
     </x-slot>
@@ -14,12 +14,12 @@
         <div class="col-12">
             <form wire:submit.prevent="replay" class="card">
                 <div class="card-header">
-                    <h4 class="card-title">{{ __('jetadmin::bap.replay') }}</h4>
+                    <h4 class="card-title">{{ __('jetadmin::replay') }}</h4>
                 </div>
                 <div class="card-body">
 
                     <div class="mb-3">
-                        <label class="form-label" for="description">{{ __('jetadmin::bap.body') }}</label>
+                        <label class="form-label" for="description">{{ __('jetadmin::body') }}</label>
                         <textarea wire:model="body" class="form-control @error('body') is-invalid @enderror" name="body"></textarea>
                         @error('body')
                         <div class="invalid-feedback">{{ $message }}</div>
@@ -27,7 +27,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <div class="form-label">{{ __('jetadmin::bap.files') }}</div>
+                        <div class="form-label">{{ __('jetadmin::files') }}</div>
                         <input type="file" multiple wire:model="files" class="form-control @error('files') is-invalid @enderror" name="files">
                         @error('files')
                         <div class="invalid-feedback">{{ $message }}</div>
@@ -37,7 +37,7 @@
                 </div>
                 <div class="card-footer text-end">
                     <div class="d-flex">
-                        <button type="submit" class="btn btn-primary ms-auto">{{ __('jetadmin::bap.submit') }}</button>
+                        <button type="submit" class="btn btn-primary ms-auto">{{ __('jetadmin::submit') }}</button>
                     </div>
                 </div>
             </form>

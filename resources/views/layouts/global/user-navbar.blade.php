@@ -16,13 +16,13 @@
             @if(auth()->user()->unreadNotifications->count() == 0)
                 <div class="card">
                     <div class="card-body">
-                        {{ __('jetadmin::bap.no_notifications') }}
+                        {{ __('jetadmin::no_notifications') }}
                     </div>
                 </div>
             @else
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">{{ __('jetadmin::bap.unread_notifications') }}</h3>
+                        <h3 class="card-title">{{ __('jetadmin::unread_notifications') }}</h3>
                     </div>
                     <div class="list-group list-group-flush list-group-hoverable">
                         @foreach(auth()->user()->unreadNotifications as $notification)
@@ -60,15 +60,15 @@
 
         <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
             @auth
-                <a href="{{ route('user.verify') }}" class="dropdown-item">{{ __('jetadmin::bap.account_verify') }}</a>
-                <a href="{{ route('user.mobile') }}" class="dropdown-item">{{ __('jetadmin::bap.mobile') }}</a>
-                <a href="{{ route('profile.show') }}" class="dropdown-item">{{ __('jetadmin::bap.profile') }}</a>
+                <a href="{{ route('user.verify') }}" class="dropdown-item">{{ __('jetadmin::account_verify') }}</a>
+                <a href="{{ route('user.mobile') }}" class="dropdown-item">{{ __('jetadmin::mobile') }}</a>
+                <a href="{{ route('profile.show') }}" class="dropdown-item">{{ __('jetadmin::profile') }}</a>
                 <div class="dropdown-divider"></div>
-                <a href="{{ route('logout') }}" class="dropdown-item">{{ __('jetadmin::bap.logout') }}</a>
+                <a href="{{ route('logout') }}" class="dropdown-item">{{ __('jetadmin::logout') }}</a>
             @endauth
             @guest
-                    <a href="{{ route('register') }}" class="dropdown-item">{{ __('jetadmin::bap.register') }}</a>
-                    <a href="{{ route('login') }}" class="dropdown-item">{{ __('jetadmin::bap.login') }}</a>
+                    <a href="{{ route('register') }}" class="dropdown-item">{{ __('jetadmin::register') }}</a>
+                    <a href="{{ route('login') }}" class="dropdown-item">{{ __('jetadmin::login') }}</a>
             @endguest
         </div>
 

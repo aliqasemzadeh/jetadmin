@@ -2,13 +2,13 @@
     <form wire:submit.prevent="create">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">{{ __('jetadmin::bap.create_faq') }}</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="{{ __('jetadmin::bap.close') }}"></button>
+                <h5 class="modal-title">{{ __('jetadmin::create_faq') }}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="{{ __('jetadmin::close') }}"></button>
             </div>
             <div class="modal-body">
 
                 <div class="mb-3">
-                    <label class="form-label" for="description">{{ __('jetadmin::bap.question') }}</label>
+                    <label class="form-label" for="description">{{ __('jetadmin::question') }}</label>
                     <textarea wire:model="question" class="form-control @error('question') is-invalid @enderror" name="question"></textarea>
                     @error('question')
                     <div class="invalid-feedback">{{ $message }}</div>
@@ -16,7 +16,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label" for="description">{{ __('jetadmin::bap.answer') }}</label>
+                    <label class="form-label" for="description">{{ __('jetadmin::answer') }}</label>
                     <textarea wire:model="answer" class="form-control @error('answer') is-invalid @enderror" name="answer"></textarea>
                     @error('answer')
                     <div class="invalid-feedback">{{ $message }}</div>
@@ -24,8 +24,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('jetadmin::bap.close') }}</button>
-                <button type="submit" class="btn btn-primary">{{ __('jetadmin::bap.create') }}</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('jetadmin::close') }}</button>
+                <button type="submit" class="btn btn-primary">{{ __('jetadmin::create') }}</button>
             </div>
         </div>
     </form>
