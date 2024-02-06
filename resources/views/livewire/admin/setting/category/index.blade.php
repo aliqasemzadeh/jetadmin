@@ -1,6 +1,6 @@
 <div>
     <x-slot name="title">
-        {{ __('jetadmin::categories') }}
+        {{ __('jetadmin.categories') }}
     </x-slot>
     <x-slot name="actions">
         @can('admin_category_create')
@@ -8,7 +8,7 @@
                 <div class="btn-list">
                     <button onclick="Livewire.emit('showModal', 'admin.setting.category.create')" class="btn btn-primary d-none d-sm-inline-block">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                        {{ __('jetadmin::create_category') }}
+                        {{ __('jetadmin.create_category') }}
                     </button>
                     <button onclick="Livewire.emit('showModal', 'admin.setting.category.create')" class="btn btn-primary d-sm-none btn-icon" aria-label="Create new report">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
@@ -19,19 +19,19 @@
     </x-slot>
     <x-slot name="breadcrumb">
         <ol class="breadcrumb breadcrumb-arrows" aria-label="breadcrumbs">
-            <li class="breadcrumb-item"><a href="{{ route('admin.dashboard.index') }}">{{ __('jetadmin::dashboard') }}</a></li>
-            <li class="breadcrumb-item active" aria-current="page"><a href="{{ route('admin.setting.category.index') }}">{{ __('jetadmin::categories') }}</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('admin.dashboard.index') }}">{{ __('jetadmin.dashboard') }}</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="{{ route('admin.setting.category.index') }}">{{ __('jetadmin.categories') }}</a></li>
         </ol>
     </x-slot>
 
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">{{ __('jetadmin::categories') }}</h3>
+            <h3 class="card-title">{{ __('jetadmin.categories') }}</h3>
         </div>
         <div class="card-body">
             <div class="d-flex">
                 <div class="text-muted">
-                    {{ __('jetadmin::per_page') }}:
+                    {{ __('jetadmin.per_page') }}:
                     <div class="mx-2 d-inline-block">
                         <div class="btn-group btn-group-sm w-100">
                             <button type="button" wire:click="setPerPage(10)" class="btn @if($perPage == 10) btn-primary @endif">10</button>
@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <div class="ms-auto text-muted">
-                    {{ __('jetadmin::search') }}:
+                    {{ __('jetadmin.search') }}:
                     <div class="ms-2 d-inline-block">
 
                         <div class="input-group input-group-sm input-group-flat">
@@ -64,7 +64,7 @@
                 <thead>
                 <tr>
                     <th class="w-1"><input name="selectAll" wire:model="selectAll" class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select all invoices"></th>
-                    <th class="w-1" wire:click="sortByColumn('id')">{{ __('jetadmin::number') }}
+                    <th class="w-1" wire:click="sortByColumn('id')">{{ __('jetadmin.number') }}
 
                     @if ($sortColumn == 'id')
                         @if($sortDirection == 'asc')
@@ -77,7 +77,7 @@
                             @endif
                         @endif
                     </th>
-                    <th wire:click="sortByColumn('title')">{{ __('jetadmin::title') }}
+                    <th wire:click="sortByColumn('title')">{{ __('jetadmin.title') }}
                     @if ($sortColumn == 'title')
                         @if($sortDirection == 'asc')
                             <!-- Download SVG icon from http://tabler-icons.io/i/chevron-up -->
@@ -89,7 +89,7 @@
                             @endif
                         @endif
                     </th>
-                    <th wire:click="sortByColumn('type')">{{ __('jetadmin::type') }}
+                    <th wire:click="sortByColumn('type')">{{ __('jetadmin.type') }}
 
                     @if ($sortColumn == 'type')
                         @if($sortDirection == 'asc')
@@ -102,7 +102,7 @@
                             @endif
                         @endif
                     </th>
-                    <th wire:click="sortByColumn('language')">{{ __('jetadmin::language') }}
+                    <th wire:click="sortByColumn('language')">{{ __('jetadmin.language') }}
 
                     @if ($sortColumn == 'language')
                         @if($sortDirection == 'asc')
@@ -124,7 +124,7 @@
                         <td><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select User" value="{{ $category->id }}" name="selectedItems" wire:model="selectedItems"></td>
                         <td>{{ $category->id }}</td>
                         <td>{{ $category->title }}</td>
-                        <td>{{ __('jetadmin::category_types.'.$category->type) }}</td>
+                        <td>{{ __('jetadmin.category_types.'.$category->type) }}</td>
                         <td>{{ config('laravellocalization.supportedLocales.'.$category->language.'.name') }}</td>
                         <td class="text-end">
                             @can('admin_category_edit')
@@ -149,7 +149,7 @@
         <div class="card-footer d-flex justify-content-between">
             <div>
                 <div class="btn-group btn-group-sm w-100">
-                    <button type="button" wire:click="deleteSelected" class="btn">{{ __('jetadmin::delete') }} ({{ count($selectedItems) }})</button>
+                    <button type="button" wire:click="deleteSelected" class="btn">{{ __('jetadmin.delete') }} ({{ count($selectedItems) }})</button>
                 </div>
 
             </div>

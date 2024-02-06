@@ -4,8 +4,8 @@
     </x-slot>
     <x-slot name="breadcrumb">
         <ol class="breadcrumb breadcrumb-arrows" aria-label="breadcrumbs">
-            <li class="breadcrumb-item"><a href="{{ route('panel.dashboard.index') }}">{{ __('jetadmin::dashboard') }}</a></li>
-            <li class="breadcrumb-item"><a href="{{ route('admin.support.ticket.index') }}">{{ __('jetadmin::tickets') }}</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('panel.dashboard.index') }}">{{ __('jetadmin.dashboard') }}</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('admin.support.ticket.index') }}">{{ __('jetadmin.tickets') }}</a></li>
             <li class="breadcrumb-item active" aria-current="page"><a href="{{ route('panel.support.ticket.view', [$ticket->id]) }}">{{ $ticket->title }}</a></li>
         </ol>
     </x-slot>
@@ -17,7 +17,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="9" /><line x1="12" y1="8" x2="12.01" y2="8" /><polyline points="11 12 12 12 12 16 13 16" /></svg>
                 </div>
                 <div>
-                    {{ __('jetadmin::please_create_new_ticket') }}
+                    {{ __('jetadmin.please_create_new_ticket') }}
                 </div>
             </div>
             <a class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="close"></a>
@@ -27,12 +27,12 @@
         <div class="col-12">
             <form wire:submit.prevent="replay" class="card">
                 <div class="card-header">
-                    <h4 class="card-title">{{ __('jetadmin::replay') }}</h4>
+                    <h4 class="card-title">{{ __('jetadmin.replay') }}</h4>
                 </div>
                 <div class="card-body">
 
                     <div class="mb-3">
-                        <label class="form-label" for="description">{{ __('jetadmin::body') }}</label>
+                        <label class="form-label" for="description">{{ __('jetadmin.body') }}</label>
                         <textarea wire:model="body" class="form-control @error('body') is-invalid @enderror" name="body"></textarea>
                         @error('body')
                         <div class="invalid-feedback">{{ $message }}</div>
@@ -40,7 +40,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <div class="form-label">{{ __('jetadmin::files') }}</div>
+                        <div class="form-label">{{ __('jetadmin.files') }}</div>
                         <input type="file" multiple wire:model="files" class="form-control @error('files') is-invalid @enderror" name="files">
                         @error('files')
                         <div class="invalid-feedback">{{ $message }}</div>
@@ -50,8 +50,8 @@
                 </div>
                 <div class="card-footer text-end">
                     <div class="d-flex">
-                        <button type="submit" wire:model="next_action" value="index" class="btn btn-secondary">{{ __('jetadmin::submit') }}</button>
-                        <button type="submit" name="next_action" wire:model="next_action" value="next" class="btn btn-primary ms-auto">{{ __('jetadmin::next_submit') }}</button>
+                        <button type="submit" wire:model="next_action" value="index" class="btn btn-secondary">{{ __('jetadmin.submit') }}</button>
+                        <button type="submit" name="next_action" wire:model="next_action" value="next" class="btn btn-primary ms-auto">{{ __('jetadmin.next_submit') }}</button>
                     </div>
                 </div>
             </form>
