@@ -13,13 +13,12 @@
 
 ## 🧰 Built with
 
-- Laravel 10
+- Laravel
 - Livewire
-- TailwindCSS
+- Bootsrap
+- Tabler
 - SweetAlert2
 - spatie/laravel-permission
-- Vite Build Tools
-- daisyUI
 
 
 ## 🧾 Installation
