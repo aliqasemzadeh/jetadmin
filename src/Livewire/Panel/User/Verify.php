@@ -61,7 +61,7 @@ class Verify extends Component
             $this->verify->save();
         } else {
             $this->verify = new UserVerify();
-            $this->verify->random_string = rand(config('bap.verify_code_start'), config('bap.verify_code_finish'));
+            $this->verify->random_string = rand(config('jetadmin.verify_code_start'), config('jetadmin.verify_code_finish'));
             $this->verify->user_id = auth()->user()->id;
             $this->verify->status = 'start';
             $this->verify->save();
@@ -75,7 +75,7 @@ class Verify extends Component
         ]);
 
         if($verify->status == 'new') {
-            $verify->random_string = rand(config('bap.verify_code_start'), config('bap.verify_code_finish'));
+            $verify->random_string = rand(config('jetadmin.verify_code_start'), config('jetadmin.verify_code_finish'));
             $verify->save();
         }
 

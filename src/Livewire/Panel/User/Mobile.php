@@ -40,7 +40,7 @@ class Mobile extends Component
             'method' => 'sms',
         ]);
         $userVerifyCode->ip = Request::ip();
-        $userVerifyCode->code = rand(config('bap.verify_code_start'), config('bap.verify_code_finish'));
+        $userVerifyCode->code = rand(config('jetadmin.verify_code_start'), config('jetadmin.verify_code_finish'));
         $userVerifyCode->value = $this->mobile;
         $userVerifyCode->save();
         $this->userVerifyCode = $userVerifyCode;

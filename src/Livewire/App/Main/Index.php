@@ -12,13 +12,13 @@ class Index extends Component
     {
         $displayItems = [];
 
-        if(config('bap.home.display-carousels')) {
-            $carousels = Carousel::where('language', app()->getLocale())->orderBy('created_at', 'DESC')->take(config('bap.home.count-carousels'))->get();
+        if(config('jetadmin.home.display-carousels')) {
+            $carousels = Carousel::where('language', app()->getLocale())->orderBy('created_at', 'DESC')->take(config('jetadmin.home.count-carousels'))->get();
             $displayItems = ['carousels' => $carousels];
         }
 
-        if(config('bap.home.display-articles')) {
-            $articles = Article::where('language', app()->getLocale())->orderBy('created_at', 'DESC')->take(config('bap.home.count-articles'))->get();
+        if(config('jetadmin.home.display-articles')) {
+            $articles = Article::where('language', app()->getLocale())->orderBy('created_at', 'DESC')->take(config('jetadmin.home.count-articles'))->get();
             $displayItems['articles'] = $articles;
         }
 
