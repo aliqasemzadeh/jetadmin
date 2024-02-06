@@ -2,7 +2,7 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\Admin\Setting\Category;
 
-use App\Models\Category;
+use AliQasemzadeh\JetAdmin\Models\Category;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Attributes\On;
 use Livewire\Component;
@@ -153,6 +153,6 @@ class Index extends Component
             return abort(403);
         }
         $categories = Category::filter(['search' => $this->search])->orderBy($this->sortColumn, $this->sortDirection)->paginate($this->perPage);
-        return view('livewire.admin.setting.category.index', compact('categories'))->layout('layouts.admin');
+        return view('jetadmin:livewire.admin.setting.category.index', compact('categories'))->layout('layouts.admin');
     }
 }

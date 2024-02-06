@@ -8,6 +8,6 @@ class Index extends Component
 {
     public function render()
     {
-        return view('livewire.panel.dashboard.index')->layout('layouts.panel');
+        return view('jetadmin:livewire.panel.dashboard.index')->layout('layouts.panel');
     }
 }

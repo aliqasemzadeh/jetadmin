@@ -2,7 +2,7 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\Admin\Content\FAQ;
 
-use App\Models\FrequentlyAskedQuestion;
+use AliQasemzadeh\JetAdmin\Models\FrequentlyAskedQuestion;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 
@@ -36,6 +36,6 @@ class Create extends Component
 
     public function render()
     {
-        return view('livewire.admin.content.f-a-q.create');
+        return view('jetadmin:livewire.admin.content.f-a-q.create');
     }
 }

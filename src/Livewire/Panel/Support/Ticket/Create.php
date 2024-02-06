@@ -2,10 +2,10 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\Panel\Support\Ticket;
 
-use App\Models\Category;
-use App\Models\Ticket;
-use App\Models\TicketFile;
-use App\Models\TicketReplay;
+use AliQasemzadeh\JetAdmin\Models\Category;
+use AliQasemzadeh\JetAdmin\Models\Ticket;
+use AliQasemzadeh\JetAdmin\Models\TicketFile;
+use AliQasemzadeh\JetAdmin\Models\TicketReplay;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 use Livewire\WithFileUploads;
@@ -61,6 +61,6 @@ class Create extends Component
     public function render()
     {
         $categories = Category::where('type', 'ticket')->get();
-        return view('livewire.panel.support.ticket.create', compact('categories'))->layout('layouts.panel');
+        return view('jetadmin:livewire.panel.support.ticket.create', compact('categories'))->layout('layouts.panel');
     }
 }

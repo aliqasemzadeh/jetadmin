@@ -3,7 +3,7 @@
 namespace AliQasemzadeh\JetAdmin\Livewire\Admin\User;
 
 use App\Exports\UsersExport;
-use App\Models\User;
+use AliQasemzadeh\JetAdmin\Models\User;
 use Illuminate\Support\Facades\Log;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
@@ -161,6 +161,6 @@ class Index extends Component
             return abort(403);
         }
         $users = User::filter(['search' => $this->search])->orderBy($this->sortColumn, $this->sortDirection)->paginate($this->perPage);
-        return view('livewire.admin.user.index', compact('users'))->layout('layouts.admin');
+        return view('jetadmin:livewire.admin.user.index', compact('users'))->layout('layouts.admin');
     }
 }

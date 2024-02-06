@@ -2,8 +2,8 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\Admin\Content\Article;
 
-use App\Models\Article;
-use App\Models\Category;
+use AliQasemzadeh\JetAdmin\Models\Article;
+use AliQasemzadeh\JetAdmin\Models\Category;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 use Livewire\WithFileUploads;
@@ -71,6 +71,6 @@ class Edit extends Component
     public function render()
     {
         $categories = Category::where('type', 'article')->get();
-        return view('livewire.admin.content.article.edit', compact('categories'));
+        return view('jetadmin:livewire.admin.content.article.edit', compact('categories'));
     }
 }

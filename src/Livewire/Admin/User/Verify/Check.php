@@ -2,8 +2,8 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\Admin\User\Verify;
 
-use App\Models\User;
-use App\Models\UserVerify;
+use AliQasemzadeh\JetAdmin\Models\User;
+use AliQasemzadeh\JetAdmin\Models\UserVerify;
 use Carbon\Carbon;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
@@ -66,6 +66,6 @@ class Check extends Component
 
     public function render()
     {
-        return view('livewire.admin.user.verify.check');
+        return view('jetadmin:livewire.admin.user.verify.check');
     }
 }

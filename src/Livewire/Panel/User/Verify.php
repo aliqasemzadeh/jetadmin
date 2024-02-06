@@ -2,7 +2,7 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\Panel\User;
 
-use App\Models\UserVerify;
+use AliQasemzadeh\JetAdmin\Models\UserVerify;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
@@ -79,6 +79,6 @@ class Verify extends Component
             $verify->save();
         }
 
-        return view('livewire.panel.user.verify', ['random_string'=> $verify->random_string, 'verify' => $verify])->layout('layouts.panel');
+        return view('jetadmin:livewire.panel.user.verify', ['random_string'=> $verify->random_string, 'verify' => $verify])->layout('layouts.panel');
     }
 }

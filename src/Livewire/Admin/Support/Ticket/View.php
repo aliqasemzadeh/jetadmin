@@ -2,9 +2,9 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\Admin\Support\Ticket;
 
-use App\Models\Ticket;
-use App\Models\TicketFile;
-use App\Models\TicketReplay;
+use AliQasemzadeh\JetAdmin\Models\Ticket;
+use AliQasemzadeh\JetAdmin\Models\TicketFile;
+use AliQasemzadeh\JetAdmin\Models\TicketReplay;
 use App\Notifications\TicketReplied;
 use Carbon\Carbon;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
@@ -86,6 +86,6 @@ class View extends Component
     public function render()
     {
         $replays = TicketReplay::with(['user', 'files'])->where('ticket_id', $this->ticket->id)->latest()->get();
-        return view('livewire.admin.support.ticket.view', compact('replays'))->layout('layouts.admin');
+        return view('jetadmin:livewire.admin.support.ticket.view', compact('replays'))->layout('layouts.admin');
     }
 }

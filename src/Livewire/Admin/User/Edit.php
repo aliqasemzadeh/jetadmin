@@ -2,7 +2,7 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\Admin\User;
 
-use App\Models\User;
+use AliQasemzadeh\JetAdmin\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rule;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
@@ -67,6 +67,6 @@ class Edit extends Component
             return abort(403);
         }
 
-        return view('livewire.admin.user.edit');
+        return view('jetadmin:livewire.admin.user.edit');
     }
 }

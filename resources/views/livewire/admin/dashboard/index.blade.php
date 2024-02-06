@@ -20,10 +20,10 @@
                         </div>
                         <div class="col">
                             <div class="font-weight-medium">
-                                {{ \App\Models\Ticket::count() }} {{ __('jetadmin::bap.tickets') }}
+                                {{ \AliQasemzadeh\JetAdmin\Models\Ticket::count() }} {{ __('jetadmin::bap.tickets') }}
                             </div>
                             <div class="text-muted">
-                                {{ \App\Models\Ticket::whereIn('status', ['new', 'customer'])->count() }} {{ __('jetadmin::bap.unanswered_ticket') }}
+                                {{ \AliQasemzadeh\JetAdmin\Models\Ticket::whereIn('status', ['new', 'customer'])->count() }} {{ __('jetadmin::bap.unanswered_ticket') }}
                             </div>
                         </div>
                     </div>
@@ -62,10 +62,10 @@
                         </div>
                         <div class="col">
                             <div class="font-weight-medium">
-                                {{ \App\Models\User::count() }} {{ __('jetadmin::bap.users') }}
+                                {{ \AliQasemzadeh\JetAdmin\Models\User::count() }} {{ __('jetadmin::bap.users') }}
                             </div>
                             <div class="text-muted">
-                                {{ \App\Models\User::whereDate('created_at', \Carbon\Carbon::today())->count() }} {{ __('jetadmin::bap.today_users') }}
+                                {{ \AliQasemzadeh\JetAdmin\Models\User::whereDate('created_at', \Carbon\Carbon::today())->count() }} {{ __('jetadmin::bap.today_users') }}
                             </div>
                         </div>
                     </div>

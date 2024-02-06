@@ -2,7 +2,7 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\Admin\Support\Ticket;
 
-use App\Models\Ticket;
+use AliQasemzadeh\JetAdmin\Models\Ticket;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -117,6 +117,6 @@ class Archive extends Component
         }
 
         $tickets = Ticket::with(['user', 'category'])->filter(['search' => $this->search])->whereNotIn('status', ['new', 'customer'])->orderBy($this->sortColumn, $this->sortDirection)->paginate($this->perPage);
-        return view('livewire.admin.support.ticket.index', compact('tickets'))->layout('layouts.admin');
+        return view('jetadmin:livewire.admin.support.ticket.index', compact('tickets'))->layout('layouts.admin');
     }
 }

@@ -2,7 +2,7 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\Admin\User\Verify;
 
-use App\Models\UserVerify;
+use AliQasemzadeh\JetAdmin\Models\UserVerify;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Attributes\On;
 use Livewire\Component;
@@ -62,6 +62,6 @@ class Index extends Component
 
         $verifies = UserVerify::where('national_code', 'LIKE', '%' . $this->search . '%')->orderBy($this->sortColumn, $this->sortDirection)->paginate($this->perPage);
 
-        return view('livewire.admin.user.verify.index', compact('verifies'))->layout('layouts.admin');
+        return view('jetadmin:livewire.admin.user.verify.index', compact('verifies'))->layout('layouts.admin');
     }
 }

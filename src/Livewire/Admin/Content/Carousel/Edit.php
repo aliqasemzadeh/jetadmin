@@ -2,7 +2,7 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\Admin\Content\Carousel;
 
-use App\Models\Carousel;
+use AliQasemzadeh\JetAdmin\Models\Carousel;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 use Livewire\WithFileUploads;
@@ -69,6 +69,6 @@ class Edit extends Component
 
     public function render()
     {
-        return view('livewire.admin.content.carousel.edit');
+        return view('jetadmin:livewire.admin.content.carousel.edit');
     }
 }

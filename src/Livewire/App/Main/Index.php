@@ -2,8 +2,8 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\App\Main;
 
-use App\Models\Article;
-use App\Models\Carousel;
+use AliQasemzadeh\JetAdmin\Models\Article;
+use AliQasemzadeh\JetAdmin\Models\Carousel;
 use Livewire\Component;
 
 class Index extends Component
@@ -22,6 +22,6 @@ class Index extends Component
             $displayItems['articles'] = $articles;
         }
 
-        return view('livewire.app.main.index', $displayItems);
+        return view('jetadmin:livewire.app.main.index', $displayItems);
     }
 }

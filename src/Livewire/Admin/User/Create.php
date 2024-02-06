@@ -2,7 +2,7 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\Admin\User;
 
-use App\Models\User;
+use AliQasemzadeh\JetAdmin\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
@@ -50,6 +50,6 @@ class Create extends Component
         if(!auth()->user()->can('admin_user_create')) {
             return abort(403);
         }
-        return view('livewire.admin.user.create');
+        return view('jetadmin:livewire.admin.user.create');
     }
 }

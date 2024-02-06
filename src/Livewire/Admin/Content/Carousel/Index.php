@@ -2,7 +2,7 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\Admin\Content\Carousel;
 
-use App\Models\Carousel;
+use AliQasemzadeh\JetAdmin\Models\Carousel;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Attributes\On;
 use Livewire\Component;
@@ -153,6 +153,6 @@ class Index extends Component
         }
 
         $carousels = Carousel::with(['user'])->filter(['search' => $this->search])->orderBy($this->sortColumn, $this->sortDirection)->paginate($this->perPage);
-        return view('livewire.admin.content.carousel.index', compact('carousels'))->layout('layouts.admin');
+        return view('jetadmin:livewire.admin.content.carousel.index', compact('carousels'))->layout('layouts.admin');
     }
 }

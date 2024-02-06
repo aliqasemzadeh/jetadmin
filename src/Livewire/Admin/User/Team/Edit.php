@@ -2,8 +2,8 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\Admin\User\Team;
 
-use App\Models\Team;
-use App\Models\User;
+use AliQasemzadeh\JetAdmin\Models\Team;
+use AliQasemzadeh\JetAdmin\Models\User;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 
@@ -65,6 +65,6 @@ class Edit extends Component
             $users = [];
         }
 
-        return view('livewire.admin.user.team.edit', compact('users'));
+        return view('jetadmin:livewire.admin.user.team.edit', compact('users'));
     }
 }

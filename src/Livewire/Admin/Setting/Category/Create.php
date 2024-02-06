@@ -2,7 +2,7 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\Admin\Setting\Category;
 
-use App\Models\Category;
+use AliQasemzadeh\JetAdmin\Models\Category;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 
@@ -41,6 +41,6 @@ class Create extends Component
 
     public function render()
     {
-        return view('livewire.admin.setting.category.create');
+        return view('jetadmin:livewire.admin.setting.category.create');
     }
 }

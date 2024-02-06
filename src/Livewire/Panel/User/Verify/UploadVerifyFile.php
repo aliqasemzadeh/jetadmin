@@ -2,7 +2,7 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\Panel\User\Verify;
 
-use App\Models\UserVerify;
+use AliQasemzadeh\JetAdmin\Models\UserVerify;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
@@ -42,6 +42,6 @@ class UploadVerifyFile extends Component
 
     public function render()
     {
-        return view('livewire.panel.user.verify.upload-verify-file');
+        return view('jetadmin:livewire.panel.user.verify.upload-verify-file');
     }
 }

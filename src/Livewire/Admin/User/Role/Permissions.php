@@ -101,6 +101,6 @@ class Permissions extends Component
             $permissions = Permission::all();
         }
 
-        return view('livewire.admin.user.role.permissions', compact('permissions'));
+        return view('jetadmin:livewire.admin.user.role.permissions', compact('permissions'));
     }
 }

@@ -2,7 +2,7 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\Admin\User;
 
-use App\Models\User;
+use AliQasemzadeh\JetAdmin\Models\User;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 
@@ -51,6 +51,6 @@ class Ban extends Component
 
     public function render()
     {
-        return view('livewire.admin.user.ban');
+        return view('jetadmin:livewire.admin.user.ban');
     }
 }

@@ -2,9 +2,9 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\Panel\Support\Ticket;
 
-use App\Models\Ticket;
-use App\Models\TicketFile;
-use App\Models\TicketReplay;
+use AliQasemzadeh\JetAdmin\Models\Ticket;
+use AliQasemzadeh\JetAdmin\Models\TicketFile;
+use AliQasemzadeh\JetAdmin\Models\TicketReplay;
 use Carbon\Carbon;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
@@ -73,6 +73,6 @@ class View extends Component
 
     public function render()
     {
-        return view('livewire.panel.support.ticket.view')->layout('layouts.panel');
+        return view('jetadmin:livewire.panel.support.ticket.view')->layout('layouts.panel');
     }
 }

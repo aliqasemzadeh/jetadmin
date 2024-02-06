@@ -19,6 +19,6 @@ class TestChart extends Component
                 ->addColumn('Test', 75, '#f6fd55')
         ;
 
-        return view('livewire.app.main.test-chart', ['columnChartModel' => $columnChartModel]);
+        return view('jetadmin:livewire.app.main.test-chart', ['columnChartModel' => $columnChartModel]);
     }
 }

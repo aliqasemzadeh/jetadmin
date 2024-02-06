@@ -2,7 +2,7 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\Admin\User\Role;
 
-use App\Models\User;
+use AliQasemzadeh\JetAdmin\Models\User;
 use Livewire\Attributes\On;
 use Livewire\Component;
 use Spatie\Permission\Models\Role;
@@ -23,6 +23,6 @@ class Users extends Component
     #[On('admin.user.role.users')]
     public function render()
     {
-        return view('livewire.admin.user.role.users');
+        return view('jetadmin:livewire.admin.user.role.users');
     }
 }

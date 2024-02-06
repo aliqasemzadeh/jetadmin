@@ -2,7 +2,7 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\App\Article;
 
-use App\Models\Article;
+use AliQasemzadeh\JetAdmin\Models\Article;
 use Livewire\Component;
 
 class View extends Component
@@ -16,6 +16,6 @@ class View extends Component
 
     public function render()
     {
-        return view('livewire.app.article.view');
+        return view('jetadmin:livewire.app.article.view');
     }
 }

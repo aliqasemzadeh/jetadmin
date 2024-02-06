@@ -3,7 +3,7 @@
 namespace AliQasemzadeh\JetAdmin\Livewire\Panel\User;
 
 use App\Jobs\SendMobileTextMessageJob;
-use App\Models\UserVerifyCode;
+use AliQasemzadeh\JetAdmin\Models\UserVerifyCode;
 use App\Rules\CheckUserVerifyCodeRule;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
@@ -71,6 +71,6 @@ class Mobile extends Component
 
     public function render()
     {
-        return view('livewire.panel.user.mobile')->layout('layouts.panel');
+        return view('jetadmin:livewire.panel.user.mobile')->layout('layouts.panel');
     }
 }

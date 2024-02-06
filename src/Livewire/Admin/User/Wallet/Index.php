@@ -2,8 +2,8 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\Admin\User\Wallet;
 
-use App\Models\User;
-use App\Models\Wallet;
+use AliQasemzadeh\JetAdmin\Models\User;
+use AliQasemzadeh\JetAdmin\Models\Wallet;
 use Livewire\Attributes\On;
 use Livewire\Component;
 
@@ -29,7 +29,7 @@ class Index extends Component
 
         $wallets = collect($wallets);
 
-        return view('livewire.admin.user.wallet.index', compact('wallets', 'user'));
+        return view('jetadmin:livewire.admin.user.wallet.index', compact('wallets', 'user'));
     }
 
     public function exportTransactions($wallet_id)

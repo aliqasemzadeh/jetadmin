@@ -2,7 +2,7 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\Admin\User\Team;
 
-use App\Models\Team;
+use AliQasemzadeh\JetAdmin\Models\Team;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Attributes\On;
 use Livewire\Component;
@@ -142,8 +142,8 @@ class Index extends Component
             return abort(403);
         }
 
-        $teams = \App\Models\Team::where('name', 'LIKE', '%' . $this->search . '%')->orderBy($this->sortColumn, $this->sortDirection)->paginate($this->perPage);
+        $teams = \AliQasemzadeh\JetAdmin\Models\Team::where('name', 'LIKE', '%' . $this->search . '%')->orderBy($this->sortColumn, $this->sortDirection)->paginate($this->perPage);
 
-        return view('livewire.admin.user.team.index', compact('teams'))->layout('layouts.admin');
+        return view('jetadmin:livewire.admin.user.team.index', compact('teams'))->layout('layouts.admin');
     }
 }

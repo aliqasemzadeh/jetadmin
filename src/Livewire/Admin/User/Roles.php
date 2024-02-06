@@ -2,7 +2,7 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\Admin\User;
 
-use App\Models\User;
+use AliQasemzadeh\JetAdmin\Models\User;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Attributes\On;
 use Livewire\Component;
@@ -93,6 +93,6 @@ class Roles extends Component
             $roles = Role::all();
 
         }
-        return view('livewire.admin.user.roles', compact('roles'));
+        return view('jetadmin:livewire.admin.user.roles', compact('roles'));
     }
 }

@@ -2,7 +2,7 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\Admin\Setting\Category;
 
-use App\Models\Category;
+use AliQasemzadeh\JetAdmin\Models\Category;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 
@@ -51,6 +51,6 @@ class Edit extends Component
 
     public function render()
     {
-        return view('livewire.admin.setting.category.edit');
+        return view('jetadmin:livewire.admin.setting.category.edit');
     }
 }

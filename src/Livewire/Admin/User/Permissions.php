@@ -2,7 +2,7 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\Admin\User;
 
-use App\Models\User;
+use AliQasemzadeh\JetAdmin\Models\User;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Attributes\On;
@@ -95,6 +95,6 @@ class Permissions extends Component
             $permissions = Permission::all();
 
         }
-        return view('livewire.admin.user.permissions', compact('permissions'));
+        return view('jetadmin:livewire.admin.user.permissions', compact('permissions'));
     }
 }

@@ -2,7 +2,7 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\Panel\Support\Ticket;
 
-use App\Models\Ticket;
+use AliQasemzadeh\JetAdmin\Models\Ticket;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Attributes\On;
 use Livewire\Component;
@@ -106,6 +106,6 @@ class Index extends Component
     public function render()
     {
         $tickets = Ticket::with(['category'])->filter(['search' => $this->search])->where('user_id', auth()->user()->id)->orderBy($this->sortColumn, $this->sortDirection)->paginate($this->perPage);
-        return view('livewire.panel.support.ticket.index', compact('tickets'))->layout('layouts.panel');
+        return view('jetadmin:livewire.panel.support.ticket.index', compact('tickets'))->layout('layouts.panel');
     }
 }

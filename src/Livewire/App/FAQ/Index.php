@@ -2,7 +2,7 @@
 
 namespace AliQasemzadeh\JetAdmin\Livewire\App\FAQ;
 
-use App\Models\FrequentlyAskedQuestion;
+use AliQasemzadeh\JetAdmin\Models\FrequentlyAskedQuestion;
 use Livewire\Component;
 
 class Index extends Component
@@ -10,6 +10,6 @@ class Index extends Component
     public function render()
     {
         $faqs = FrequentlyAskedQuestion::all();
-        return view('livewire.app.f-a-q.index', compact('faqs'));
+        return view('jetadmin:livewire.app.f-a-q.index', compact('faqs'));
     }
 }
