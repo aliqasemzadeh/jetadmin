@@ -6,8 +6,7 @@
   "authors": [
     {
       "name": "Ali Qasemzadeh",
-      "email": "AliQasemzadeh7@gmail.com",
-      "role": "Developer"
+      "email": "AliQasemzadeh7@gmail.com"
     }
   ],
   "minimum-stability": "dev",
