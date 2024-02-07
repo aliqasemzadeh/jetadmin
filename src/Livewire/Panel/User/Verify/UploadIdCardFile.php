@@ -29,7 +29,7 @@ class UploadIdCardFile extends Component
         $this->verify->id_card_file = $this->id_card_file->store('id_card_files');
         $this->verify->save();
 
-        $this->alert('success', __('jetadmin.uploaded'));
+        $this->alert('success', __('jetadmin::jetadmin.uploaded'));
     }
 
     public function displayIdCardFile(UserVerify $verify)

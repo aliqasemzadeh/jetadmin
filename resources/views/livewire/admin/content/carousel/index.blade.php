@@ -1,6 +1,6 @@
 <div>
     <x-slot name="title">
-        {{ __('jetadmin.carousels') }}
+        {{ __('jetadmin::jetadmin.carousels') }}
     </x-slot>
     <x-slot name="actions">
         @can('admin_carousel_create')
@@ -8,9 +8,9 @@
                 <div class="btn-list">
                     <button onclick="Livewire.emit('showModal', 'admin.content.carousel.create')" class="btn btn-primary d-none d-sm-inline-block">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                        {{ __('jetadmin.create_carousel') }}
+                        {{ __('jetadmin::jetadmin.create_carousel') }}
                     </button>
-                    <button onclick="Livewire.emit('showModal', 'admin.content.carousel.create')" class="btn btn-primary d-sm-none btn-icon" aria-label="{{ __('jetadmin.create_carousel') }}">
+                    <button onclick="Livewire.emit('showModal', 'admin.content.carousel.create')" class="btn btn-primary d-sm-none btn-icon" aria-label="{{ __('jetadmin::jetadmin.create_carousel') }}">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
                     </button>
                 </div>
@@ -19,19 +19,19 @@
     </x-slot>
     <x-slot name="breadcrumb">
         <ol class="breadcrumb breadcrumb-arrows" aria-label="breadcrumbs">
-            <li class="breadcrumb-item"><a href="{{ route('admin.dashboard.index') }}">{{ __('jetadmin.dashboard') }}</a></li>
-            <li class="breadcrumb-item active" aria-current="page"><a href="{{ route('admin.content.carousel.index') }}">{{ __('jetadmin.carousels') }}</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('admin.dashboard.index') }}">{{ __('jetadmin::jetadmin.dashboard') }}</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="{{ route('admin.content.carousel.index') }}">{{ __('jetadmin::jetadmin.carousels') }}</a></li>
         </ol>
     </x-slot>
 
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">{{ __('jetadmin.carousels') }}</h3>
+            <h3 class="card-title">{{ __('jetadmin::jetadmin.carousels') }}</h3>
         </div>
         <div class="card-body">
             <div class="d-flex">
                 <div class="text-muted">
-                    {{ __('jetadmin.per_page') }}:
+                    {{ __('jetadmin::jetadmin.per_page') }}:
                     <div class="mx-2 d-inline-block">
                         <div class="btn-group btn-group-sm w-100">
                             <button type="button" wire:click="setPerPage(10)" class="btn @if($perPage == 10) btn-primary @endif">10</button>
@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <div class="ms-auto text-muted">
-                    {{ __('jetadmin.search') }}:
+                    {{ __('jetadmin::jetadmin.search') }}:
                     <div class="ms-2 d-inline-block">
 
                         <div class="input-group input-group-sm input-group-flat">
@@ -64,7 +64,7 @@
                 <thead>
                 <tr>
                     <th class="w-1"><input name="selectAll" wire:model="selectAll" class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select all invoices"></th>
-                    <th class="w-1" wire:click="sortByColumn('id')">{{ __('jetadmin.number') }}
+                    <th class="w-1" wire:click="sortByColumn('id')">{{ __('jetadmin::jetadmin.number') }}
 
                     @if ($sortColumn == 'id')
                         @if($sortDirection == 'asc')
@@ -77,7 +77,7 @@
                             @endif
                         @endif
                     </th>
-                    <th wire:click="sortByColumn('title')">{{ __('jetadmin.title') }}
+                    <th wire:click="sortByColumn('title')">{{ __('jetadmin::jetadmin.title') }}
                     @if ($sortColumn == 'title')
                         @if($sortDirection == 'asc')
                             <!-- Download SVG icon from http://tabler-icons.io/i/chevron-up -->
@@ -89,7 +89,7 @@
                             @endif
                         @endif
                     </th>
-                    <th wire:click="sortByColumn('user_id')">{{ __('jetadmin.user') }}
+                    <th wire:click="sortByColumn('user_id')">{{ __('jetadmin::jetadmin.user') }}
 
                     @if ($sortColumn == 'user_id')
                         @if($sortDirection == 'asc')
@@ -140,7 +140,7 @@
         <div class="card-footer d-flex justify-content-between">
             <div>
                 <div class="btn-group btn-group-sm w-100">
-                    <button type="button" wire:click="deleteSelected" class="btn">{{ __('jetadmin.delete') }} ({{ count($selectedItems) }})</button>
+                    <button type="button" wire:click="deleteSelected" class="btn">{{ __('jetadmin::jetadmin.delete') }} ({{ count($selectedItems) }})</button>
                 </div>
 
             </div>

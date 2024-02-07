@@ -14,13 +14,13 @@ class Index extends Component
     public function turn_on()
     {
         Artisan::call("up");
-        $this->alert('success', __('jetadmin.system_turned_on'));
+        $this->alert('success', __('jetadmin::jetadmin.system_turned_on'));
     }
 
     public function turn_off()
     {
         Artisan::call("down");
-        $this->alert('success', __('jetadmin.system_turned_off'));
+        $this->alert('success', __('jetadmin::jetadmin.system_turned_off'));
     }
 
     #[On('admin.setting.manage.index')]

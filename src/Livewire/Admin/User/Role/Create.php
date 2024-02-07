@@ -26,7 +26,7 @@ class Create extends Component
         $this->dispatch('admin.user.role.index');
         $this->dispatch('hideModal');
 
-        $this->alert('success', __('jetadmin.created'));
+        $this->alert('success', __('jetadmin::jetadmin.created'));
     }
 
 

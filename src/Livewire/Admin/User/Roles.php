@@ -36,11 +36,11 @@ class Roles extends Component
         if(!auth()->user()->can('admin_user_roles')) {
             return abort(403);
         }
-        $this->confirm(__('jetadmin.are_you_sure'), [
+        $this->confirm(__('jetadmin::jetadmin.are_you_sure'), [
             'toast' => false,
             'position' => 'center',
             'showConfirmButton' => true,
-            'cancelButtonText' => __('jetadmin.cancel'),
+            'cancelButtonText' => __('jetadmin::jetadmin.cancel'),
             'onConfirmed' => 'confirmedDeleteRole',
             'onCancelled' => 'cancelledDeleteRole'
         ]);
@@ -56,7 +56,7 @@ class Roles extends Component
         $this->dispatch('admin.user.roles');
         $this->alert(
             'success',
-            __('jetadmin.added')
+            __('jetadmin::jetadmin.added')
         );
     }
 
@@ -69,7 +69,7 @@ class Roles extends Component
         $this->dispatch('admin.user.roles');
         $this->alert(
             'success',
-            __('jetadmin.removed')
+            __('jetadmin::jetadmin.removed')
         );
     }
 
@@ -77,7 +77,7 @@ class Roles extends Component
     {
         $this->alert(
             'success',
-            __('jetadmin.cancelled')
+            __('jetadmin::jetadmin.cancelled')
         );
     }
 

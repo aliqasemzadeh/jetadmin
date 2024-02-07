@@ -1,10 +1,10 @@
 <div>
     <x-slot name="title">
-        {{ __('jetadmin.dashboard') }}
+        {{ __('jetadmin::jetadmin.dashboard') }}
     </x-slot>
     <x-slot name="breadcrumb">
         <ol class="breadcrumb breadcrumb-arrows" aria-label="breadcrumbs">
-            <li class="breadcrumb-item active" aria-current="page"><a href="{{ route('admin.dashboard.index') }}">{{ __('jetadmin.dashboard') }}</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="{{ route('admin.dashboard.index') }}">{{ __('jetadmin::jetadmin.dashboard') }}</a></li>
         </ol>
     </x-slot>
     <div class="row row-cards">
@@ -20,10 +20,10 @@
                         </div>
                         <div class="col">
                             <div class="font-weight-medium">
-                                {{ \AliQasemzadeh\JetAdmin\Models\Ticket::count() }} {{ __('jetadmin.tickets') }}
+                                {{ \AliQasemzadeh\JetAdmin\Models\Ticket::count() }} {{ __('jetadmin::jetadmin.tickets') }}
                             </div>
                             <div class="text-muted">
-                                {{ \AliQasemzadeh\JetAdmin\Models\Ticket::whereIn('status', ['new', 'customer'])->count() }} {{ __('jetadmin.unanswered_ticket') }}
+                                {{ \AliQasemzadeh\JetAdmin\Models\Ticket::whereIn('status', ['new', 'customer'])->count() }} {{ __('jetadmin::jetadmin.unanswered_ticket') }}
                             </div>
                         </div>
                     </div>
@@ -62,10 +62,10 @@
                         </div>
                         <div class="col">
                             <div class="font-weight-medium">
-                                {{ \AliQasemzadeh\JetAdmin\Models\User::count() }} {{ __('jetadmin.users') }}
+                                {{ \AliQasemzadeh\JetAdmin\Models\User::count() }} {{ __('jetadmin::jetadmin.users') }}
                             </div>
                             <div class="text-muted">
-                                {{ \AliQasemzadeh\JetAdmin\Models\User::whereDate('created_at', \Carbon\Carbon::today())->count() }} {{ __('jetadmin.today_users') }}
+                                {{ \AliQasemzadeh\JetAdmin\Models\User::whereDate('created_at', \Carbon\Carbon::today())->count() }} {{ __('jetadmin::jetadmin.today_users') }}
                             </div>
                         </div>
                     </div>

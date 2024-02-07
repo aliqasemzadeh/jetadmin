@@ -22,7 +22,7 @@ class Create extends Component
         $this->user_id = $user_id;
         $this->alert(
             'success',
-            __('jetadmin.user_selected')
+            __('jetadmin::jetadmin.user_selected')
         );
     }
 
@@ -41,7 +41,7 @@ class Create extends Component
 
         $this->alert(
             'success',
-            __('jetadmin.created')
+            __('jetadmin::jetadmin.created')
         );
     }
 

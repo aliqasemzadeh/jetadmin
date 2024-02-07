@@ -36,7 +36,7 @@ class Ban extends Component
         $this->dispatchTo(\AliQasemzadeh\JetAdmin\Livewire\Admin\User\Index::getName(), 'updateList');
         $this->dispatch('hideModal');
 
-        $this->alert('success', __('jetadmin.banned'));
+        $this->alert('success', __('jetadmin::jetadmin.banned'));
     }
 
     public function unban()
@@ -46,7 +46,7 @@ class Ban extends Component
         $this->dispatchTo(\AliQasemzadeh\JetAdmin\Livewire\Admin\User\Index::getName(), 'updateList');
         $this->dispatch('hideModal');
 
-        $this->alert('success', __('jetadmin.unbanned'));
+        $this->alert('success', __('jetadmin::jetadmin.unbanned'));
     }
 
     public function render()

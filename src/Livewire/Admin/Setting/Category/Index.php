@@ -58,11 +58,11 @@ class Index extends Component
         if(!auth()->user()->can('admin_user_delete')) {
             return abort(403);
         }
-        $this->confirm(__('jetadmin.are_you_sure'), [
+        $this->confirm(__('jetadmin::jetadmin.are_you_sure'), [
             'toast' => false,
             'position' => 'center',
             'showConfirmButton' => true,
-            'cancelButtonText' => __('jetadmin.cancel'),
+            'cancelButtonText' => __('jetadmin::jetadmin.cancel'),
             'onConfirmed' => 'confirmedDeleteCategory',
             'onCancelled' => 'cancelledDeleteCategory'
         ]);
@@ -79,7 +79,7 @@ class Index extends Component
         $this->dispatch('updateList');
         $this->alert(
             'success',
-            __('jetadmin.removed')
+            __('jetadmin::jetadmin.removed')
         );
     }
 
@@ -87,7 +87,7 @@ class Index extends Component
     {
         $this->alert(
             'success',
-            __('jetadmin.cancelled')
+            __('jetadmin::jetadmin.cancelled')
         );
     }
 
@@ -119,11 +119,11 @@ class Index extends Component
         if(!auth()->user()->can('admin_user_delete')) {
             return abort(403);
         }
-        $this->confirm(__('jetadmin.are_you_sure'), [
+        $this->confirm(__('jetadmin::jetadmin.are_you_sure'), [
             'toast' => false,
             'position' => 'center',
             'showConfirmButton' => true,
-            'cancelButtonText' => __('jetadmin.cancel'),
+            'cancelButtonText' => __('jetadmin::jetadmin.cancel'),
             'onConfirmed' => 'deleteSelectedQuery',
             'onCancelled' => 'cancelledDelete'
         ]);
@@ -142,7 +142,7 @@ class Index extends Component
 
         $this->alert(
             'success',
-            __('jetadmin.removed')
+            __('jetadmin::jetadmin.removed')
         );
     }
 

@@ -53,7 +53,7 @@ class Create extends Component
             $fileRecord->save();
         }
 
-        $this->alert('success', __('jetadmin.created'));
+        $this->alert('success', __('jetadmin::jetadmin.created'));
 
         return redirect()->route('panel.support.ticket.view', compact('ticket'));
     }

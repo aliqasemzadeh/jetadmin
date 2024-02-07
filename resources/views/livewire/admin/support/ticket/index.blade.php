@@ -1,22 +1,22 @@
 <div>
     <x-slot name="title">
-        {{ __('jetadmin.tickets') }}
+        {{ __('jetadmin::jetadmin.tickets') }}
     </x-slot>
     <x-slot name="breadcrumb">
         <ol class="breadcrumb breadcrumb-arrows" aria-label="breadcrumbs">
-            <li class="breadcrumb-item"><a href="{{ route('admin.dashboard.index') }}">{{ __('jetadmin.dashboard') }}</a></li>
-            <li class="breadcrumb-item active" aria-current="page"><a href="{{ route('admin.support.ticket.index') }}">{{ __('jetadmin.tickets') }}</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('admin.dashboard.index') }}">{{ __('jetadmin::jetadmin.dashboard') }}</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="{{ route('admin.support.ticket.index') }}">{{ __('jetadmin::jetadmin.tickets') }}</a></li>
         </ol>
     </x-slot>
 
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">{{ __('jetadmin.tickets') }}</h3>
+            <h3 class="card-title">{{ __('jetadmin::jetadmin.tickets') }}</h3>
         </div>
         <div class="card-body">
             <div class="d-flex">
                 <div class="text-muted">
-                    {{ __('jetadmin.per_page') }}:
+                    {{ __('jetadmin::jetadmin.per_page') }}:
                     <div class="mx-2 d-inline-block">
                         <div class="btn-group btn-group-sm w-100">
                             <button type="button" wire:click="setPerPage(10)" class="btn @if($perPage == 10) btn-primary @endif">10</button>
@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div class="ms-auto text-muted">
-                    {{ __('jetadmin.search') }}:
+                    {{ __('jetadmin::jetadmin.search') }}:
                     <div class="ms-2 d-inline-block">
 
                         <div class="input-group input-group-sm input-group-flat">
@@ -49,7 +49,7 @@
                 <thead>
                 <tr>
                     <th class="w-1"><input name="selectAll" wire:model="selectAll" class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select all invoices"></th>
-                    <th class="w-1" wire:click="sortByColumn('id')">{{ __('jetadmin.number') }}
+                    <th class="w-1" wire:click="sortByColumn('id')">{{ __('jetadmin::jetadmin.number') }}
 
                     @if ($sortColumn == 'id')
                         @if($sortDirection == 'asc')
@@ -62,7 +62,7 @@
                             @endif
                         @endif
                     </th>
-                    <th wire:click="sortByColumn('title')">{{ __('jetadmin.title') }}
+                    <th wire:click="sortByColumn('title')">{{ __('jetadmin::jetadmin.title') }}
                     @if ($sortColumn == 'title')
                         @if($sortDirection == 'asc')
                             <!-- Download SVG icon from http://tabler-icons.io/i/chevron-up -->
@@ -74,7 +74,7 @@
                             @endif
                         @endif
                     </th>
-                    <th wire:click="sortByColumn('category_id')">{{ __('jetadmin.category') }}
+                    <th wire:click="sortByColumn('category_id')">{{ __('jetadmin::jetadmin.category') }}
 
                     @if ($sortColumn == 'category_id')
                         @if($sortDirection == 'asc')
@@ -87,7 +87,7 @@
                             @endif
                         @endif
                     </th>
-                    <th wire:click="sortByColumn('user_id')">{{ __('jetadmin.user') }}
+                    <th wire:click="sortByColumn('user_id')">{{ __('jetadmin::jetadmin.user') }}
 
                     @if ($sortColumn == 'user_id')
                         @if($sortDirection == 'asc')
@@ -100,7 +100,7 @@
                             @endif
                         @endif
                     </th>
-                    <th wire:click="sortByColumn('updated_at')">{{ __('jetadmin.updated_at') }}
+                    <th wire:click="sortByColumn('updated_at')">{{ __('jetadmin::jetadmin.updated_at') }}
 
                     @if ($sortColumn == 'updated_at')
                         @if($sortDirection == 'asc')
@@ -144,7 +144,7 @@
         <div class="card-footer d-flex justify-content-between">
             <div>
                 <div class="btn-group btn-group-sm w-100">
-                    <button type="button" wire:click="archiveSelected" class="btn">{{ __('jetadmin.archive') }} ({{ count($selectedItems) }})</button>
+                    <button type="button" wire:click="archiveSelected" class="btn">{{ __('jetadmin::jetadmin.archive') }} ({{ count($selectedItems) }})</button>
                 </div>
 
             </div>

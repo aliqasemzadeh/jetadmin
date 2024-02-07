@@ -75,7 +75,7 @@ class View extends Component
 
         $this->dispatchTo(\AliQasemzadeh\JetAdmin\Livewire\Admin\Support\Ticket\Index::getName(), 'updateList');
 
-        $this->alert('success', __('jetadmin.replied'));
+        $this->alert('success', __('jetadmin::jetadmin.replied'));
     }
 
     public function mount(Ticket $ticket)

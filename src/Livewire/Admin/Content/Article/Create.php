@@ -54,7 +54,7 @@ class Create extends Component
         $this->dispatch( 'admin.content.article.index');
         $this->dispatch('hideModal');
 
-        $this->alert('success', __('jetadmin.created'));
+        $this->alert('success', __('jetadmin::jetadmin.created'));
     }
 
     public function render()

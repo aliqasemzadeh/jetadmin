@@ -29,7 +29,7 @@ class UploadVerifyFile extends Component
         $this->verify->verify_file = $this->verify_file->store('verify_files');
         $this->verify->save();
 
-        $this->alert('success', __('jetadmin.uploaded'));
+        $this->alert('success', __('jetadmin::jetadmin.uploaded'));
     }
 
     public function displayVerifyFile(UserVerify $verify)
