@@ -30,7 +30,7 @@ class  UpdatePermissionsCommand extends Command
     public function handle()
     {
         $admin = Role::firstOrCreate(['name' => 'admin']);
-        foreach (__('permissions') as $permission => $translate) {
+        foreach (__('jetadmin::permissions') as $permission => $translate) {
             Permission::firstOrCreate(
                 ['guard_name' => 'web', 'name' => $permission]
             );
