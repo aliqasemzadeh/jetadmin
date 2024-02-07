@@ -9,7 +9,7 @@
                 <div class="mb-3">
                     <label class="form-label" for="name">{{ __('jetadmin::jetadmin.name') }}</label>
                     <input type="text" wire:model="name" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="{{ __('jetadmin::jetadmin.name') }}">
-                    <small class="form-hint">{{ __('permissions.'.$name) }}</small>
+                    <small class="form-hint">{{ __('jetadmin::permissions.'.$name) }}</small>
                     @error('name')
                     <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
