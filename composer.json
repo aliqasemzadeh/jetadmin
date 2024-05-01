@@ -33,7 +33,8 @@
     "spatie/laravel-permission": "^5.5",
     "spatie/laravel-tags": "^4.3",
     "tucker-eric/eloquentfilter": "^3.0.0",
-    "yadahan/laravel-authentication-log": "^1.6.0"
+    "yadahan/laravel-authentication-log": "^1.6.0",
+    "wire-elements/modal": "dev-main"
   },
   "autoload": {
     "psr-4": {
