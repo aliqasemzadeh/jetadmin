@@ -8,7 +8,7 @@
 >
 ## 🔌 Requirements
 
-- PHP version: >= 8.0
+- PHP version: >= 8.1
 - Composer
 - Node.js
 
@@ -17,9 +17,8 @@
 
 - Laravel
 - Livewire
-- Bootsrap
-- Tabler
-- SweetAlert2
+- TailwindCSS
+- daisyUI
 - spatie/laravel-permission
 
 
