@@ -21,7 +21,9 @@
         <!-- navbar component -->
         <nav class="border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
             <div class="flex flex-wrap items-center justify-between p-4">
-                <button data-drawer-target="drawer-example" data-drawer-show="drawer-example" aria-controls="drawer-example"
+                <button data-drawer-target="drawer-right-example" data-drawer-show="drawer-right-example"
+                        data-drawer-placement="right" aria-controls="drawer-right-example"
+
                         type="button"
                         class="inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
                     <span class="sr-only">Open main menu</span>
@@ -34,8 +36,7 @@
                     <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo"/>
                     <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
                 </a>
-                <button data-drawer-target="drawer-right-example" data-drawer-show="drawer-right-example"
-                        data-drawer-placement="right" aria-controls="drawer-right-example" type="button"
+                <button data-drawer-target="drawer-example" data-drawer-show="drawer-example" aria-controls="drawer-example" aria-controls="drawer-right-example" type="button"
                         class="inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
                     <span class="sr-only">Open main menu</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16">
