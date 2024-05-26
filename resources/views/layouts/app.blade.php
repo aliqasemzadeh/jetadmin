@@ -86,7 +86,7 @@
                 </svg>
                 <span class="sr-only">Close menu</span>
             </button>
-            <div class="h-full overflow-y-auto bg-gray-50 dark:bg-gray-800">
+            <div class="bg-gray-50 dark:bg-gray-800">
                 <ul class="space-y-2 font-medium">
                     @auth
                     <li>
