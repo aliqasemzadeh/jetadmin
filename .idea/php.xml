@@ -170,6 +170,18 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/version" />
       <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
       <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/archtechx/enums" />
+      <path value="$PROJECT_DIR$/vendor/laravel-lang/locales" />
+      <path value="$PROJECT_DIR$/vendor/laravel-lang/native-country-names" />
+      <path value="$PROJECT_DIR$/vendor/laravel-lang/lang" />
+      <path value="$PROJECT_DIR$/vendor/laravel-lang/locale-list" />
+      <path value="$PROJECT_DIR$/vendor/laravel-lang/publisher" />
+      <path value="$PROJECT_DIR$/vendor/laravel-lang/native-currency-names" />
+      <path value="$PROJECT_DIR$/vendor/laravel-lang/native-locale-names" />
+      <path value="$PROJECT_DIR$/vendor/dragon-code/support" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/vendor/dragon-code/contracts" />
+      <path value="$PROJECT_DIR$/vendor/dragon-code/pretty-array" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
