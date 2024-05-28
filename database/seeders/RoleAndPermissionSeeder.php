@@ -12,6 +12,18 @@ class RoleAndPermissionSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $admin = Role::create(['name' => 'admin']);
+        $support = Role::create(['name' => 'support']);
+
+        foreach (__('permissions') as $permission => $translate) {
+            Permission::create(
+                ['guard_name' => 'web', 'name' => $permission]
+            );
+            $admin->givePermissionTo($permission);
+        }
+
+
+        $user = User::findOrFail(1);
+        $user->assignRole($admin);
     }
 }
