@@ -173,6 +173,8 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel-lang/native-locale-names" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel-lang/publisher" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-php81" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/opcodesio/log-viewer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/opcodesio/mail-parser" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

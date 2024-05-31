@@ -11,6 +11,8 @@
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9",
         "livewire/livewire": "^3.0",
+        "mcamara/laravel-localization": "^2.0",
+        "opcodesio/log-viewer": "^3.10",
         "spatie/laravel-permission": "^6.7"
     },
     "require-dev": {
