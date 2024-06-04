@@ -225,7 +225,7 @@
 
 <!-- Page Content -->
 <main class="bg-white dark:bg-gray-900">
-    <div class=" mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div class="container mx-auto sm:px-6 lg:px-8">
         {{ $slot }}
     </div>
 </main>
