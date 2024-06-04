@@ -163,7 +163,7 @@
     </button>
     @guest
         <p class="mb-6 text-sm text-gray-500 dark:text-gray-400">
-            {{ __('To unlock all options please register.') }}
+            {{ __('To unlock all options please login or register.') }}
         </p>
 
         <div class="grid grid-cols-1 gap-2">
@@ -203,13 +203,31 @@
                 </a>
             </li>
             <li>
-                <a href="{{ route('logout') }}" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                    <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H8m12 0-4 4m4-4-4-4M9 4H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h2"/>
-                    </svg>
-                    <span class="ms-3">{{ __(('Logout')) }}</span>
-                </a>
+                <form method="POST" action="{{ route('logout') }}" x-data>
+                    @csrf
+                    <a  @click.prevent="$root.submit();" href="{{ route('logout') }}" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H8m12 0-4 4m4-4-4-4M9 4H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h2"/>
+                        </svg>
+                        <span class="ms-3">{{ __(('Logout')) }}</span>
+                    </a>
+                </form>
             </li>
+            @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
+                <div class="ms-3 relative">
+                    @if (Auth::user()->allTeams()->count() > 1)
+                        <div class="border-t border-gray-200 dark:border-gray-600"></div>
+
+                        <div class="block px-4 py-2 text-xs text-gray-400">
+                            {{ __('Switch Teams') }}
+                        </div>
+
+                        @foreach (Auth::user()->allTeams() as $team)
+                            <x-switchable-team :team="$team" />
+                        @endforeach
+                    @endif
+                </div>
+            @endif
         </ul>
     </div>
     @endauth
