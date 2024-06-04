@@ -1,5 +1,5 @@
 <?php
 return [
-    'global' => 'Global Team',
-    'private' => 'Private Team',
+    'public' => 'Public Team',
+    'personal' => 'Personal Team',
 ];

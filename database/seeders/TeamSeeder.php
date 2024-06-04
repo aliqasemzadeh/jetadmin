@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Actions\Jetstream\CreateTeam;
+use App\Models\Team;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -16,9 +17,15 @@ class TeamSeeder extends Seeder
     {
         $user = User::findOrFail(1);
         foreach (__('teams') as $key => $teamName) {
-            new CreateTeam($user, [
-                'name' => $teamName
-            ]);
+            $team = new Team();
+            $team->name = $teamName;
+            $team->user_id = $user->id;
+            if($key == 'personal') {
+                $team->personal_team = true;
+            } else {
+                $team->personal_team = false;
+            }
+            $team->save();
         }
     }
 }
