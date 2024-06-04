@@ -16,8 +16,8 @@ class RoleAndPermissionSeeder extends Seeder
     public function run(): void
     {
         setPermissionsTeamId(1);
-        $admin = Role::create(['name' => 'admin']);
-        $support = Role::create(['name' => 'support']);
+        $admin = Role::create(['name' => 'admin', 'team_id' => 1]);
+        $support = Role::create(['name' => 'support', 'team_id' => 1]);
 
         foreach (__('permissions') as $permission => $translate) {
             Permission::create(
