@@ -224,7 +224,7 @@
 </div>
 
 <!-- Page Content -->
-<main class="bg-white dark:bg-gray-900 pt-20">
+<main class="bg-white dark:bg-gray-900">
     {{ $slot }}
 </main>
 
