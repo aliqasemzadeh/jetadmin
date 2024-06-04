@@ -15,6 +15,7 @@ class RoleAndPermissionSeeder extends Seeder
      */
     public function run(): void
     {
+        setPermissionsTeamId(1);
         $admin = Role::create(['name' => 'admin']);
         $support = Role::create(['name' => 'support']);
 
@@ -28,5 +29,6 @@ class RoleAndPermissionSeeder extends Seeder
 
         $user = User::findOrFail(1);
         $user->assignRole($admin);
+        $user->assignRole($support);
     }
 }
