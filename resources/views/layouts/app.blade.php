@@ -13,7 +13,7 @@
     <!-- Styles -->
     @livewireStyles
 </head>
-<body class="font-sans antialiased">
+<body class="bg-white dark:bg-gray-900">
 <!-- navbar component -->
 <nav class="bg-gray-50 dark:bg-gray-800 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
     <div class="flex flex-wrap items-center justify-between p-4">
@@ -58,7 +58,7 @@
 
 <!-- menu drawer component -->
 <div id="drawer-right-example"
-     class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-gray-50 w-80 dark:bg-gray-900"
+     class="fixed top-0 start-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-gray-50 w-80 dark:bg-gray-900"
      tabindex="-1" aria-labelledby="drawer-right-label">
     <h5 id="drawer-right-label"
         class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 dark:text-gray-400">
@@ -139,7 +139,7 @@
 
 <!-- user drawer component -->
 <div id="drawer-example"
-     class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-gray-50 w-80 dark:bg-gray-900"
+     class="fixed top-0 end-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-gray-50 w-80 dark:bg-gray-900"
      tabindex="-1" aria-labelledby="drawer-label">
     <h5 id="drawer-label"
         class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 dark:text-gray-400">
@@ -224,7 +224,7 @@
 </div>
 
 <!-- Page Content -->
-<main class="bg-white dark:bg-gray-900">
+<main>
     <div class="container mx-auto sm:px-6 lg:px-8">
         {{ $slot }}
     </div>
