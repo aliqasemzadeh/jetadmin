@@ -15,8 +15,10 @@ class TeamSeeder extends Seeder
     public function run(): void
     {
         $user = User::findOrFail(1);
-        $team = new CreateTeam($user, [
-           'name' => __('Global Team')
-        ]);
+        foreach (__('teams') as $key => $teamName) {
+            new CreateTeam($user, [
+                'name' => $teamName
+            ]);
+        }
     }
 }
