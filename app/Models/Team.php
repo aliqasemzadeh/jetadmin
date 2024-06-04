@@ -7,10 +7,14 @@ use Laravel\Jetstream\Events\TeamCreated;
 use Laravel\Jetstream\Events\TeamDeleted;
 use Laravel\Jetstream\Events\TeamUpdated;
 use Laravel\Jetstream\Team as JetstreamTeam;
+use Spatie\Permission\Traits\HasPermissions;
+use Spatie\Permission\Traits\HasRoles;
 
 class Team extends JetstreamTeam
 {
     use HasFactory;
+    use HasPermissions;
+    use HasRoles;
 
     /**
      * The attributes that are mass assignable.
