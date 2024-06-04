@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Actions\Jetstream\CreateTeam;
+use App\Models\Membership;
 use App\Models\Team;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -26,6 +27,12 @@ class TeamSeeder extends Seeder
                 $team->personal_team = false;
             }
             $team->save();
+
+            $memberShip = new Membership();
+            $memberShip->team_id = $team->id;
+            $memberShip->user_id = $user->id;
+            $memberShip->role = __('Owner');
+            $memberShip->save();
         }
     }
 }
