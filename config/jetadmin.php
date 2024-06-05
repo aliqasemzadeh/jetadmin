@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'admin_prefix' => 'admin'
+    'admin_route_prefix' => 'admin'
 ];

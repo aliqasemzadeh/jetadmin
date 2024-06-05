@@ -11,5 +11,9 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
         return view('dashboard');
     })->name('dashboard');
 
-    Route::get('/admin/user/index', \App\Livewire\Admin\User\Index::class)->name('admin.user.index');
+    Route::group(['prefix' => config('jetadmin.admin_route_prefix')], function () {
+        Route::get('/user/index', \App\Livewire\Admin\User\Index::class)->name('admin.user.index');
+    });
+
+
 });
