@@ -11,7 +11,7 @@ class Index extends Component
     use WithPagination;
     public function render()
     {
-        $users = User::paginate(config('jetadmin.per_page'))->get();
+        $users = User::paginate(config('jetadmin.per_page'));
         return view('livewire.admin.user.index', compact('users'));
     }
 }
