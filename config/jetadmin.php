@@ -1,5 +1,6 @@
 <?php
 
 return [
-    'admin_route_prefix' => 'admin'
+    'admin_route_prefix' => 'admin',
+    'per_page' => 10,
 ];
