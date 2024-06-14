@@ -216,9 +216,6 @@
 <!-- Page Content -->
 <main>
     <div class="container mx-auto sm:px-6 lg:px-8">
-        <!-- Page Banner -->
-        <x-banner/>
-
         <!-- Page Heading -->
         @if (isset($header))
             <header class="bg-white shadow">
@@ -227,6 +224,10 @@
                 </div>
             </header>
         @endif
+
+        <!-- Page Banner -->
+        <x-banner/>
+
         {{ $slot }}
     </div>
 </main>
