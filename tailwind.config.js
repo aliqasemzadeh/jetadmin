@@ -16,7 +16,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Tahoma', ...defaultTheme.fontFamily.sans],
+                sans: ['Vazirmatn', ...defaultTheme.fontFamily.sans],
             },
         },
     },
