@@ -186,6 +186,8 @@
       <path value="$PROJECT_DIR$/vendor/opcodesio/mail-parser" />
       <path value="$PROJECT_DIR$/vendor/laravel-lang/config" />
       <path value="$PROJECT_DIR$/vendor/spatie/error-solutions" />
+      <path value="$PROJECT_DIR$/vendor/wireui/heroicons" />
+      <path value="$PROJECT_DIR$/vendor/wireui/wireui" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />

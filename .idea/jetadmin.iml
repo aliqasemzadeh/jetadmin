@@ -177,6 +177,8 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/opcodesio/mail-parser" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel-lang/config" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/error-solutions" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/wireui/heroicons" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/wireui/wireui" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
