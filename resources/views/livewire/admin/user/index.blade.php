@@ -119,7 +119,7 @@
                     <th scope="col" class="px-4 py-3">{{ __('ID') }}</th>
                     <th scope="col" class="px-4 py-3">{{ __('Name') }}</th>
                     <th scope="col" class="px-4 py-3">
-                        <span class="sr-only">Actions</span>
+                        <span class="sr-only">{{ __('Actions') }}</span>
                     </th>
                 </tr>
                 </thead>
