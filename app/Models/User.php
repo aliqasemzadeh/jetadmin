@@ -73,6 +73,6 @@ class User extends Authenticatable
         if($this->first_name) {
             return "{$this->first_name} {$this->last_name}";
         }
-        return __('jetadmin.user') . ":" . $this->id;
+        return __('jetadmin::messages.name') . ":" . $this->id;
     }
 }
