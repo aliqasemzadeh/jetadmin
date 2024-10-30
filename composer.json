@@ -1,0 +1,15 @@
+{
+  "name": "aliqasemzadeh/jetadmin",
+  "description": "This package is admin panel with Laravel, Livewire, TailWindCSS, FlowBite and AlpineJS.\n",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "aliqasemzadeh",
+      "email": "aliqasemzadeh7@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.1"
+  }
+}
