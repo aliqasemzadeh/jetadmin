@@ -9,7 +9,12 @@
       "email": "aliqasemzadeh7@gmail.com"
     }
   ],
+  "autoload": {
+    "psr-4": {
+      "AliQasemzadeh\\JetAdmin\\": "src/"
+    }
+  },
   "require": {
-    "php": "^8.1"
+    "php": "*"
   }
 }
