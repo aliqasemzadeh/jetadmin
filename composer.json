@@ -1,6 +1,6 @@
 {
   "name": "aliqasemzadeh/jetadmin",
-  "description": "This package is admin panel with Laravel, Livewire, TailWindCSS, FlowBite and AlpineJS.\n",
+  "description": "This package is admin panel with Laravel, Livewire, WireUI, TailWindCSS, FlowBite and AlpineJS.\n",
   "minimum-stability": "stable",
   "license": "MIT",
   "authors": [
