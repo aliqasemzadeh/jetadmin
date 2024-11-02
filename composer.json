@@ -19,5 +19,12 @@
     "livewire/livewire": "^3.5",
     "wireui/wireui": "^2.2",
     "power-components/livewire-powergrid": "^6.0"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "AliQasemzadeh\\JetAdmin\\JetAdminServiceProvider"
+      ]
+    }
   }
 }
