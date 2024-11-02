@@ -17,6 +17,7 @@
   "require": {
     "php": "*",
     "livewire/livewire": "^3.5",
-    "wireui/wireui": "^2.2"
+    "wireui/wireui": "^2.2",
+    "power-components/livewire-powergrid": "^6.0"
   }
 }
