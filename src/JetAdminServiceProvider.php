@@ -7,6 +7,8 @@ class JetAdminServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
+        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'jetadmin');
         $this->publishes([
             __DIR__.'/../config/jetadmin.php' => config_path('jetadmin.php'),
         ], 'jetadmin-config');
