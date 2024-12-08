@@ -19,7 +19,9 @@
     "livewire/livewire": "^3.5",
     "wireui/wireui": "^2.2",
     "power-components/livewire-powergrid": "^6.0",
-    "wire-elements/modal": "^2.0"
+    "wire-elements/modal": "^2.0",
+    "wireui/heroicons": "^2.7",
+    "wireui/phosphoricons": "^2.3"
   },
   "extra": {
     "laravel": {
