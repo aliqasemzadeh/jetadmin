@@ -8,7 +8,7 @@ class InstallCommand extends Command
 {
     protected $signature = 'jetadmin:install';
 
-    protected $description = 'Command description';
+    protected $description = 'This command install JetAdmin requirement.';
 
     public function handle(): void
     {
