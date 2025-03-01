@@ -7,8 +7,13 @@
         <flux:sidebar sticky stashable class="border-r border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900">
             <flux:sidebar.toggle class="lg:hidden" icon="x-mark" />
 
-            @include('components.layouts.menus.user.sidebar')
-            @include('components.layouts.menus.administrator.sidebar')
+            @if(\Illuminate\Support\Facades\Route::is('administrator.*'))
+                @include('components.layouts.menus.administrator.sidebar')
+            @endif
+
+            @if(\Illuminate\Support\Facades\Route::is('user.*'))
+                @include('components.layouts.menus.user.sidebar')
+            @endif
 
             <flux:spacer />
 
@@ -51,7 +56,7 @@
                     <flux:menu.separator />
 
                     <flux:menu.radio.group>
-                        <flux:menu.item href="/settings/profile" icon="cog" wire:navigate>{{ __('Settings') }}</flux:menu.item>
+                        <flux:menu.item :href="route('user.settings.profile')" icon="cog" wire:navigate>{{ __('Settings') }}</flux:menu.item>
                     </flux:menu.radio.group>
 
                     <flux:menu.separator />
@@ -101,7 +106,7 @@
                     <flux:menu.separator />
 
                     <flux:menu.radio.group>
-                        <flux:menu.item href="/settings/profile" icon="cog" wire:navigate>Settings</flux:menu.item>
+                        <flux:menu.item :href="route('user.settings.profile')" icon="cog" wire:navigate>{{ __('Settings') }}</flux:menu.item>
                     </flux:menu.radio.group>
 
                     <flux:menu.separator />

@@ -15,6 +15,8 @@
         "laravel/tinker": "^2.10.1",
         "livewire/flux": "^2.0",
         "livewire/volt": "^1.6.7",
+        "mcamara/laravel-localization": "^2.3",
+        "opcodesio/log-viewer": "^3.15",
         "power-components/livewire-powergrid": "^6.1",
         "spatie/laravel-permission": "^6.16"
     },
