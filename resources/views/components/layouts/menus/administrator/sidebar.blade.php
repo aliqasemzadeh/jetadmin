@@ -7,9 +7,9 @@
         <flux:navlist.item icon="home" :href="route('administrator.dashboard.index')" :current="request()->routeIs('administrator.dashboard.index')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
     </flux:navlist.group>
 
-    <flux:navlist.group expandable heading="Favorites" class="hidden lg:grid">
-        <flux:navlist.item href="#">Users</flux:navlist.item>
-        <flux:navlist.item href="#">Roles</flux:navlist.item>
-        <flux:navlist.item href="#">Permissions</flux:navlist.item>
+    <flux:navlist.group heading="{{ __('jetadmin.user_managements') }}" class="grid">
+        <flux:navlist.item icon="user-group" href="{{ route('administrator.user-management.user.index') }}" :current="request()->routeIs('administrator.user-management.user.index')" wire:navigate>{{ __('jetadmin.users') }}</flux:navlist.item>
+        <flux:navlist.item icon="user-circle" href="{{ route('administrator.user-management.role.index') }}" :current="request()->routeIs('administrator.user-management.role.index')" wire:navigate>{{ __('jetadmin.roles') }}</flux:navlist.item>
+        <flux:navlist.item icon="adjustments-vertical" href="{{ route('administrator.user-management.permission.index') }}" :current="request()->routeIs('administrator.user-management.permission.index')" wire:navigate>{{ __('jetadmin.permissions') }}</flux:navlist.item>
     </flux:navlist.group>
 </flux:navlist>

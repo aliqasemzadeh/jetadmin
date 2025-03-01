@@ -5,5 +5,6 @@
 <flux:navlist variant="outline">
     <flux:navlist.group heading="{{ __('jetadmin.panels.user') }}" class="grid">
         <flux:navlist.item icon="home" :href="route('user.dashboard.index')" :current="request()->routeIs('user.dashboard.index')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
+        <flux:navlist.item icon="cog" :href="route('user.settings.profile')" :current="request()->routeIs('user.settings.*')" wire:navigate>{{ __('Settings') }}</flux:navlist.item>
     </flux:navlist.group>
 </flux:navlist>
