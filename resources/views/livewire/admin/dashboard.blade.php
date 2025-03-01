@@ -1,3 +1,0 @@
-<div>
-  Hi Mans
-</div>
