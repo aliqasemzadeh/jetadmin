@@ -39,6 +39,7 @@ final class Table extends PowerGridComponent
     {
         return [
             Button::add('create-user')
+                ->can('administrator_user_permission_create')
                 ->slot(__('jetadmin.create_permission'))
                 ->class('btn-indigo btn-default')
                 ->dispatch('openModal', ['component' => 'administrator.user-management.permission.create']),
@@ -96,11 +97,13 @@ final class Table extends PowerGridComponent
             Button::add('edit')
                 ->slot(__('jetadmin.edit'))
                 ->id()
+                ->can('administrator_user_permission_edit')
                 ->class('btn-blue btn-xs')
                 ->dispatch('openModal', ['component' => 'administrator.user-management.permission.edit', 'arguments' => ['id' => $row->id]]),
             Button::add('delete')
                 ->slot(__('jetadmin.delete'))
                 ->id()
+                ->can('administrator_user_permission_delete')
                 ->class('btn-red btn-xs')
                 ->confirm(__('jetadmin.are_you_sure'))
                 ->dispatch('delete', ['id' => $row->id])

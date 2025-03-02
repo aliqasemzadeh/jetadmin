@@ -39,6 +39,7 @@ final class Table extends PowerGridComponent
     {
         return [
             Button::add('create-user')
+                ->can('administrator_user_role_create')
                 ->slot(__('jetadmin.create_role'))
                 ->class('btn-indigo btn-default')
                 ->dispatch('openModal', ['component' => 'administrator.user-management.role.create']),
@@ -98,21 +99,25 @@ final class Table extends PowerGridComponent
             Button::add('edit')
                 ->slot(__('jetadmin.edit'))
                 ->id()
+                ->can('administrator_user_role_edit')
                 ->class('btn-blue btn-xs')
                 ->dispatch('openModal', ['component' => 'administrator.user-management.role.edit', 'arguments' => ['id' => $row->id]]),
             Button::add('roles')
                 ->slot(__('jetadmin.roles'))
                 ->id()
+                ->can('administrator_user_role_users')
                 ->class('btn-slate btn-xs')
                 ->dispatch('openModal', ['component' => 'administrator.user-management.role.users', 'arguments' => ['id' => $row->id]]),
             Button::add('roles')
                 ->slot(__('jetadmin.permissions'))
                 ->id()
+                ->can('administrator_user_role_permissions')
                 ->class('btn-pink btn-xs')
                 ->dispatch('openModal', ['component' => 'administrator.user-management.role.permissions', 'arguments' => ['id' => $row->id]]),
             Button::add('delete')
                 ->slot(__('jetadmin.delete'))
                 ->id()
+                ->can('administrator_user_role_delete')
                 ->class('btn-red btn-xs')
                 ->confirm(__('jetadmin.are_you_sure'))
                 ->dispatch('delete', ['id' => $row->id])
