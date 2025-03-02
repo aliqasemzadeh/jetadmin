@@ -37,4 +37,5 @@ return [
     'are_you_sure' => 'Are you sure?',
     'edit_role' => 'Edit Role',
     'edit_permission' => 'Edit Permission',
+    'search' => 'Search',
 ];

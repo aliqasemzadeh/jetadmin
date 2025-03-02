@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Livewire\Administrator\UserManagement\User;
+namespace App\Livewire\Administrator\UserManagement\Permission;
 
-use App\Models\User;
+use Spatie\Permission\Models\Permission;
 use Illuminate\Support\Carbon;
 use PowerComponents\LivewirePowerGrid\Button;
 use PowerComponents\LivewirePowerGrid\Column;
@@ -17,7 +17,7 @@ final class Table extends PowerGridComponent
 {
     use WithExport;
 
-    public string $tableName = 'administrator.user-management.user.index';
+    public string $tableName = 'administrator.user-management.permission.index';
 
     public function setUp(): array
     {
@@ -39,15 +39,15 @@ final class Table extends PowerGridComponent
     {
         return [
             Button::add('create-user')
-                ->slot(__('jetadmin.create_user'))
+                ->slot(__('jetadmin.create_permission'))
                 ->class('btn-indigo btn-default')
-                ->dispatch('openModal', ['component' => 'administrator.user-management.user.create']),
+                ->dispatch('openModal', ['component' => 'administrator.user-management.permission.create']),
         ];
     }
 
     public function datasource(): \Illuminate\Database\Eloquent\Builder
     {
-        return User::query();
+        return Permission::query();
     }
 
     public function fields(): PowerGridFields
@@ -55,10 +55,8 @@ final class Table extends PowerGridComponent
         return PowerGrid::fields()
             ->add('id')
             ->add('name')
-            ->add('email')
-            ->add('created_at_formatted', fn ($model) => Carbon::parse($model->created_at)->format('d/m/Y H:i:s'))
-            ->add('updated_at_formatted', fn ($model) => Carbon::parse($model->updated_at)->format('d/m/Y H:i:s'))
-            ->add('deleted_at_formatted', fn ($model) => Carbon::parse($model->deleted_at)->format('d/m/Y H:i:s'));
+            ->add('guard_name')
+            ->add('created_at_formatted', fn ($model) => Carbon::parse($model->created_at)->format('d/m/Y H:i:s'));
     }
 
     public function columns(): array
@@ -68,17 +66,11 @@ final class Table extends PowerGridComponent
             Column::make(__('jetadmin.name'), 'name')
                 ->sortable()
                 ->searchable(),
-
-            Column::make(__('jetadmin.email'), 'email')
+            Column::make(__('jetadmin.guard_name'), 'guard_name')
                 ->sortable()
                 ->searchable(),
-
             Column::make(__('jetadmin.created_at'), 'created_at_formatted', 'created_at')
                 ->sortable(),
-
-            Column::make(__('jetadmin.updated_at'), 'updated_at_formatted', 'updated_at')
-                ->sortable(),
-
             Column::action(__('jetadmin.action'))
 
         ];
@@ -88,15 +80,14 @@ final class Table extends PowerGridComponent
     {
         return [
             Filter::datetimepicker('created_at'),
-            Filter::datetimepicker('updated_at'),
         ];
     }
 
     #[\Livewire\Attributes\On('delete')]
     public function delete($id): void
     {
-        User::findOrFail($id)->delete();
-        $this->dispatch('pg:eventRefresh-administrator.user-management.user.index');
+        Permission::findById($id)->delete();
+        $this->dispatch('pg:eventRefresh-administrator.user-management.permission.index');
     }
 
     public function actions($row): array
@@ -106,17 +97,7 @@ final class Table extends PowerGridComponent
                 ->slot(__('jetadmin.edit'))
                 ->id()
                 ->class('btn-blue btn-xs')
-                ->dispatch('openModal', ['component' => 'administrator.user-management.user.edit', 'arguments' => ['id' => $row->id]]),
-            Button::add('roles')
-                ->slot(__('jetadmin.roles'))
-                ->id()
-                ->class('btn-slate btn-xs')
-                ->dispatch('openModal', ['component' => 'administrator.user-management.user.roles', 'arguments' => ['id' => $row->id]]),
-            Button::add('roles')
-                ->slot(__('jetadmin.permissions'))
-                ->id()
-                ->class('btn-pink btn-xs')
-                ->dispatch('openModal', ['component' => 'administrator.user-management.user.permissions', 'arguments' => ['id' => $row->id]]),
+                ->dispatch('openModal', ['component' => 'administrator.user-management.permission.edit', 'arguments' => ['id' => $row->id]]),
             Button::add('delete')
                 ->slot(__('jetadmin.delete'))
                 ->id()

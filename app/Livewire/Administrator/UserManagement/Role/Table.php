@@ -55,7 +55,7 @@ final class Table extends PowerGridComponent
         return PowerGrid::fields()
             ->add('id')
             ->add('name')
-            ->add('email')
+            ->add('guard_name')
             ->add('created_at_formatted', fn ($model) => Carbon::parse($model->created_at)->format('d/m/Y H:i:s'));
     }
 
@@ -73,7 +73,7 @@ final class Table extends PowerGridComponent
 
             Column::make(__('jetadmin.created_at'), 'created_at_formatted', 'created_at')
                 ->sortable(),
-            Column::action(__('jetadmin.id'))
+            Column::action(__('jetadmin.action'))
 
         ];
     }
@@ -81,7 +81,7 @@ final class Table extends PowerGridComponent
     public function filters(): array
     {
         return [
-            Filter::datetimepicker('deleted_at'),
+            Filter::datetimepicker('created_at'),
         ];
     }
 
@@ -89,7 +89,7 @@ final class Table extends PowerGridComponent
     public function delete($id): void
     {
         Role::findById($id)->delete();
-        $this->dispatch('pg:eventRefresh-administrator.user-management.user.index');
+        $this->dispatch('pg:eventRefresh-administrator.user-management.role.index');
     }
 
     public function actions($row): array
