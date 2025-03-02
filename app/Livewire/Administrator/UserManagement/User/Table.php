@@ -35,6 +35,16 @@ final class Table extends PowerGridComponent
         ];
     }
 
+    public function header(): array
+    {
+        return [
+            Button::add('create-user')
+                ->slot(__('jetadmin.create_user'))
+                ->class('btn-indigo btn-default')
+                ->dispatch('openModal', ['component' => 'administrator.user-management.user.create']),
+        ];
+    }
+
     public function datasource(): \Illuminate\Database\Eloquent\Builder
     {
         return User::query();
@@ -85,10 +95,11 @@ final class Table extends PowerGridComponent
         ];
     }
 
-    #[\Livewire\Attributes\On('edit')]
-    public function edit($rowId): void
+    #[\Livewire\Attributes\On('delete')]
+    public function delete($id): void
     {
-        $this->js('alert('.$rowId.')');
+        User::findOrFail($id)->delete();
+        $this->dispatch('pg:eventRefresh-administrator.user-management.user.index');
     }
 
     public function actions($row): array
@@ -103,7 +114,8 @@ final class Table extends PowerGridComponent
                 ->slot(__('jetadmin.delete'))
                 ->id()
                 ->class('btn-red btn-xs')
-                ->dispatch('edit', ['rowId' => $row->id])
+                ->confirm(__('jetadmin.are_you_sure'))
+                ->dispatch('delete', ['id' => $row->id])
 
         ];
     }
