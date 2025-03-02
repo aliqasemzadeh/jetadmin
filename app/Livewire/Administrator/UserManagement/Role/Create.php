@@ -28,6 +28,7 @@ class Create extends ModalComponent
 
     public function render()
     {
+        $this->authorize('administrator_user_role_create');
         return view('livewire.administrator.user-management.role.create');
     }
 }

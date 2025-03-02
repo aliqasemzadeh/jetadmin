@@ -35,6 +35,7 @@ class Edit extends ModalComponent
 
     public function render()
     {
+        $this->authorize('administrator_user_role_edit');
         return view('livewire.administrator.user-management.role.edit');
     }
 }

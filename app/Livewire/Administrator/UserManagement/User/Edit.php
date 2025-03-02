@@ -43,6 +43,7 @@ class Edit extends ModalComponent
 
     public function render()
     {
+        $this->authorize('administrator_user_edit');
         return view('livewire.administrator.user-management.user.edit');
     }
 }

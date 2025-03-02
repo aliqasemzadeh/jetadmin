@@ -20,6 +20,7 @@ class Users extends ModalComponent
 
     public function render()
     {
+        $this->authorize('administrator_user_role_users');
         return view('livewire.administrator.user-management.role.users');
     }
 }

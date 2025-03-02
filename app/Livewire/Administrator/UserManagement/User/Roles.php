@@ -35,6 +35,7 @@ class Roles extends ModalComponent
     #[On('administrator.user-management.user.roles.render')]
     public function render()
     {
+        $this->authorize('administrator_user_roles');
         if($this->search != "") {
             $roles = Role::where('name', 'like', '%'.$this->search.'%')->paginate();
         } else {

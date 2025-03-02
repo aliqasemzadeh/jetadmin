@@ -25,6 +25,7 @@ class Create extends ModalComponent
     }
     public function render()
     {
+        $this->authorize('administrator_user_permission_create');
         return view('livewire.administrator.user-management.permission.create');
     }
 }

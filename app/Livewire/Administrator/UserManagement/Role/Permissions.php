@@ -34,6 +34,7 @@ class Permissions extends ModalComponent
     #[On('administrator.user-management.role.permissions.render')]
     public function render()
     {
+        $this->authorize('administrator_user_role_permissions');
         if($this->search != "") {
             $permissions = Permission::where('name', 'like', '%'.$this->search.'%')->paginate();
         } else {

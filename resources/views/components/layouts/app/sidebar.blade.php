@@ -7,9 +7,11 @@
         <flux:sidebar sticky stashable class="border-r border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900">
             <flux:sidebar.toggle class="lg:hidden" icon="x-mark" />
 
-            @if(\Illuminate\Support\Facades\Route::is('administrator.*'))
-                @include('components.layouts.menus.administrator.sidebar')
-            @endif
+            @can('administrator_access')
+                @if(\Illuminate\Support\Facades\Route::is('administrator.*'))
+                    @include('components.layouts.menus.administrator.sidebar')
+                @endif
+            @endcan
 
             @if(\Illuminate\Support\Facades\Route::is('user.*'))
                 @include('components.layouts.menus.user.sidebar')
@@ -19,9 +21,11 @@
 
             <flux:navlist variant="outline">
                 @foreach(config('jetadmin.panels') as $panel)
+                    @can($panel['permission'])
                     <flux:navlist.item :icon="$panel['icon']" :href="route($panel['route'])" wire:navigate>
                         {{ __($panel['title']) }}
                     </flux:navlist.item>
+                    @endcan
                 @endforeach
             </flux:navlist>
 
