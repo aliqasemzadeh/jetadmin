@@ -95,10 +95,16 @@ final class Table extends PowerGridComponent
     {
         return [
             Button::add('edit')
-                ->slot('Edit: '.$row->id)
+                ->slot(__('jetadmin.edit'))
                 ->id()
-                ->class('pg-btn-white dark:ring-pg-primary-600 dark:border-pg-primary-600 dark:hover:bg-pg-primary-700 dark:ring-offset-pg-primary-800 dark:text-pg-primary-300 dark:bg-pg-primary-700')
+                ->class('btn-blue btn-xs')
+                ->dispatch('openModal', ['component' => 'administrator.user-management.user.edit', 'arguments' => ['id' => $row->id]]),
+            Button::add('delete')
+                ->slot(__('jetadmin.delete'))
+                ->id()
+                ->class('btn-red btn-xs')
                 ->dispatch('edit', ['rowId' => $row->id])
+
         ];
     }
 

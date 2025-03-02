@@ -2,7 +2,7 @@
 @import 'tailwindcss';
 @import '../../vendor/livewire/flux/dist/flux.css';
 
-@config "./powergrid-tailwind.config.js";
+@config "./tailwind.config.js";
 
 @source "../views";
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
@@ -71,3 +71,114 @@ select:focus[data-flux-control] {
 /* \[:where(&)\]:size-4 {
     @apply size-4;
 } */
+
+@layer components {
+
+    /* Colors */
+    .btn-red {
+        @apply bg-red-500 text-white rounded;
+        @apply hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500;
+    }
+    .btn-orange {
+        @apply bg-orange-500 text-white rounded;
+        @apply hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500;
+    }
+    .btn-amber {
+        @apply bg-amber-500 text-white rounded;
+        @apply hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500;
+    }
+    .btn-yellow {
+        @apply bg-yellow-500 text-white rounded;
+        @apply hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500;
+    }
+    .btn-lime {
+        @apply bg-lime-500 text-white rounded;
+        @apply hover:bg-lime-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-lime-500;
+    }
+    .btn-green {
+        @apply bg-green-500 text-white rounded;
+        @apply hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500;
+    }
+    .btn-emerald {
+        @apply bg-emerald-500 text-white rounded;
+        @apply hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500;
+    }
+    .btn-teal {
+        @apply bg-teal-500 text-white rounded;
+        @apply hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500;
+    }
+    .btn-cyan {
+        @apply bg-cyan-500 text-white rounded;
+        @apply hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500;
+    }
+    .btn-sky {
+        @apply bg-sky-500 text-white rounded;
+        @apply hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500;
+    }
+    .btn-blue {
+        @apply bg-blue-500 text-white rounded;
+        @apply hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500;
+    }
+    .btn-indigo {
+        @apply bg-indigo-500 text-white rounded;
+        @apply hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+    }
+    .btn-violet {
+        @apply bg-violet-500 text-white rounded;
+        @apply hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet-500;
+    }
+    .btn-purple {
+        @apply bg-purple-500 text-white rounded;
+        @apply hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500;
+    }
+    .btn-fuchsia {
+        @apply bg-fuchsia-500 text-white rounded;
+        @apply hover:bg-fuchsia-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-fuchsia-500;
+    }
+    .btn-pink {
+        @apply bg-pink-500 text-white rounded;
+        @apply hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500;
+    }
+    .btn-rose {
+        @apply bg-rose-500 text-white rounded;
+        @apply hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-500;
+    }
+    .btn-slate {
+        @apply bg-slate-500 text-white rounded;
+        @apply hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-500;
+    }
+    .btn-gray {
+        @apply bg-gray-500 text-white rounded;
+        @apply hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500;
+    }
+    .btn-zinc {
+        @apply bg-zinc-500 text-white rounded;
+        @apply hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zinc-500;
+    }
+    .btn-neutral {
+        @apply bg-neutral-500 text-white rounded;
+        @apply hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-500;
+    }
+    .btn-stone {
+        @apply bg-stone-500 text-white rounded;
+        @apply hover:bg-stone-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-stone-500;
+    }
+
+    /* Sizes */
+    .btn-xs {
+        @apply px-2 py-1 text-xs;
+    }
+
+    .btn-sm {
+        @apply px-3 py-1.5 text-sm;
+    }
+
+    .btn-default {
+        @apply px-4 py-2 text-base;
+    }
+
+    .btn-lg {
+        @apply px-6 py-3 text-lg;
+    }
+
+}
