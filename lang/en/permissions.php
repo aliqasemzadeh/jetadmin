@@ -2,6 +2,7 @@
 return [
     'user' => [
         'user_access' => 'User Access',
+        'user_dashboard' => 'User Dashboard',
         'user_settings' => 'User Settings',
     ],
     'administrator' => [

@@ -27,6 +27,19 @@ class CreatePermissionsCommand extends Command
      */
     public function handle()
     {
+        $user = Role::findByName('user');
+        $permissions_user = __('permissions.user');
+
+        foreach ($permissions_user as $permission => $translate) {
+            Permission::create(
+                ['name' => $permission]
+            );
+        }
+
+        foreach ($permissions_user as $permission => $translate) {
+            $user->givePermissionTo($permission);
+        }
+
         $administrator = Role::findByName('administrator');
         $permissions_administrator = __('permissions.administrator');
 
@@ -39,5 +52,7 @@ class CreatePermissionsCommand extends Command
         foreach ($permissions_administrator as $permission => $translate) {
             $administrator->givePermissionTo($permission);
         }
+
+
     }
 }

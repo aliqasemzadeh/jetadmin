@@ -39,7 +39,7 @@ final class Table extends PowerGridComponent
     {
         return [
             Button::add('create-user')
-                ->can('administrator_user_create')
+                ->can(auth()->user()->can('administrator_user_create'))
                 ->slot(__('jetadmin.create_user'))
                 ->class('btn-indigo btn-default')
                 ->dispatch('openModal', ['component' => 'administrator.user-management.user.create']),
@@ -106,25 +106,25 @@ final class Table extends PowerGridComponent
             Button::add('edit')
                 ->slot(__('jetadmin.edit'))
                 ->id()
-                ->can('administrator_user_edit')
+                ->can(auth()->user()->can('administrator_user_edit'))
                 ->class('btn-blue btn-xs')
                 ->dispatch('openModal', ['component' => 'administrator.user-management.user.edit', 'arguments' => ['id' => $row->id]]),
             Button::add('roles')
                 ->slot(__('jetadmin.roles'))
                 ->id()
-                ->can('administrator_user_roles')
+                ->can(auth()->user()->can('administrator_user_roles'))
                 ->class('btn-slate btn-xs')
                 ->dispatch('openModal', ['component' => 'administrator.user-management.user.roles', 'arguments' => ['id' => $row->id]]),
             Button::add('roles')
                 ->slot(__('jetadmin.permissions'))
                 ->id()
-                ->can('administrator_user_permissions')
+                ->can(auth()->user()->can('administrator_user_permissions'))
                 ->class('btn-pink btn-xs')
                 ->dispatch('openModal', ['component' => 'administrator.user-management.user.permissions', 'arguments' => ['id' => $row->id]]),
             Button::add('delete')
                 ->slot(__('jetadmin.delete'))
                 ->id()
-                ->can('administrator_user_delete')
+                ->can(auth()->user()->can('administrator_user_delete'))
                 ->class('btn-red btn-xs')
                 ->confirm(__('jetadmin.are_you_sure'))
                 ->dispatch('delete', ['id' => $row->id])
