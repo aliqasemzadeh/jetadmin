@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Livewire\Administrator\UserManagement\User;
+namespace App\Livewire\Administrator\UserManagement\Role;
 
-use App\Models\User;
+use Spatie\Permission\Models\Role;
 use Illuminate\Support\Carbon;
 use PowerComponents\LivewirePowerGrid\Button;
 use PowerComponents\LivewirePowerGrid\Column;
@@ -17,7 +17,7 @@ final class Table extends PowerGridComponent
 {
     use WithExport;
 
-    public string $tableName = 'administrator.user-management.user.index';
+    public string $tableName = 'administrator.user-management.role.index';
 
     public function setUp(): array
     {
@@ -39,15 +39,15 @@ final class Table extends PowerGridComponent
     {
         return [
             Button::add('create-user')
-                ->slot(__('jetadmin.create_user'))
+                ->slot(__('jetadmin.create_role'))
                 ->class('btn-indigo btn-default')
-                ->dispatch('openModal', ['component' => 'administrator.user-management.user.create']),
+                ->dispatch('openModal', ['component' => 'administrator.user-management.role.create']),
         ];
     }
 
     public function datasource(): \Illuminate\Database\Eloquent\Builder
     {
-        return User::query();
+        return Role::query();
     }
 
     public function fields(): PowerGridFields
@@ -56,9 +56,7 @@ final class Table extends PowerGridComponent
             ->add('id')
             ->add('name')
             ->add('email')
-            ->add('created_at_formatted', fn ($model) => Carbon::parse($model->created_at)->format('d/m/Y H:i:s'))
-            ->add('updated_at_formatted', fn ($model) => Carbon::parse($model->updated_at)->format('d/m/Y H:i:s'))
-            ->add('deleted_at_formatted', fn ($model) => Carbon::parse($model->deleted_at)->format('d/m/Y H:i:s'));
+            ->add('created_at_formatted', fn ($model) => Carbon::parse($model->created_at)->format('d/m/Y H:i:s'));
     }
 
     public function columns(): array
@@ -69,19 +67,13 @@ final class Table extends PowerGridComponent
                 ->sortable()
                 ->searchable(),
 
-            Column::make(__('jetadmin.email'), 'email')
+            Column::make(__('jetadmin.guard_name'), 'guard_name')
                 ->sortable()
                 ->searchable(),
 
             Column::make(__('jetadmin.created_at'), 'created_at_formatted', 'created_at')
                 ->sortable(),
-
-            Column::make(__('jetadmin.updated_at'), 'updated_at_formatted', 'updated_at')
-                ->sortable(),
-
-            Column::make(__('jetadmin.deleted_at'), 'deleted_at_formatted', 'deleted_at')
-                ->sortable(),
-            Column::action(__('jetadmin.action'))
+            Column::action(__('jetadmin.id'))
 
         ];
     }
@@ -89,8 +81,6 @@ final class Table extends PowerGridComponent
     public function filters(): array
     {
         return [
-            Filter::datetimepicker('created_at'),
-            Filter::datetimepicker('updated_at'),
             Filter::datetimepicker('deleted_at'),
         ];
     }
@@ -98,7 +88,7 @@ final class Table extends PowerGridComponent
     #[\Livewire\Attributes\On('delete')]
     public function delete($id): void
     {
-        User::findOrFail($id)->delete();
+        Role::findById($id)->delete();
         $this->dispatch('pg:eventRefresh-administrator.user-management.user.index');
     }
 
@@ -109,7 +99,7 @@ final class Table extends PowerGridComponent
                 ->slot(__('jetadmin.edit'))
                 ->id()
                 ->class('btn-blue btn-xs')
-                ->dispatch('openModal', ['component' => 'administrator.user-management.user.edit', 'arguments' => ['id' => $row->id]]),
+                ->dispatch('openModal', ['component' => 'administrator.user-management.role.edit', 'arguments' => ['id' => $row->id]]),
             Button::add('delete')
                 ->slot(__('jetadmin.delete'))
                 ->id()

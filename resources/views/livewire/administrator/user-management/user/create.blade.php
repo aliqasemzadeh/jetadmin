@@ -20,6 +20,8 @@
 
                             <flux:error name="name" />
                         </flux:field>
+                    </flux:field>
+                    <flux:field>
                         <flux:label>{{ __('jetadmin.email') }}</flux:label>
 
                         <flux:input wire:model="email" type="email" />
