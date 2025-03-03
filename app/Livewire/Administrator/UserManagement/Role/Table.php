@@ -102,8 +102,8 @@ final class Table extends PowerGridComponent
                 ->can(auth()->user()->can('administrator_user_role_edit'))
                 ->class('btn-blue btn-xs')
                 ->dispatch('openModal', ['component' => 'administrator.user-management.role.edit', 'arguments' => ['id' => $row->id]]),
-            Button::add('roles')
-                ->slot(__('jetadmin.roles'))
+            Button::add('users')
+                ->slot(__('jetadmin.users'))
                 ->id()
                 ->can(auth()->user()->can('administrator_user_role_users'))
                 ->class('btn-slate btn-xs')
