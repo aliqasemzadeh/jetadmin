@@ -19,9 +19,10 @@ Route::group([
             Route::redirect('settings', 'settings/profile');
             Route::redirect('settings', 'settings/profile');
 
-            Volt::route('settings/profile', 'settings.profile')->name('user.settings.profile');
-            Volt::route('settings/password', 'settings.password')->name('user.settings.password');
-            Volt::route('settings/appearance', 'settings.appearance')->name('user.settings.appearance');
+            Volt::route('settings/profile', 'user.settings.profile')->name('user.settings.profile');
+            Volt::route('settings/password', 'user.settings.password')->name('user.settings.password');
+            Volt::route('settings/appearance', 'user.settings.appearance')->name('user.settings.appearance');
+            Route::get('settings/session', App\Livewire\User\Settings\Session\Index::class)->name('user.settings.session');
         });
 
         Route::prefix(config('jetadmin.route-prefix.administrator'))->group(function () {

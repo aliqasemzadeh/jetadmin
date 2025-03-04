@@ -4,6 +4,7 @@
             <flux:navlist.item :href="route('user.settings.profile')" :current="request()->routeIs('user.settings.profile')" wire:navigate>{{ __('Profile') }}</flux:navlist.item>
             <flux:navlist.item :href="route('user.settings.password')" :current="request()->routeIs('user.settings.password')" wire:navigate>{{ __('Password') }}</flux:navlist.item>
             <flux:navlist.item :href="route('user.settings.appearance')" :current="request()->routeIs('user.settings.appearance')" wire:navigate>{{ __('Appearance') }}</flux:navlist.item>
+            <flux:navlist.item :href="route('user.settings.session')" :current="request()->routeIs('user.settings.session')" wire:navigate>{{ __('Session') }}</flux:navlist.item>
         </flux:navlist>
     </div>
 
