@@ -10,6 +10,7 @@ use Livewire\Component;
 
 class Index extends Component
 {
+    public string $password = '';
     public function getSessionsProperty()
     {
         if (config('session.driver') !== 'database') {
@@ -40,6 +41,23 @@ class Index extends Component
     protected function createAgent($session)
     {
         return tap(new Agent(), fn ($agent) => $agent->setUserAgent($session->user_agent));
+    }
+
+    public function logoutOthers(): void
+    {
+        $this->validate([
+            'password' => ['required', 'string', 'current_password'],
+        ]);
+
+        if (config('session.driver') !== 'database') {
+            return;
+        }
+
+        DB::connection(config('session.connection'))->table(config('session.table', 'sessions'))
+            ->where('user_id', Auth::user()->getAuthIdentifier())
+            ->where('id', '!=', request()->session()->getId())
+            ->delete();
+
     }
 
     public function render()

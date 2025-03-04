@@ -43,3 +43,4 @@ Check out the following screenshots for more visual information:
 - [User Permissions](screenshot/user-permissions.jpg)
 - [User Roles](screenshot/user-roles.jpg)
 - [Role Permissions](screenshot/role-permissions.jpg)
+- [Active Sessions](screenshot/active-sessions.jpg)
