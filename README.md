@@ -39,7 +39,7 @@ Done.
 Check out the following screenshots for more visual information:
 
 - [Sidebar Menus](screenshot/sidebar-menus.jpg)
-- [Users](screenshots/users.jpg)
+- [Users](screenshot/users.jpg)
 - [User Permissions](screenshot/user-permissions.jpg)
 - [User Roles](screenshot/user-roles.jpg)
 - [Role Permissions](screenshot/role-permissions.jpg)
