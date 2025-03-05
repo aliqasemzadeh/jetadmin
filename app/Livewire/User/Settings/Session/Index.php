@@ -58,6 +58,8 @@ class Index extends Component
             ->where('id', '!=', request()->session()->getId())
             ->delete();
 
+        $this->modal('confirm-logout-others')->close();
+
     }
 
     public function render()
