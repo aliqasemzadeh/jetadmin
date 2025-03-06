@@ -7,15 +7,21 @@
         <flux:sidebar sticky stashable class="border-r border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900">
             <flux:sidebar.toggle class="lg:hidden" icon="x-mark" />
 
+
+
+
+            @if(\Illuminate\Support\Facades\Route::is('user.*') || \Illuminate\Support\Facades\Route::is('dashboard'))
+                @can('user_access')
+                    @include('components.layouts.menus.user.sidebar')
+                @endcan
+            @endif
+
+
             @can('administrator_access')
                 @if(\Illuminate\Support\Facades\Route::is('administrator.*'))
                     @include('components.layouts.menus.administrator.sidebar')
                 @endif
             @endcan
-
-            @if(\Illuminate\Support\Facades\Route::is('user.*'))
-                @include('components.layouts.menus.user.sidebar')
-            @endif
 
             <flux:spacer />
 
