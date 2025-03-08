@@ -10,6 +10,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "alirahimi/livewire-persian-datepicker": "^1.2",
         "imanghafoori/laravel-password-history": "^1.0",
         "jenssegers/agent": "^2.6",
         "laravel-lang/common": "^6.6",
