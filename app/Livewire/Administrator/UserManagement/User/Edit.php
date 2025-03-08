@@ -15,18 +15,21 @@ class Edit extends ModalComponent
     public string $email = '';
     public string $password = '';
     public string $password_confirmation = '';
+    public $created_at = '';
 
     public function mount($id)
     {
         $this->user = User::findOrFail($id);
         $this->name = $this->user->name;
         $this->email = $this->user->email;
+        $this->created_at = $this->user->created_at;
     }
 
     public function edit()
     {
         $validated = $this->validate([
             'name' => ['required', 'string', 'max:255'],
+            'created_at' => ['required', 'date'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', Rule::unique('users', 'email')->ignore($this->user)],
             'password' => ['nullable', 'string', 'confirmed', Rules\Password::defaults()],
         ]);

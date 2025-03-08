@@ -3,7 +3,10 @@
 namespace App\Livewire\Administrator\UserManagement\User;
 
 use App\Models\User;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Log;
+use Morilog\Jalali\Jalalian;
 use PowerComponents\LivewirePowerGrid\Button;
 use PowerComponents\LivewirePowerGrid\Column;
 use PowerComponents\LivewirePowerGrid\Components\SetUp\Exportable;
@@ -57,8 +60,8 @@ final class Table extends PowerGridComponent
             ->add('id')
             ->add('name')
             ->add('email')
-            ->add('created_at_formatted', fn ($model) => Carbon::parse($model->created_at)->format('d/m/Y H:i:s'))
-            ->add('updated_at_formatted', fn ($model) => Carbon::parse($model->updated_at)->format('d/m/Y H:i:s'))
+            ->add('created_at_formatted', fn ($model) => Jalalian::fromCarbon(Carbon::parse($model->created_at)))
+            ->add('updated_at_formatted', fn ($model) => Jalalian::fromCarbon(Carbon::parse($model->updated_at)))
             ->add('deleted_at_formatted', fn ($model) => Carbon::parse($model->deleted_at)->format('d/m/Y H:i:s'));
     }
 
@@ -89,7 +92,11 @@ final class Table extends PowerGridComponent
     {
         return [
             Filter::datetimepicker('created_at'),
-            Filter::datetimepicker('updated_at'),
+            Filter::inputText('updated_at', 'updated_at')
+                ->component('powergrid-persian-datepicker')
+                ->builder(function (Builder $query, $value) {
+                return $query->whereDate('updated_at', $value['value']);
+            }),
         ];
     }
 

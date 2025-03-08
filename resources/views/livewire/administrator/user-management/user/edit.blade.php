@@ -12,6 +12,16 @@
     <!-- Modal body -->
     <form wire:submit="edit" method="post">
         <div class="pb-2">
+            <x-persian-datepicker
+                wirePropertyName="created_at"
+                showFormat="jYYYY/jMM/jDD"
+                returnFormat="YYYY/MM/DD"
+                :required="false"
+                :defaultDate="date('Y/m/d')"
+                :setNullInput="true"
+                :withTime="false"
+                :ignoreWire="false"
+                :withTimeSeconds="true"/>
             <flux:field>
                     <flux:label>{{ __('jetadmin.name') }}</flux:label>
 
