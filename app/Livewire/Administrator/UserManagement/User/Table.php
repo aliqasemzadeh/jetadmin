@@ -92,11 +92,7 @@ final class Table extends PowerGridComponent
     {
         return [
             Filter::datetimepicker('created_at'),
-            Filter::inputText('updated_at', 'updated_at')
-                ->component('powergrid-persian-datepicker')
-                ->builder(function (Builder $query, $value) {
-                return $query->whereDate('updated_at', $value['value']);
-            }),
+            Filter::datetimepicker('updated_at'),
         ];
     }
 
