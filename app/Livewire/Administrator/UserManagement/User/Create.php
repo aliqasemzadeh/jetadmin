@@ -4,10 +4,11 @@ namespace App\Livewire\Administrator\UserManagement\User;
 
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Livewire\Component;
 use LivewireUI\Modal\ModalComponent;
 use Illuminate\Validation\Rules;
 
-class Create extends ModalComponent
+class Create extends Component
 {
     public string $name = '';
     public string $email = '';

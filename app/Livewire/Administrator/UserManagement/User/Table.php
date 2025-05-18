@@ -45,7 +45,7 @@ final class Table extends PowerGridComponent
                 ->can(auth()->user()->can('administrator_user_create'))
                 ->slot(__('jetadmin.create_user'))
                 ->class('btn-indigo btn-default')
-                ->dispatch('openModal', ['component' => 'administrator.user-management.user.create']),
+                ->dispatch('modal-show', ['name' => 'administrator.user-management.user.create.modal']),
         ];
     }
 
@@ -111,7 +111,7 @@ final class Table extends PowerGridComponent
                 ->id()
                 ->can(auth()->user()->can('administrator_user_edit'))
                 ->class('btn-blue btn-xs')
-                ->dispatch('openModal', ['component' => 'administrator.user-management.user.edit', 'arguments' => ['id' => $row->id]]),
+                ->dispatch('modal-show', ['name' => 'edit-user', 'arguments' => ['id' => $row->id]]),
             Button::add('roles')
                 ->slot(__('jetadmin.roles'))
                 ->id()

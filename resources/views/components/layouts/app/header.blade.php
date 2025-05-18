@@ -119,7 +119,6 @@
 
         {{ $slot }}
 
-        @livewire('wire-elements-modal')
         @fluxScripts
     </body>
 </html>

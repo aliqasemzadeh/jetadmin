@@ -4,5 +4,7 @@
         <flux:subheading size="lg" class="mb-6">{{ __('jetadmin.users_description') }}</flux:subheading>
         <flux:separator variant="subtle" />
     </div>
-    <livewire:administrator.usermanagement.user.table />
+    <livewire:administrator.user-management.user.create />
+    <livewire:administrator.user-management.user.edit />
+    <livewire:administrator.user-management.user.table />
 </div>

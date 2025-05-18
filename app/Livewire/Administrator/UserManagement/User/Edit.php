@@ -6,9 +6,10 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rule;
 use Illuminate\Validation\Rules;
+use Livewire\Component;
 use LivewireUI\Modal\ModalComponent;
 
-class Edit extends ModalComponent
+class Edit extends Component
 {
     public User $user;
     public string $name = '';
@@ -17,7 +18,7 @@ class Edit extends ModalComponent
     public string $password_confirmation = '';
     public $created_at = '';
 
-    public function mount($id)
+    public function mount($id = 1)
     {
         $this->user = User::findOrFail($id);
         $this->name = $this->user->name;

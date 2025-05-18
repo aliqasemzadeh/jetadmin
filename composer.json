@@ -10,7 +10,6 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "alirahimi/livewire-persian-datepicker": "^1.2",
         "imanghafoori/laravel-password-history": "^1.0",
         "jenssegers/agent": "^2.6",
         "laravel-lang/common": "^6.6",
@@ -25,8 +24,7 @@
         "opcodesio/log-viewer": "^3.15",
         "openspout/openspout": "^4.28",
         "power-components/livewire-powergrid": "^6.1",
-        "spatie/laravel-permission": "^6.16",
-        "wire-elements/modal": "^3.0.1"
+        "spatie/laravel-permission": "^6.16"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
