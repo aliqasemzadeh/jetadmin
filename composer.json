@@ -15,6 +15,7 @@
         "jenssegers/agent": "^2.6",
         "laravel-lang/common": "^6.6",
         "laravel/framework": "^12.0",
+        "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.10.1",
         "livewire/flux": "^2.0",
         "livewire/volt": "^1.6.7",
@@ -25,7 +26,7 @@
         "openspout/openspout": "^4.28",
         "power-components/livewire-powergrid": "^6.1",
         "spatie/laravel-permission": "^6.16",
-        "wire-elements/modal": "^2.0"
+        "wire-elements/modal": "^3.0.1"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

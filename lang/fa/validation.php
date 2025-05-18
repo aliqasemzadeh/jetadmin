@@ -11,6 +11,7 @@ return [
     'alpha'                  => ':Attribute باید فقط حروف الفبا باشد.',
     'alpha_dash'             => ':Attribute باید فقط حروف الفبا، اعداد، خط تیره و زیرخط باشد.',
     'alpha_num'              => ':Attribute باید فقط حروف الفبا و اعداد باشد.',
+    'any_of'                 => 'The :attribute field is invalid.',
     'array'                  => ':Attribute باید آرایه باشد.',
     'ascii'                  => ':Attribute تنها میتواند شامل کاراکترها و نمادهای الفبایی تک بایتی باشد.',
     'before'                 => ':Attribute باید تاریخی قبل از :date باشد.',
