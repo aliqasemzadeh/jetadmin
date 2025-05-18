@@ -2,13 +2,13 @@
 
 namespace App\Livewire\Administrator\UserManagement\Role;
 
+use Livewire\Component;
 use Spatie\Permission\Models\Role;
 use Livewire\Attributes\On;
 use Livewire\WithPagination;
-use LivewireUI\Modal\ModalComponent;
 use Spatie\Permission\Models\Permission;
 
-class Permissions extends ModalComponent
+class Permissions extends Component
 {
     use WithPagination;
     public Role $role;

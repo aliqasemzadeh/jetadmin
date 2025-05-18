@@ -2,12 +2,10 @@
 
 namespace App\Livewire\Administrator\UserManagement\Role;
 
-use App\Models\User;
-use Illuminate\Support\Facades\Hash;
-use LivewireUI\Modal\ModalComponent;
+use Livewire\Component;
 use Spatie\Permission\Models\Role;
 
-class Create extends ModalComponent
+class Create extends Component
 {
     public string $name = '';
     public string $guard_name = 'web';

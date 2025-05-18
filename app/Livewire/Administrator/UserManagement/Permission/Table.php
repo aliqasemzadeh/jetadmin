@@ -42,7 +42,7 @@ final class Table extends PowerGridComponent
                 ->can(auth()->user()->can('administrator_user_permission_create'))
                 ->slot(__('jetadmin.create_permission'))
                 ->class('btn-indigo btn-default')
-                ->dispatch('openModal', ['component' => 'administrator.user-management.permission.create']),
+                ->dispatch('modal-show', ['name' => 'administrator.user-management.permission.create.modal']),
         ];
     }
 
@@ -99,7 +99,7 @@ final class Table extends PowerGridComponent
                 ->id()
                 ->can(auth()->user()->can('administrator_user_permission_edit'))
                 ->class('btn-blue btn-xs')
-                ->dispatch('openModal', ['component' => 'administrator.user-management.permission.edit', 'arguments' => ['id' => $row->id]]),
+                ->dispatch('modal-show', ['name' => 'administrator.user-management.permission.edit', 'arguments' => ['id' => $row->id]]),
             Button::add('delete')
                 ->slot(__('jetadmin.delete'))
                 ->id()
@@ -110,16 +110,4 @@ final class Table extends PowerGridComponent
 
         ];
     }
-
-    /*
-    public function actionRules($row): array
-    {
-       return [
-            // Hide button edit for ID 1
-            Rule::button('edit')
-                ->when(fn($row) => $row->id === 1)
-                ->hide(),
-        ];
-    }
-    */
 }

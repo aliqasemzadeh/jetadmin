@@ -2,10 +2,10 @@
 
 namespace App\Livewire\Administrator\UserManagement\Permission;
 
-use LivewireUI\Modal\ModalComponent;
+use Livewire\Component;
 use Spatie\Permission\Models\Permission;
 
-class Create extends ModalComponent
+class Create extends Component
 {
     public string $name = '';
     public string $guard_name = 'web';

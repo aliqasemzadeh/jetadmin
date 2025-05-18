@@ -2,9 +2,9 @@
 
 namespace App\Livewire\Administrator\UserManagement\Role;
 
-use LivewireUI\Modal\ModalComponent;
+use Livewire\Component;
 
-class Users extends ModalComponent
+class Users extends Component
 {
     public \Spatie\Permission\Models\Role $role;
     public function mount($id)

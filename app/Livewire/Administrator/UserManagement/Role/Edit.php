@@ -3,10 +3,10 @@
 namespace App\Livewire\Administrator\UserManagement\Role;
 
 use Illuminate\Validation\Rule;
-use LivewireUI\Modal\ModalComponent;
+use Livewire\Component;
 use Spatie\Permission\Models\Role;
 
-class Edit extends ModalComponent
+class Edit extends Component
 {
     public Role $role;
     public string $name = '';

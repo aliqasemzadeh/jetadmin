@@ -3,10 +3,10 @@
 namespace App\Livewire\Administrator\UserManagement\Permission;
 
 use Illuminate\Validation\Rule;
-use LivewireUI\Modal\ModalComponent;
+use Livewire\Component;
 use Spatie\Permission\Models\Permission;
 
-class Edit extends ModalComponent
+class Edit extends Component
 {
     public Permission $permission;
     public string $name = '';

@@ -42,7 +42,7 @@ final class Table extends PowerGridComponent
                 ->can(auth()->user()->can('administrator_user_role_create'))
                 ->slot(__('jetadmin.create_role'))
                 ->class('btn-indigo btn-default')
-                ->dispatch('openModal', ['component' => 'administrator.user-management.role.create']),
+                ->dispatch('modal-show', ['name' => 'administrator.user-management.role.create.modal']),
         ];
     }
 
@@ -101,19 +101,19 @@ final class Table extends PowerGridComponent
                 ->id()
                 ->can(auth()->user()->can('administrator_user_role_edit'))
                 ->class('btn-blue btn-xs')
-                ->dispatch('openModal', ['component' => 'administrator.user-management.role.edit', 'arguments' => ['id' => $row->id]]),
+                ->dispatch('modal-show', ['name' => 'administrator.user-management.role.edit.modal', 'arguments' => ['id' => $row->id]]),
             Button::add('users')
                 ->slot(__('jetadmin.users'))
                 ->id()
                 ->can(auth()->user()->can('administrator_user_role_users'))
                 ->class('btn-slate btn-xs')
-                ->dispatch('openModal', ['component' => 'administrator.user-management.role.users', 'arguments' => ['id' => $row->id]]),
+                ->dispatch('modal-show', ['name' => 'administrator.user-management.role.users.modal', 'arguments' => ['id' => $row->id]]),
             Button::add('roles')
                 ->slot(__('jetadmin.permissions'))
                 ->id()
                 ->can(auth()->user()->can('administrator_user_role_permissions'))
                 ->class('btn-pink btn-xs')
-                ->dispatch('openModal', ['component' => 'administrator.user-management.role.permissions', 'arguments' => ['id' => $row->id]]),
+                ->dispatch('modal-show', ['component' => 'administrator.user-management.role.permissions.modal', 'arguments' => ['id' => $row->id]]),
             Button::add('delete')
                 ->slot(__('jetadmin.delete'))
                 ->id()
@@ -124,16 +124,4 @@ final class Table extends PowerGridComponent
 
         ];
     }
-
-    /*
-    public function actionRules($row): array
-    {
-       return [
-            // Hide button edit for ID 1
-            Rule::button('edit')
-                ->when(fn($row) => $row->id === 1)
-                ->hide(),
-        ];
-    }
-    */
 }
