@@ -117,13 +117,13 @@ final class Table extends PowerGridComponent
                 ->id()
                 ->can(auth()->user()->can('administrator_user_roles'))
                 ->class('btn-slate btn-xs')
-                ->dispatch('openModal', ['component' => 'administrator.user-management.user.roles', 'arguments' => ['id' => $row->id]]),
+                ->dispatch('modal-show', ['name' => 'administrator.user-management.user.roles.modal', 'arguments' => ['id' => $row->id]]),
             Button::add('roles')
                 ->slot(__('jetadmin.permissions'))
                 ->id()
                 ->can(auth()->user()->can('administrator_user_permissions'))
                 ->class('btn-pink btn-xs')
-                ->dispatch('openModal', ['component' => 'administrator.user-management.user.permissions', 'arguments' => ['id' => $row->id]]),
+                ->dispatch('openModal', ['name' => 'administrator.user-management.user.permissions.modal', 'arguments' => ['id' => $row->id]]),
             Button::add('delete')
                 ->slot(__('jetadmin.delete'))
                 ->id()

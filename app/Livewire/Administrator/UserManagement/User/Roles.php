@@ -14,7 +14,7 @@ class Roles extends ModalComponent
     public User $user;
     public $search;
 
-    public function mount($id)
+    public function mount($id = 0)
     {
         $this->user = User::findOrFail($id);
     }

@@ -1,6 +1,6 @@
-<div class="p-4 bg-white rounded-lg shadow dark:bg-zinc-800 sm:p-5">
-    <!-- Modal header -->
-    <div class="flex justify-between items-center pb-4 mb-4 rounded-t border-b sm:mb-5 dark:border-zinc-600">
+<flux:modal name="administrator.user-management.user.roles.modal" class="md:w-96">
+
+<div class="flex justify-between items-center pb-4 mb-4 rounded-t border-b sm:mb-5 dark:border-zinc-600">
         <h3 class="text-lg font-semibold text-zinc-900 dark:text-white">
             {{ __('jetadmin.roles') }}: {{ $user->name }}
         </h3>
@@ -66,5 +66,5 @@
         </div>
     </div>
 
-</div>
+</flux:modal>
 
