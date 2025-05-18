@@ -4,17 +4,17 @@ namespace App\Livewire\Administrator\UserManagement\User;
 
 use App\Models\User;
 use Livewire\Attributes\On;
+use Livewire\Component;
 use Livewire\WithPagination;
-use LivewireUI\Modal\ModalComponent;
 use Spatie\Permission\Models\Permission;
 
-class Permissions extends ModalComponent
+class Permissions extends Component
 {
     use WithPagination;
     public User $user;
     public $search;
 
-    public function mount($id = 0)
+    public function mount($id = 1)
     {
         $this->user = User::findOrFail($id);
     }
