@@ -13,6 +13,9 @@
 @source './../../vendor/power-components/livewire-powergrid/resources/views/**/*.php';
 @source './../../vendor/power-components/livewire-powergrid/src/Themes/Tailwind.php';
 
+@source './../../vendor/wire-elements/modal/resources/views/*.blade.php';
+@source './../../storage/framework/views/*.php';
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
