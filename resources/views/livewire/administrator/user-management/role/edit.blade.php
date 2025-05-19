@@ -1,4 +1,4 @@
-<flux:modal name="administrator.user-management.permission.create.modal" class="md:w-96">
+<flux:modal name="administrator.user-management.role.edit.modal" class="md:w-96">
     <div class="space-y-6">
         <div>
             <flux:heading size="lg">{{ __('jetadmin.edit_role') }} : {{ $role->name }}</flux:heading>
