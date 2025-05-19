@@ -14,7 +14,7 @@ class Permissions extends Component
     public Role $role;
     public $search;
 
-    public function mount($id)
+    public function mount($id = 1)
     {
         $this->role = Role::findById($id);
     }

@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Administrator\UserManagement\Permission;
 
+use Flux\Flux;
 use Illuminate\Validation\Rule;
 use Livewire\Component;
 use Spatie\Permission\Models\Permission;
@@ -12,7 +13,7 @@ class Edit extends Component
     public string $name = '';
     public string $guard_name = 'web';
 
-    public function mount($id)
+    public function mount($id = 1)
     {
         $this->permission = Permission::findById($id);
         $this->name = $this->permission->name;
@@ -29,8 +30,7 @@ class Edit extends Component
         $this->permission->update($validated);
 
         $this->dispatch('pg:eventRefresh-administrator.user-management.permission.index');
-        $this->dispatch('closeModal');
-
+        Flux::modal('administrator.user-management.permission.edit.modal')->close();
     }
 
     public function render()

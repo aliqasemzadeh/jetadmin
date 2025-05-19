@@ -7,7 +7,7 @@ use Livewire\Component;
 class Users extends Component
 {
     public \Spatie\Permission\Models\Role $role;
-    public function mount($id)
+    public function mount($id = 1)
     {
         $this->role = \Spatie\Permission\Models\Role::findById($id);
     }

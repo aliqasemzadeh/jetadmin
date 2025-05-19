@@ -3,6 +3,7 @@
 namespace App\Livewire\Administrator\UserManagement\User;
 
 use App\Models\User;
+use Flux\Flux;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rule;
 use Illuminate\Validation\Rules;
@@ -42,7 +43,7 @@ class Edit extends Component
         $this->user->update($validated);
 
         $this->dispatch('pg:eventRefresh-administrator.user-management.user.index');
-        $this->dispatch('closeModal');
+        Flux::modal('administrator.user-management.user.edit.modal')->close();
     }
 
     public function render()

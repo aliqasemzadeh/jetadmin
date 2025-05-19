@@ -12,7 +12,7 @@ class Edit extends Component
     public string $name = '';
     public string $guard_name = 'web';
 
-    public function mount($id)
+    public function mount($id = 1)
     {
         $this->role = Role::findById($id);
         $this->name = $this->role->name;
