@@ -113,7 +113,7 @@ final class Table extends PowerGridComponent
                 ->id()
                 ->can(auth()->user()->can('administrator_user_role_permissions'))
                 ->class('btn-pink btn-xs')
-                ->dispatch('modal-show', ['component' => 'administrator.user-management.role.permissions.modal', 'arguments' => ['id' => $row->id]]),
+                ->dispatch('modal-show', ['name' => 'administrator.user-management.role.permissions.modal', 'arguments' => ['id' => $row->id]]),
             Button::add('delete')
                 ->slot(__('jetadmin.delete'))
                 ->id()

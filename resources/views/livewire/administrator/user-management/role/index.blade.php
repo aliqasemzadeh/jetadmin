@@ -4,9 +4,9 @@
         <flux:subheading size="lg" class="mb-6">{{ __('jetadmin.roles_description') }}</flux:subheading>
         <flux:separator variant="subtle" />
     </div>
-    <livewire:administrator.usermanagement.role.create />
-    <livewire:administrator.usermanagement.role.edit />
-    <livewire:administrator.usermanagement.role.users />
-    <livewire:administrator.usermanagement.role.permissions />
-    <livewire:administrator.usermanagement.role.table />
+    <livewire:administrator.user-management.role.create />
+    <livewire:administrator.user-management.role.edit />
+    <livewire:administrator.user-management.role.users />
+    <livewire:administrator.user-management.role.permissions />
+    <livewire:administrator.user-management.role.table />
 </div>

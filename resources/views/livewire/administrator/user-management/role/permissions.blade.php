@@ -1,4 +1,4 @@
-<flux:modal name="administrator.user-management.role.permissions.modal" class="max-w-full max-h-full">
+<flux:modal name="administrator.user-management.role.permissions.modal" class="min-w-full min-h-full">
     <div class="space-y-6">
         <div>
             <flux:heading size="lg">{{ __('jetadmin.permissions') }}: {{ $role->name }}</flux:heading>

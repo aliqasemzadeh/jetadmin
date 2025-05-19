@@ -1,5 +1,5 @@
 <flux:modal name="administrator.user-management.permission.create.modal" class="md:w-96">
-<div class="space-y-6">
+    <div class="space-y-6">
         <div>
             <flux:heading size="lg">{{ __('jetadmin.create_permission') }}</flux:heading>
             <flux:text class="mt-2">{{ __('jetadmin.create_permission_description') }}</flux:text>
