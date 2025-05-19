@@ -6,9 +6,9 @@ Livewire starter kit is good but you need security then you have to roles and pe
 
 1. laravel
 2. livewire
+2. fluxui
 3. spatie/laravel-permission
-4. wire-elements/modal
-5. power-components/livewire-powergrid
+4. power-components/livewire-powergrid
 
 ## Installation
 First .env file for project.
