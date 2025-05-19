@@ -24,6 +24,7 @@
         "opcodesio/log-viewer": "^3.15",
         "openspout/openspout": "^4.28",
         "power-components/livewire-powergrid": "^6.1",
+        "rappasoft/laravel-authentication-log": "^5.0",
         "spatie/laravel-permission": "^6.16"
     },
     "require-dev": {
