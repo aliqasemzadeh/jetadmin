@@ -38,4 +38,7 @@ return [
     'edit_role' => 'Edit Role',
     'edit_permission' => 'Edit Permission',
     'search' => 'Search',
+    'your_email_is_verified' => 'Your email is verified.',
+    'new_verification_email_sent' => 'New verification email sent.',
+    'your_email_got_verified' => 'Your email got verified.',
 ];
