@@ -9,6 +9,8 @@ Livewire starter kit is good but you need security then you have to roles and pe
 2. fluxui
 3. spatie/laravel-permission
 4. power-components/livewire-powergrid
+4. rappasoft/laravel-authentication-log
+4. rappasoft/laravel-authentication-log
 
 ## Installation
 First .env file for project.
