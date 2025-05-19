@@ -51,7 +51,7 @@ class AuthController extends Controller
         RateLimiter::clear($this->throttleKey());
         Session::regenerate();
 
-        return response()->json(['status' => 'failed', 'user' => auth()->user()]);
+        return response()->json(['status' => 'success', 'user' => auth()->user()]);
     }
 
     /**
@@ -69,9 +69,11 @@ class AuthController extends Controller
             return response()->json(['status' => 'failed', 'errors' => $validator->errors()], 400);
         }
 
-        $validator['password'] = Hash::make($validator['password']);
+        $request->merge([
+            'password' => Hash::make($request->input('password')),
+        ]);
 
-        event(new Registered(($user = User::create($validator))));
+        event(new Registered(($user = User::create($request->all()))));
 
         Auth::login($user);
 
