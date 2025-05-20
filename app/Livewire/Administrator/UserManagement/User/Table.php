@@ -3,9 +3,11 @@
 namespace App\Livewire\Administrator\UserManagement\User;
 
 use App\Models\User;
+use Flux\Flux;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Log;
+use Livewire\Attributes\On;
 use Morilog\Jalali\Jalalian;
 use PowerComponents\LivewirePowerGrid\Button;
 use PowerComponents\LivewirePowerGrid\Column;
@@ -111,7 +113,7 @@ final class Table extends PowerGridComponent
                 ->id()
                 ->can(auth()->user()->can('administrator_user_edit'))
                 ->class('btn-blue btn-xs')
-                ->dispatch('modal-show', ['name' => 'edit-user', 'arguments' => ['id' => $row->id]]),
+                ->dispatch("show-edit", [$row]),
             Button::add('roles')
                 ->slot(__('jetadmin.roles'))
                 ->id()
@@ -135,15 +137,11 @@ final class Table extends PowerGridComponent
         ];
     }
 
-    /*
-    public function actionRules($row): array
+    #[On('show-edit')]
+    public function showEdit($row)
     {
-       return [
-            // Hide button edit for ID 1
-            Rule::button('edit')
-                ->when(fn($row) => $row->id === 1)
-                ->hide(),
-        ];
+        Flux::modal('administrator.user-management.user.edit.modal')->show();
+        $this->dispatch("user-updated.{$row['id']}");
+        Log::error("user-updated.{$row['id']}");
     }
-    */
 }

@@ -5,23 +5,36 @@ namespace App\Livewire\Administrator\UserManagement\User;
 use App\Models\User;
 use Flux\Flux;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\Rule;
 use Illuminate\Validation\Rules;
+use Livewire\Attributes\On;
 use Livewire\Component;
-use LivewireUI\Modal\ModalComponent;
 
 class Edit extends Component
 {
     public User $user;
+    public $id = '';
     public string $name = '';
     public string $email = '';
     public string $password = '';
     public string $password_confirmation = '';
     public $created_at = '';
 
-    public function mount($id = 1)
+    public function mount($id = null)
     {
-        $this->user = User::findOrFail($id);
+        if($id != null) {
+            $this->user = User::findOrFail($id);
+            $this->name = $this->user->name;
+            $this->email = $this->user->email;
+            $this->created_at = $this->user->created_at;
+        }
+    }
+
+    #[On('user-updated.{user.id}')]
+    public function refreshUser($id)
+    {
+        Log::error("Error:".$id);
         $this->name = $this->user->name;
         $this->email = $this->user->email;
         $this->created_at = $this->user->created_at;

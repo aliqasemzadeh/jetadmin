@@ -5,7 +5,7 @@
         <flux:separator variant="subtle" />
     </div>
     <livewire:administrator.user-management.user.create />
-    <livewire:administrator.user-management.user.edit />
+    <livewire:administrator.user-management.user.edit id="1" />
     <livewire:administrator.user-management.user.roles />
     <livewire:administrator.user-management.user.permissions />
     <livewire:administrator.user-management.user.table />
