@@ -119,13 +119,15 @@ final class Table extends PowerGridComponent
                 ->id()
                 ->can(auth()->user()->can('administrator_user_roles'))
                 ->class('btn-slate btn-xs')
-                ->dispatch('modal-show', ['name' => 'administrator.user-management.user.roles.modal', 'arguments' => ['id' => $row->id]]),
-            Button::add('roles')
+                ->dispatch('administrator.user-management.user.roles.assign-data', [$row->id])
+                ->dispatch('modal-show', ['name' => 'administrator.user-management.user.roles.modal']),
+            Button::add('permissions')
                 ->slot(__('jetadmin.permissions'))
                 ->id()
                 ->can(auth()->user()->can('administrator_user_permissions'))
                 ->class('btn-pink btn-xs')
-                ->dispatch('modal-show', ['name' => 'administrator.user-management.user.permissions.modal', 'arguments' => ['id' => $row->id]]),
+                ->dispatch('administrator.user-management.user.permissions.assign-data', [$row->id])
+                ->dispatch('modal-show', ['name' => 'administrator.user-management.user.permissions.modal']),
             Button::add('delete')
                 ->slot(__('jetadmin.delete'))
                 ->id()
@@ -135,13 +137,5 @@ final class Table extends PowerGridComponent
                 ->dispatch('delete', ['id' => $row->id])
 
         ];
-    }
-
-    #[On('show-edit')]
-    public function showEdit($row)
-    {
-        Flux::modal('administrator.user-management.user.edit.modal')->show();
-        $this->dispatch("user-updated.{$row['id']}");
-        Log::error("user-updated.{$row['id']}");
     }
 }

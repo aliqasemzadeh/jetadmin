@@ -3,6 +3,7 @@
 namespace App\Livewire\Administrator\UserManagement\User;
 
 use App\Models\User;
+use Flux\Flux;
 use Livewire\Attributes\On;
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -14,19 +15,27 @@ class Permissions extends Component
     public User $user;
     public $search;
 
-    public function mount($id = 1)
+    #[On('administrator.user-management.user.permissions.assign-data')]
+    public function assignData($id): void
     {
         $this->user = User::findOrFail($id);
+        Flux::modal('administrator.user-management.user.permissions.modal')->show();
     }
 
     public function assign(Permission $permission)
     {
+        if (!isset($this->user)) {
+            return;
+        }
         $this->user->givePermissionTo($permission->name);
         $this->dispatch('administrator.user-management.user.permissions');
     }
 
     public function delete(Permission $permission): void
     {
+        if (!isset($this->user)) {
+            return;
+        }
         $this->user->revokePermissionTo($permission->name);
         $this->dispatch('administrator.user-management.user.permissions');
     }

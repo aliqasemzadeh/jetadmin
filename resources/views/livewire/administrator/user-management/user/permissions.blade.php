@@ -1,8 +1,8 @@
 <flux:modal name="administrator.user-management.user.permissions.modal" class="min-w-full min-h-full">
     <div class="space-y-6">
     <div>
-        <flux:heading size="lg">{{ __('jetadmin.permissions') }}: {{ $user->name }}</flux:heading>
-        <flux:text class="mt-2">{{ __('jetadmin.roles_description') }}</flux:text>
+        <flux:heading size="lg">{{ __('jetadmin.permissions') }}: {{ isset($user) ? $user->name : '' }}</flux:heading>
+        <flux:text class="mt-2">{{ __('jetadmin.permissions_description') }}</flux:text>
     </div>
 
 
@@ -41,7 +41,7 @@
 
         <div>
             <ul class="divide-y divide-gray-200 dark:divide-gray-700">
-                @foreach($user->permissions as $permission)
+                @foreach(isset($user) && isset($user->permissions) ? $user->permissions : [] as $permission)
                     <li class="pb-3 sm:pb-4">
                         <div class="flex items-center space-x-4 rtl:space-x-reverse">
                             <div class="flex-1 min-w-0">
@@ -64,4 +64,3 @@
     </div>
 
 </flux:modal>
-

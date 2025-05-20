@@ -3,6 +3,7 @@
 namespace App\Livewire\Administrator\UserManagement\User;
 
 use App\Models\User;
+use Flux\Flux;
 use Livewire\Attributes\On;
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -14,19 +15,27 @@ class Roles extends Component
     public User $user;
     public $search;
 
-    public function mount($id = 1)
+    #[On('administrator.user-management.user.roles.assign-data')]
+    public function assignData($id): void
     {
         $this->user = User::findOrFail($id);
+        Flux::modal('administrator.user-management.user.roles.modal')->show();
     }
 
     public function assign(Role $role)
     {
+        if (!isset($this->user)) {
+            return;
+        }
         $this->user->assignRole($role->name);
         $this->dispatch('administrator.user-management.user.roles');
     }
 
     public function delete(Role $role): void
     {
+        if (!isset($this->user)) {
+            return;
+        }
         $this->user->removeRole($role->name);
         $this->dispatch('administrator.user-management.user.roles');
     }
