@@ -14,7 +14,6 @@ use Livewire\Component;
 class Edit extends Component
 {
     public User $user;
-    public $id = '';
     public string $name = '';
     public string $email = '';
     public string $password = '';
@@ -32,9 +31,8 @@ class Edit extends Component
     }
 
     #[On('user-updated.{user.id}')]
-    public function refreshUser($id)
+    public function refreshUser()
     {
-        Log::error("Error:".$id);
         $this->name = $this->user->name;
         $this->email = $this->user->email;
         $this->created_at = $this->user->created_at;
