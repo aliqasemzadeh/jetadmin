@@ -14,28 +14,22 @@ use Livewire\Component;
 class Edit extends Component
 {
     public User $user;
+    public int $id;
     public string $name = '';
     public string $email = '';
     public string $password = '';
     public string $password_confirmation = '';
     public $created_at = '';
 
-    public function mount($id = null)
+    #[On('administrator.user-management.user.edit.assign-data')]
+    public function assignData($id): void
     {
-        if($id != null) {
-            $this->user = User::findOrFail($id);
-            $this->name = $this->user->name;
-            $this->email = $this->user->email;
-            $this->created_at = $this->user->created_at;
-        }
-    }
-
-    #[On('user-updated.{user.id}')]
-    public function refreshUser()
-    {
+        $this->user = User::findOrFail($id);
+        $this->id = $this->user->id;
         $this->name = $this->user->name;
         $this->email = $this->user->email;
         $this->created_at = $this->user->created_at;
+        Flux::modal('administrator.user-management.user.edit.modal')->show();
     }
 
     public function edit()

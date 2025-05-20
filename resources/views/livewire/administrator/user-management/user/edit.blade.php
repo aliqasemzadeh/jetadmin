@@ -1,7 +1,7 @@
 <flux:modal name="administrator.user-management.user.edit.modal" class="md:w-96">
     <div class="space-y-6">
         <div>
-            <flux:heading size="lg">{{ __('jetadmin.edit_user') }} : {{ $user->id }}</flux:heading>
+            <flux:heading size="lg">{{ __('jetadmin.edit_user') }} : {{ $id }}</flux:heading>
             <flux:text class="mt-2">{{ __('jetadmin.edit_user_description') }}</flux:text>
         </div>
         <form wire:submit="edit" method="post">

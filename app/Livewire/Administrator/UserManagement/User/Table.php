@@ -113,7 +113,7 @@ final class Table extends PowerGridComponent
                 ->id()
                 ->can(auth()->user()->can('administrator_user_edit'))
                 ->class('btn-blue btn-xs')
-                ->dispatch("show-edit", [$row]),
+                ->dispatch("administrator.user-management.user.edit.assign-data", [$row->id]),
             Button::add('roles')
                 ->slot(__('jetadmin.roles'))
                 ->id()
