@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Administrator\UserManagement\Role;
 
+use Flux\Flux;
 use Livewire\Component;
 use Spatie\Permission\Models\Role;
 
@@ -20,7 +21,7 @@ class Create extends Component
         Role::create($validated);
 
         $this->dispatch('pg:eventRefresh-administrator.user-management.role.index');
-        $this->dispatch('closeModal');
+        Flux::modal('administrator.user-management.role.create.modal')->close();
 
     }
 

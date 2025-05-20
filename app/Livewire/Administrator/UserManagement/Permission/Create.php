@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Administrator\UserManagement\Permission;
 
+use Flux\Flux;
 use Livewire\Component;
 use Spatie\Permission\Models\Permission;
 
@@ -20,7 +21,7 @@ class Create extends Component
         Permission::create($validated);
 
         $this->dispatch('pg:eventRefresh-administrator.user-management.permission.index');
-        $this->dispatch('closeModal');
+        Flux::modal('administrator.user-management.permission.create.modal')->close();
 
     }
     public function render()

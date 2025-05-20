@@ -3,6 +3,7 @@
 namespace App\Livewire\Administrator\UserManagement\User;
 
 use App\Models\User;
+use Flux\Flux;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
 use LivewireUI\Modal\ModalComponent;
@@ -27,7 +28,7 @@ class Create extends Component
         User::create($validated);
 
         $this->dispatch('pg:eventRefresh-administrator.user-management.user.index');
-        $this->dispatch('closeModal');
+        Flux::modal('administrator.user-management.user.create.modal')->close();
     }
     public function render()
     {
