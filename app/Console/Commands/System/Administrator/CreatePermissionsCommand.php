@@ -31,7 +31,7 @@ class CreatePermissionsCommand extends Command
         $permissions_user = __('permissions.user');
 
         foreach ($permissions_user as $permission => $translate) {
-            Permission::create(
+            Permission::firstOrCreate(
                 ['name' => $permission]
             );
         }
@@ -44,7 +44,7 @@ class CreatePermissionsCommand extends Command
         $permissions_administrator = __('permissions.administrator');
 
         foreach ($permissions_administrator as $permission => $translate) {
-            Permission::create(
+            Permission::firstOrCreate(
                 ['name' => $permission]
             );
         }
