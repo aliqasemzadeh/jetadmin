@@ -34,6 +34,10 @@ class Edit extends Component
 
     public function edit()
     {
+        if (!isset($this->user)) {
+            return;
+        }
+
         $validated = $this->validate([
             'name' => ['required', 'string', 'max:255'],
             'created_at' => ['required', 'date'],

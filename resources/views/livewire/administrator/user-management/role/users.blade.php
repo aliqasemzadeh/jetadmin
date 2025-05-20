@@ -18,7 +18,7 @@
                                 </p>
                             </div>
                             <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                <flux:button  wire:confirm="{{ __('system.are_you_sure') }}" wire:click="revoke('{{ $user->id  }}', '{{ $role->name }}')"><flux:icon.trash /></flux:button>
+                                <flux:button  wire:confirm="{{ __('jetadmin.are_you_sure') }}" wire:click="revoke('{{ $user->id  }}', '{{ $role->name }}')"><flux:icon.trash /></flux:button>
                             </div>
                         </div>
                     </li>
