@@ -28,7 +28,7 @@
             <flux:navlist variant="outline">
                 @foreach(config('jetadmin.panels') as $panel)
                     @can($panel['permission'])
-                    <flux:navlist.item :icon="$panel['icon']" :href="route($panel['route'])" wire:navigate>
+                    <flux:navlist.item :icon="$panel['icon']" :href="route($panel['route'])" :current="request()->routeIs($panel['route'])" wire:navigate>
                         {{ __($panel['title']) }}
                     </flux:navlist.item>
                     @endcan
