@@ -41,4 +41,6 @@ return [
     'your_email_is_verified' => 'Your email is verified.',
     'new_verification_email_sent' => 'New verification email sent.',
     'your_email_got_verified' => 'Your email got verified.',
+    'settings' => 'Settings',
+    'dashboard' => 'Dashboard',
 ];

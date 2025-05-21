@@ -29,5 +29,9 @@ return [
         'administrator_user_permission_create' => 'Administrator User Permission Create',
         'administrator_user_permission_edit' => 'Administrator User Permission Edit',
         'administrator_user_permission_delete' => 'Administrator User Permission Delete',
+
+        'administrator_content_management' => 'Administrator Content Management',
+        'administrator_content_management_faq_index' => 'Administrator Content Management FAQ Index',
+        'administrator_content_management_article_index' => 'Administrator Content Management Article Index',
     ],
 ];
