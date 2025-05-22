@@ -23,30 +23,21 @@
 
             <flux:spacer />
 
-            <flux:navbar class="mr-1.5 space-x-0.5 py-0!">
-                <flux:tooltip content="Search" position="bottom">
-                    <flux:navbar.item class="!h-10 [&>div>svg]:size-5" icon="magnifying-glass" href="#" label="Search" />
-                </flux:tooltip>
-                <flux:tooltip content="Repository" position="bottom">
-                    <flux:navbar.item
-                        class="h-10 max-lg:hidden [&>div>svg]:size-5"
-                        icon="folder-git-2"
-                        href="https://github.com/laravel/livewire-starter-kit"
-                        target="_blank"
-                        label="Repository"
-                    />
-                </flux:tooltip>
-                <flux:tooltip content="Documentation" position="bottom">
-                    <flux:navbar.item
-                        class="h-10 max-lg:hidden [&>div>svg]:size-5"
-                        icon="book-open-text"
-                        href="https://laravel.com/docs/starter-kits"
-                        target="_blank"
-                        label="Documentation"
-                    />
-                </flux:tooltip>
+            <flux:navbar variant="outline">
+                @foreach(config('jetadmin.panels') as $panel)
+                    @can($panel['permission'])
+                        <flux:tooltip :label="__($panel['title'])" position="bottom">
+                            <flux:navbar.item
+                                class="h-10 max-lg:hidden [&>div>svg]:size-5"
+                                :icon="$panel['icon']"
+                                :href="route($panel['route'])"
+                                :label="__($panel['title'])"
+                                wire:navigate
+                            />
+                        </flux:tooltip>
+                    @endcan
+                @endforeach
             </flux:navbar>
-
             <!-- Desktop User Menu -->
             <flux:dropdown position="top" align="end">
                 <flux:profile
@@ -110,15 +101,21 @@
 
             <flux:spacer />
 
-            <flux:navlist variant="outline">
-                <flux:navlist.item icon="folder-git-2" href="https://github.com/laravel/livewire-starter-kit" target="_blank">
-                {{ __('Repository') }}
-                </flux:navlist.item>
+            <flux:navbar variant="outline">
+                @foreach(config('jetadmin.panels') as $panel)
+                    @can($panel['permission'])
+                            <flux:navbar.item
+                                class="h-10 max-lg:hidden [&>div>svg]:size-5"
+                                :icon="$panel['icon']"
+                                :href="route($panel['route'])"
+                                wire:navigate
+                            >
+                                {{ __($panel['title']) }}
+                            </flux:navbar.item>
+                    @endcan
+                @endforeach
+            </flux:navbar>
 
-                <flux:navlist.item icon="book-open-text" href="https://laravel.com/docs/starter-kits" target="_blank">
-                {{ __('Documentation') }}
-                </flux:navlist.item>
-            </flux:navlist>
         </flux:sidebar>
 
         {{ $slot }}
