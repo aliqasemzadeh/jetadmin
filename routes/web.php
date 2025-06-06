@@ -30,6 +30,9 @@ Route::group([
             Route::get('/user-management/user/index', App\Livewire\Administrator\UserManagement\User\Index::class)->name('administrator.user-management.user.index');
             Route::get('/user-management/role/index', App\Livewire\Administrator\UserManagement\Role\Index::class)->name('administrator.user-management.role.index');
             Route::get('/user-management/permission/index', App\Livewire\Administrator\UserManagement\Permission\Index::class)->name('administrator.user-management.permission.index');
+
+            Route::get('/content-management/article/index', App\Livewire\Administrator\ContentManagement\Article\Index::class)->name('administrator.content-management.article.index');
+            Route::get('/content-management/faq/index', App\Livewire\Administrator\ContentManagement\FAQ\Index::class)->name('administrator.content-management.faq.index');
         });
 
 

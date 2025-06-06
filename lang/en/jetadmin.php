@@ -6,7 +6,7 @@ return [
         'user' => 'User',
         'administrator' => 'Administrator',
     ],
-    'user_managements' => 'User Managements',
+    'user_management' => 'User Management',
     'user' => 'User',
     'create_user' => 'Create User',
     'edit_user' => 'Edit User',
@@ -43,4 +43,9 @@ return [
     'your_email_got_verified' => 'Your email got verified.',
     'settings' => 'Settings',
     'dashboard' => 'Dashboard',
+    'content_management' => 'Content Management',
+    'articles' => 'Articles',
+    'article' => 'Article',
+    'faqs' => 'FAQs',
+    'FAQ' => 'FAQ',
 ];

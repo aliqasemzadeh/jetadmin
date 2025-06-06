@@ -9,7 +9,7 @@ return [
         'administrator_access' => 'Administrator Access',
 
         'administrator_dashboard_index' => 'Administrator Dashboard Index',
-        'administrator_user_managements' => 'Administrator User Managements',
+        'administrator_user_management' => 'Administrator User Management',
 
         'administrator_user_index' => 'Administrator User Index',
         'administrator_user_create' => 'Administrator User Create',
@@ -31,7 +31,7 @@ return [
         'administrator_user_permission_delete' => 'Administrator User Permission Delete',
 
         'administrator_content_management' => 'Administrator Content Management',
-        'administrator_content_management_faq_index' => 'Administrator Content Management FAQ Index',
-        'administrator_content_management_article_index' => 'Administrator Content Management Article Index',
+        'administrator_content_faq_index' => 'Administrator Content Management FAQ Index',
+        'administrator_content_article_index' => 'Administrator Content Management Article Index',
     ],
 ];
