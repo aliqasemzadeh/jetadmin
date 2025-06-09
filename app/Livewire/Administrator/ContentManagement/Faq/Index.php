@@ -8,6 +8,6 @@ class Index extends Component
 {
     public function render()
     {
-        return view('livewire.administrator.content-management.f-a-q.index');
+        return view('livewire.administrator.content-management.faq.index');
     }
 }
