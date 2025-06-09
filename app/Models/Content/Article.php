@@ -2,6 +2,7 @@
 
 namespace App\Models\Content;
 
+use App\Models\Setting\Category;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

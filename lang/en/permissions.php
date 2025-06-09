@@ -53,5 +53,7 @@ return [
         'administrator_setting_category_create' => 'Administrator Setting Management Category Create',
         'administrator_setting_category_edit' => 'Administrator Setting Management Category Edit',
         'administrator_setting_category_delete' => 'Administrator Setting Management Category Delete',
+
+        'administrator_setting_option_index' => 'Administrator Setting Management Option Index',
     ],
 ];

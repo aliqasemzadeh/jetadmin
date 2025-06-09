@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Administrator\ContentManagement\FAQ;
+namespace App\Livewire\Administrator\ContentManagement\Faq;
 
 use Livewire\Component;
 
