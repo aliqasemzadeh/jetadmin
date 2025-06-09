@@ -27,7 +27,7 @@ class Create extends Component
         $validated['password'] = Hash::make($validated['password']);
         User::create($validated);
 
-        $this->dispatch('pg:eventRefresh-administrator.user-management.user.index');
+        $this->dispatch('pg:eventRefresh-administrator.user-management.user.table');
         Flux::modal('administrator.user-management.user.create.modal')->close();
     }
     public function render()

@@ -51,7 +51,7 @@ class Edit extends Component
 
         $this->user->update($validated);
 
-        $this->dispatch('pg:eventRefresh-administrator.user-management.user.index');
+        $this->dispatch('pg:eventRefresh-administrator.user-management.user.table');
         Flux::modal('administrator.user-management.user.edit.modal')->close();
     }
 

@@ -14,5 +14,10 @@ class Category extends Model
     protected $fillable = [
         'title',
         'type',
+        'icon',
+        'image',
+        'language',
+        'description',
+        'sort_order',
     ];
 }

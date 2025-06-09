@@ -17,7 +17,7 @@ final class Table extends PowerGridComponent
 {
     use WithExport;
 
-    public string $tableName = 'administrator.setting-management.category.index';
+    public string $tableName = 'administrator.setting-management.category.table';
 
     public function setUp(): array
     {
@@ -107,7 +107,7 @@ final class Table extends PowerGridComponent
                 ->id()
                 ->can(auth()->user()->can('administrator_setting_category_edit'))
                 ->class('btn-blue btn-xs')
-                ->dispatch("administrator.setting-management.user.category.assign-data", [$row->id]),
+                ->dispatch("administrator.setting-management.category.edit.assign-data", [$row->id]),
             Button::add('delete')
                 ->slot(__('jetadmin.delete'))
                 ->id()

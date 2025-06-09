@@ -27,6 +27,7 @@ Route::group([
 
         Route::prefix(config('jetadmin.route-prefix.administrator'))->group(function () {
             Route::get('/dashboard/index', App\Livewire\Administrator\Dashboard\Index::class)->name('administrator.dashboard.index');
+
             Route::get('/user-management/user/index', App\Livewire\Administrator\UserManagement\User\Index::class)->name('administrator.user-management.user.index');
             Route::get('/user-management/role/index', App\Livewire\Administrator\UserManagement\Role\Index::class)->name('administrator.user-management.role.index');
             Route::get('/user-management/permission/index', App\Livewire\Administrator\UserManagement\Permission\Index::class)->name('administrator.user-management.permission.index');
@@ -35,6 +36,7 @@ Route::group([
             Route::get('/content-management/faq/index', App\Livewire\Administrator\ContentManagement\FAQ\Index::class)->name('administrator.content-management.faq.index');
 
             Route::get('/setting-management/category/index', App\Livewire\Administrator\SettingManagement\Category\Index::class)->name('administrator.setting-management.category.index');
+            Route::get('/setting-management/option/index', App\Livewire\Administrator\SettingManagement\Option\Index::class)->name('administrator.setting-management.option.index');
         });
 
 
