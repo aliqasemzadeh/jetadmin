@@ -31,10 +31,17 @@ return [
         'administrator_user_permission_delete' => 'Administrator User Permission Delete',
 
         'administrator_content_management' => 'Administrator Content Management',
+
+        'administrator_content_category_index' => 'Administrator Content Management Category Index',
+        'administrator_content_category_create' => 'Administrator Content Management Category Create',
+        'administrator_content_category_edit' => 'Administrator Content Management Category Edit',
+        'administrator_content_category_delete' => 'Administrator Content Management Category Delete',
+
         'administrator_content_faq_index' => 'Administrator Content Management FAQ Index',
         'administrator_content_faq_create' => 'Administrator Content Management FAQ Create',
         'administrator_content_faq_edit' => 'Administrator Content Management FAQ Edit',
         'administrator_content_faq_delete' => 'Administrator Content Management FAQ Delete',
+
         'administrator_content_article_index' => 'Administrator Content Management Article Index',
         'administrator_content_article_create' => 'Administrator Content Management Article Create',
         'administrator_content_article_edit' => 'Administrator Content Management Article Edit',

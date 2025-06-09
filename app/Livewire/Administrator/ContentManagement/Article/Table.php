@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Administrator\ContentManagement\Article;
 
+use App\Models\Content\Article;
 use App\Models\User;
 use Illuminate\Support\Carbon;
 use PowerComponents\LivewirePowerGrid\Button;
@@ -48,15 +49,14 @@ final class Table extends PowerGridComponent
 
     public function datasource(): \Illuminate\Database\Eloquent\Builder
     {
-        return User::query();
+        return Article::query();
     }
 
     public function fields(): PowerGridFields
     {
         return PowerGrid::fields()
             ->add('id')
-            ->add('name')
-            ->add('email')
+            ->add('title')
             ->add('created_at_formatted', fn ($model) => Carbon::parse($model->created_at))
             ->add('updated_at_formatted', fn ($model) => Carbon::parse($model->updated_at))
             ->add('deleted_at_formatted', fn ($model) => Carbon::parse($model->deleted_at)->format('d/m/Y H:i:s'));
@@ -66,11 +66,7 @@ final class Table extends PowerGridComponent
     {
         return [
             Column::make(__('jetadmin.id'), 'id'),
-            Column::make(__('jetadmin.name'), 'name')
-                ->sortable()
-                ->searchable(),
-
-            Column::make(__('jetadmin.email'), 'email')
+            Column::make(__('jetadmin.title'), 'title')
                 ->sortable()
                 ->searchable(),
 
@@ -96,8 +92,8 @@ final class Table extends PowerGridComponent
     #[\Livewire\Attributes\On('delete')]
     public function delete($id): void
     {
-        User::findOrFail($id)->delete();
-        $this->dispatch('pg:eventRefresh-administrator.user-management.user.index');
+        Article::findOrFail($id)->delete();
+        $this->dispatch('pg:eventRefresh-administrator.content-management.article.table');
     }
 
     public function actions($row): array
@@ -106,31 +102,16 @@ final class Table extends PowerGridComponent
             Button::add('edit')
                 ->slot(__('jetadmin.edit'))
                 ->id()
-                ->can(auth()->user()->can('administrator_user_edit'))
+                ->can(auth()->user()->can('administrator_content_article_edit'))
                 ->class('btn-blue btn-xs')
-                ->dispatch("administrator.user-management.user.edit.assign-data", [$row->id]),
-            Button::add('roles')
-                ->slot(__('jetadmin.roles'))
-                ->id()
-                ->can(auth()->user()->can('administrator_user_roles'))
-                ->class('btn-slate btn-xs')
-                ->dispatch('administrator.user-management.user.roles.assign-data', [$row->id])
-                ->dispatch('modal-show', ['name' => 'administrator.user-management.user.roles.modal']),
-            Button::add('permissions')
-                ->slot(__('jetadmin.permissions'))
-                ->id()
-                ->can(auth()->user()->can('administrator_user_permissions'))
-                ->class('btn-pink btn-xs')
-                ->dispatch('administrator.user-management.user.permissions.assign-data', [$row->id])
-                ->dispatch('modal-show', ['name' => 'administrator.user-management.user.permissions.modal']),
+                ->dispatch("administrator.content-management.user.article.assign-data", [$row->id]),
             Button::add('delete')
                 ->slot(__('jetadmin.delete'))
                 ->id()
-                ->can(auth()->user()->can('administrator_user_delete'))
+                ->can(auth()->user()->can('administrator_content_article_delete'))
                 ->class('btn-red btn-xs')
                 ->confirm(__('jetadmin.are_you_sure'))
                 ->dispatch('delete', ['id' => $row->id])
-
         ];
     }
 }
