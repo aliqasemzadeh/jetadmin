@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Administrator\UserManagement\User;
+namespace App\Livewire\Administrator\ContentManagement\Article;
 
 use App\Models\User;
 use Illuminate\Support\Carbon;
@@ -17,7 +17,7 @@ final class Table extends PowerGridComponent
 {
     use WithExport;
 
-    public string $tableName = 'administrator.user-management.user.index';
+    public string $tableName = 'administrator.content-management.article.index';
 
     public function setUp(): array
     {
@@ -39,10 +39,10 @@ final class Table extends PowerGridComponent
     {
         return [
             Button::add('create-user')
-                ->can(auth()->user()->can('administrator_user_create'))
-                ->slot(__('jetadmin.create_user'))
+                ->can(auth()->user()->can('administrator_content_article_create'))
+                ->slot(__('jetadmin.create_article'))
                 ->class('btn-indigo btn-default')
-                ->dispatch('modal-show', ['name' => 'administrator.user-management.user.create.modal']),
+                ->dispatch('modal-show', ['name' => 'administrator.content-management.article.create.modal']),
         ];
     }
 
