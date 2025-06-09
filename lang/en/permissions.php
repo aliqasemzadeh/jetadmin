@@ -46,5 +46,12 @@ return [
         'administrator_content_article_create' => 'Administrator Content Management Article Create',
         'administrator_content_article_edit' => 'Administrator Content Management Article Edit',
         'administrator_content_article_delete' => 'Administrator Content Management Article Delete',
+
+        'administrator_setting_management' => 'Administrator Setting Management',
+
+        'administrator_setting_category_index' => 'Administrator Setting Management Category Index',
+        'administrator_setting_category_create' => 'Administrator Setting Management Category Create',
+        'administrator_setting_category_edit' => 'Administrator Setting Management Category Edit',
+        'administrator_setting_category_delete' => 'Administrator Setting Management Category Delete',
     ],
 ];

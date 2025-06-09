@@ -32,4 +32,11 @@
                 @endcan
             </flux:navlist.group>
         @endcan
+        @can('administrator_setting_management')
+            <flux:navlist.group heading="{{ __('jetadmin.setting_management') }}" class="grid">
+                @can('administrator_setting_category_index')
+                    <flux:navlist.item icon="rectangle-group" :href="route('administrator.setting-management.category.index')" :current="request()->routeIs('administrator.setting-management.category.index')" wire:navigate>{{ __('jetadmin.categories') }}</flux:navlist.item>
+                @endcan
+            </flux:navlist.group>
+        @endcan
 </flux:navlist>
