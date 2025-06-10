@@ -1,10 +1,8 @@
 <?php
 
-namespace App\Livewire\Administrator\ContentManagement\Article;
+namespace App\Livewire\Administrator\ContentManagement\Faq;
 
-use App\Models\Content\Article;
 use App\Models\Content\FrequentlyAskedQuestion;
-use App\Models\User;
 use Illuminate\Support\Carbon;
 use PowerComponents\LivewirePowerGrid\Button;
 use PowerComponents\LivewirePowerGrid\Column;
@@ -60,6 +58,7 @@ final class Table extends PowerGridComponent
             ->add('question')
             ->add('answer')
             ->add('language')
+            ->add('sort_order')
             ->add('created_at_formatted', fn ($model) => Carbon::parse($model->created_at))
             ->add('updated_at_formatted', fn ($model) => Carbon::parse($model->updated_at))
             ->add('deleted_at_formatted', fn ($model) => Carbon::parse($model->deleted_at)->format('d/m/Y H:i:s'));
@@ -78,6 +77,8 @@ final class Table extends PowerGridComponent
             Column::make(__('jetadmin.language'), 'language')
                 ->sortable()
                 ->searchable(),
+            Column::make(__('jetadmin.sort_order'), 'sort_order')
+                ->sortable(),
             Column::make(__('jetadmin.created_at'), 'created_at_formatted', 'created_at')
                 ->sortable(),
             Column::make(__('jetadmin.updated_at'), 'updated_at_formatted', 'updated_at')

@@ -14,5 +14,7 @@ class FrequentlyAskedQuestion extends Model
     protected $fillable = [
         'question',
         'answer',
+        'language',
+        'sort_order',
     ];
 }
