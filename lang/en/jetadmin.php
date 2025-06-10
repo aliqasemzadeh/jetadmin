@@ -94,6 +94,7 @@ return [
     'options' => 'Options',
     'option' => 'Option',
     'create_option' => 'Create Option',
+    'setting_management' => 'Setting Management',
 
     'category_types' => [
         'article' => 'Article',
