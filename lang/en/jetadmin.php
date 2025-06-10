@@ -35,6 +35,7 @@ return [
     'delete' => 'Delete',
     'id' => 'ID',
     'name' => 'Name',
+    'title' => 'Title',
     'guard_name' => 'Guard',
     'email' => 'Email',
     'password' => 'Password',

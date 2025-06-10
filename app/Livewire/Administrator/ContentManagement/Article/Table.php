@@ -18,7 +18,7 @@ final class Table extends PowerGridComponent
 {
     use WithExport;
 
-    public string $tableName = 'administrator.content-management.article.index';
+    public string $tableName = 'administrator.content-management.article.table';
 
     public function setUp(): array
     {
