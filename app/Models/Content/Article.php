@@ -15,8 +15,16 @@ class Article extends Model
 
     protected $fillable = [
         'title',
+        'pre_title',
         'category_id',
         'user_id',
+        'description',
+        'body',
+        'language',
+        'public',
+        'likes',
+        'views',
+        'publish_at',
     ];
 
     public function user()

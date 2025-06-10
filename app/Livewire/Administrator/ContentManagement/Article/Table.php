@@ -57,6 +57,9 @@ final class Table extends PowerGridComponent
         return PowerGrid::fields()
             ->add('id')
             ->add('title')
+            ->add('category_name', fn ($model) => $model->category->title)
+            ->add('author_name', fn ($model) => $model->user->name)
+            ->add('language')
             ->add('created_at_formatted', fn ($model) => Carbon::parse($model->created_at))
             ->add('updated_at_formatted', fn ($model) => Carbon::parse($model->updated_at))
             ->add('deleted_at_formatted', fn ($model) => Carbon::parse($model->deleted_at)->format('d/m/Y H:i:s'));
@@ -69,15 +72,18 @@ final class Table extends PowerGridComponent
             Column::make(__('jetadmin.title'), 'title')
                 ->sortable()
                 ->searchable(),
-
+            Column::make(__('jetadmin.category'), 'category_name')
+                ->sortable(),
+            Column::make(__('jetadmin.user'), 'author_name')
+                ->sortable(),
+            Column::make(__('jetadmin.language'), 'language')
+                ->sortable()
+                ->searchable(),
             Column::make(__('jetadmin.created_at'), 'created_at_formatted', 'created_at')
                 ->sortable(),
-
             Column::make(__('jetadmin.updated_at'), 'updated_at_formatted', 'updated_at')
                 ->sortable(),
-
             Column::action(__('jetadmin.action'))
-
         ];
     }
 
@@ -104,7 +110,7 @@ final class Table extends PowerGridComponent
                 ->id()
                 ->can(auth()->user()->can('administrator_content_article_edit'))
                 ->class('btn-blue btn-xs')
-                ->dispatch("administrator.content-management.user.article.assign-data", [$row->id]),
+                ->dispatch("administrator.content-management.article.edit.assign-data", [$row->id]),
             Button::add('delete')
                 ->slot(__('jetadmin.delete'))
                 ->id()
