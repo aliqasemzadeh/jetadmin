@@ -19,7 +19,7 @@ final class Table extends PowerGridComponent
 {
     use WithExport;
 
-    public string $tableName = 'administrator.content-management.faq.table';
+    public string $tableName = 'administrator.content-management.article.table';
 
     public function setUp(): array
     {
@@ -40,44 +40,59 @@ final class Table extends PowerGridComponent
     public function header(): array
     {
         return [
-            Button::add('create-faq')
-                ->can(auth()->user()->can('administrator_content_faq_create'))
-                ->slot(__('jetadmin.create_faq'))
+            Button::add('create-article')
+                ->can(auth()->user()->can('administrator_content_article_create'))
+                ->slot(__('jetadmin.create_article'))
                 ->class('btn-indigo btn-default')
-                ->dispatch('modal-show', ['name' => 'administrator.content-management.faq.create.modal']),
+                ->dispatch('modal-show', ['name' => 'administrator.content-management.article.create.modal']),
         ];
     }
 
     public function datasource(): \Illuminate\Database\Eloquent\Builder
     {
-        return FrequentlyAskedQuestion::query();
+        return Article::query();
     }
 
     public function fields(): PowerGridFields
     {
         return PowerGrid::fields()
             ->add('id')
-            ->add('question')
-            ->add('answer')
+            ->add('title')
+            ->add('pre_title')
+            ->add('category_id')
+            ->add('user_id')
+            ->add('user_name', fn ($model) => $model->user->name ?? '')
+            ->add('description')
             ->add('language')
+            ->add('public')
+            ->add('likes')
+            ->add('views')
+            ->add('publish_at_formatted', fn ($model) => Carbon::parse($model->publish_at)->format('d/m/Y H:i:s'))
             ->add('created_at_formatted', fn ($model) => Carbon::parse($model->created_at))
-            ->add('updated_at_formatted', fn ($model) => Carbon::parse($model->updated_at))
-            ->add('deleted_at_formatted', fn ($model) => Carbon::parse($model->deleted_at)->format('d/m/Y H:i:s'));
+            ->add('updated_at_formatted', fn ($model) => Carbon::parse($model->updated_at));
     }
 
     public function columns(): array
     {
         return [
             Column::make(__('jetadmin.id'), 'id'),
-            Column::make(__('jetadmin.question'), 'question')
+            Column::make(__('jetadmin.title'), 'title')
                 ->sortable()
                 ->searchable(),
-            Column::make(__('jetadmin.answer'), 'answer')
+            Column::make(__('jetadmin.pre_title'), 'pre_title')
+                ->sortable()
+                ->searchable(),
+            Column::make(__('jetadmin.user'), 'user_name')
                 ->sortable()
                 ->searchable(),
             Column::make(__('jetadmin.language'), 'language')
                 ->sortable()
                 ->searchable(),
+            Column::make(__('jetadmin.public'), 'public')
+                ->sortable()
+                ->searchable(),
+            Column::make(__('jetadmin.publish_at'), 'publish_at_formatted', 'publish_at')
+                ->sortable(),
             Column::make(__('jetadmin.created_at'), 'created_at_formatted', 'created_at')
                 ->sortable(),
             Column::make(__('jetadmin.updated_at'), 'updated_at_formatted', 'updated_at')
@@ -97,8 +112,8 @@ final class Table extends PowerGridComponent
     #[\Livewire\Attributes\On('delete')]
     public function delete($id): void
     {
-        FrequentlyAskedQuestion::findOrFail($id)->delete();
-        $this->dispatch('pg:eventRefresh-administrator.content-management.faq.table');
+        Article::findOrFail($id)->delete();
+        $this->dispatch('pg:eventRefresh-administrator.content-management.article.table');
     }
 
     public function actions($row): array
@@ -107,13 +122,13 @@ final class Table extends PowerGridComponent
             Button::add('edit')
                 ->slot(__('jetadmin.edit'))
                 ->id()
-                ->can(auth()->user()->can('administrator_content_faq_edit'))
+                ->can(auth()->user()->can('administrator_content_article_edit'))
                 ->class('btn-blue btn-xs')
-                ->dispatch("administrator.content-management.faq.edit.assign-data", [$row->id]),
+                ->dispatch("administrator.content-management.article.edit.assign-data", [$row->id]),
             Button::add('delete')
                 ->slot(__('jetadmin.delete'))
                 ->id()
-                ->can(auth()->user()->can('administrator_content_faq_delete'))
+                ->can(auth()->user()->can('administrator_content_article_delete'))
                 ->class('btn-red btn-xs')
                 ->confirm(__('jetadmin.are_you_sure'))
                 ->dispatch('delete', ['id' => $row->id])

@@ -91,6 +91,7 @@ return [
     'pre_title' => 'Pre Title',
     'body' => 'Body',
     'public' => 'Public',
+    'publish_at' => 'Publish At',
     'options' => 'Options',
     'option' => 'Option',
     'create_option' => 'Create Option',
