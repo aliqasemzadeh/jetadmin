@@ -1,4 +1,4 @@
-<flux:modal name="administrator.content-management.article.edit.modal" class="md:w-2/3">
+<flux:modal name="administrator.content-management.article.edit.modal" class="md:w-1/3">
     <div class="space-y-6">
         <div>
             <flux:heading size="lg">{{ __('jetadmin.edit_article') }}</flux:heading>
