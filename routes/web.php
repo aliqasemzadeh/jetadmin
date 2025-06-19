@@ -15,6 +15,8 @@ Route::group([
         Route::prefix(config('jetadmin.route-prefix.user'))->group(function () {
             Route::get('/dashboard/index', App\Livewire\User\Dashboard\Index::class)->name('user.dashboard.index');
 
+            Route::get('/support/ticket/index', App\Livewire\User\Support\Ticket\Index::class)->name('user.support.ticket.index');
+            Route::get('/support/ticket/view/{id}', App\Livewire\User\Support\Ticket\View::class)->name('user.support.ticket.view');
 
             Route::redirect('settings', 'settings/profile');
             Route::redirect('settings', 'settings/profile');

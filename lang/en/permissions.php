@@ -4,6 +4,7 @@ return [
         'user_access' => 'User Access',
         'user_dashboard' => 'User Dashboard',
         'user_settings' => 'User Settings',
+        'user_support' => 'User Support',
     ],
     'administrator' => [
         'administrator_access' => 'Administrator Access',
