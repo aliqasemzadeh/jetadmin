@@ -4,5 +4,5 @@
         <flux:subheading size="lg" class="mb-6">{{ __('jetadmin.tickets_description') }}</flux:subheading>
         <flux:separator variant="subtle" />
     </div>
-    <livewire:usr.support.ticket.table />
+    <livewire:user.support.ticket.table />
 </div>

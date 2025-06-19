@@ -96,6 +96,10 @@ return [
     'option' => 'Option',
     'create_option' => 'Create Option',
     'setting_management' => 'Setting Management',
+    'support_management' => 'Support Management',
+    'support' => 'Support',
+    'tickets' => 'Tickets',
+    'tickets_description' => 'You can view tickets here.',
 
     'category_types' => [
         'article' => 'Article',
