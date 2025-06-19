@@ -42,6 +42,11 @@ final class Table extends PowerGridComponent
     public function header(): array
     {
         return [
+            Button::add('create-ticket')
+                ->can(auth()->user()->can('user_support_ticket_create'))
+                ->slot(__('jetadmin.create_ticket'))
+                ->class('btn-indigo btn-default')
+                ->dispatch('modal-show', ['name' => 'user.support.ticket.create.modal']),
         ];
     }
 
