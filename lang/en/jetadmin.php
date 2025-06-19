@@ -100,6 +100,7 @@ return [
     'support' => 'Support',
     'tickets' => 'Tickets',
     'tickets_description' => 'You can view tickets here.',
+    'create_ticket' => 'Create Ticket',
 
     'category_types' => [
         'article' => 'Article',

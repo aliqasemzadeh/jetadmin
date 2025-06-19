@@ -5,6 +5,8 @@ return [
         'user_dashboard' => 'User Dashboard',
         'user_settings' => 'User Settings',
         'user_support' => 'User Support',
+        'user_support_ticket_index' => 'User Support Ticket Index',
+        'user_support_ticket_create' => 'User Support Ticket Create',
     ],
     'administrator' => [
         'administrator_access' => 'Administrator Access',
