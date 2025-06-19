@@ -47,6 +47,12 @@ return [
         'administrator_content_article_edit' => 'Administrator Content Management Article Edit',
         'administrator_content_article_delete' => 'Administrator Content Management Article Delete',
 
+        'administrator_support_management' => 'Administrator Support Management',
+        'administrator_support_ticket_index' => 'Administrator Support Ticket Index',
+        'administrator_support_ticket_view' => 'Administrator Support Ticket View',
+        'administrator_support_ticket_replay' => 'Administrator Support Ticket Replay',
+
+
         'administrator_setting_management' => 'Administrator Setting Management',
 
         'administrator_setting_category_index' => 'Administrator Setting Management Category Index',
