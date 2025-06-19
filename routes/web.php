@@ -36,6 +36,7 @@ Route::group([
             Route::get('/content-management/faq/index', App\Livewire\Administrator\ContentManagement\Faq\Index::class)->name('administrator.content-management.faq.index');
 
             Route::get('/support-management/ticket/index', App\Livewire\Administrator\SupportManagement\Ticket\Index::class)->name('administrator.support-management.ticket.index');
+            Route::get('/support-management/ticket/view/{id}', App\Livewire\Administrator\SupportManagement\Ticket\View::class)->name('administrator.support-management.ticket.view');
 
             Route::get('/setting-management/category/index', App\Livewire\Administrator\SettingManagement\Category\Index::class)->name('administrator.setting-management.category.index');
             Route::get('/setting-management/option/index', App\Livewire\Administrator\SettingManagement\Option\Index::class)->name('administrator.setting-management.option.index');
