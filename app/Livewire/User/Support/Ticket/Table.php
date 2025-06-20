@@ -91,29 +91,15 @@ final class Table extends PowerGridComponent
         ];
     }
 
-    #[\Livewire\Attributes\On('delete')]
-    public function delete($id): void
-    {
-        Article::findOrFail($id)->delete();
-        $this->dispatch('pg:eventRefresh-administrator.content-management.article.table');
-    }
-
     public function actions($row): array
     {
         return [
-            Button::add('edit')
-                ->slot(__('jetadmin.edit'))
+            Button::add('view')
+                ->slot(__('jetadmin.view'))
                 ->id()
-                ->can(auth()->user()->can('administrator_content_article_edit'))
-                ->class('btn-blue btn-xs')
-                ->dispatch("administrator.content-management.article.edit.assign-data", [$row->id]),
-            Button::add('delete')
-                ->slot(__('jetadmin.delete'))
-                ->id()
-                ->can(auth()->user()->can('administrator_content_article_delete'))
-                ->class('btn-red btn-xs')
-                ->confirm(__('jetadmin.are_you_sure'))
-                ->dispatch('delete', ['id' => $row->id])
+                ->can(auth()->user()->id == $row->user_id)
+                ->class('btn-green btn-xs')
+                ->route("user.support.ticket.view", [$row->id])
         ];
     }
 }

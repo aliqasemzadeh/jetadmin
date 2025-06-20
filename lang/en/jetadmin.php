@@ -103,6 +103,7 @@ return [
     'create_ticket' => 'Create Ticket',
     'create_ticket_description' => 'You can create ticket.',
     'files' => 'Files',
+    'view' => 'View',
 
     'category_types' => [
         'article' => 'Article',
