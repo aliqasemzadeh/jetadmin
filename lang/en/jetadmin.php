@@ -104,6 +104,7 @@ return [
     'create_ticket_description' => 'You can create ticket.',
     'files' => 'Files',
     'view' => 'View',
+    'replay' => 'Replay',
 
     'category_types' => [
         'article' => 'Article',
