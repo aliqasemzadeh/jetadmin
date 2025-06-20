@@ -52,7 +52,7 @@ final class Table extends PowerGridComponent
 
     public function datasource(): \Illuminate\Database\Eloquent\Builder
     {
-        return Ticket::query()->with(['user', 'category'])->where('user_id', Auth::user()->id);
+        return Ticket::query()->with(['user', 'category'])->where('user_id', Auth::user()->id)->latest();
     }
 
     public function fields(): PowerGridFields
