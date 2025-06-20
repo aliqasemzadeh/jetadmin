@@ -35,7 +35,7 @@
         @can('administrator_support_management')
             <flux:navlist.group heading="{{ __('jetadmin.support_management') }}" class="grid">
                 @can('administrator_support_ticket_index')
-                    <flux:navlist.item icon="rectangle-group" :href="route('administrator.support-management.ticket.index')" :current="request()->routeIs('administrator.support-management.ticket.index')" wire:navigate>{{ __('jetadmin.ticekts') }}</flux:navlist.item>
+                    <flux:navlist.item icon="rectangle-group" :href="route('administrator.support-management.ticket.index')" :current="request()->routeIs('administrator.support-management.ticket.index')" wire:navigate>{{ __('jetadmin.tickets') }}</flux:navlist.item>
                 @endcan
             </flux:navlist.group>
         @endcan
