@@ -2,6 +2,8 @@
 
 namespace App\Models\Support;
 
+use App\Models\Setting\Category;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -30,9 +32,5 @@ class Ticket extends Model
     public function files()
     {
         return $this->hasMany(TicketFile::class, 'ticket_id', 'id');
-    }
-
-    public function next(){
-        return UserTicket::whereIn('status', ['new','user'])->orderBy('updated_at', 'ASC')->first();
     }
 }

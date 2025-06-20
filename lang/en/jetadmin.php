@@ -101,7 +101,8 @@ return [
     'tickets' => 'Tickets',
     'tickets_description' => 'You can view tickets here.',
     'create_ticket' => 'Create Ticket',
-    'create_ticket_description' => 'you can create ticket.',
+    'create_ticket_description' => 'You can create ticket.',
+    'files' => 'Files',
 
     'category_types' => [
         'article' => 'Article',
