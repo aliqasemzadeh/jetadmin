@@ -7,18 +7,15 @@ use App\Models\Support\TicketFile;
 use App\Models\Support\TicketReplay;
 use Carbon\Carbon;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class View extends Component
 {
+    use WithFileUploads;
     public Ticket $ticket;
     public $body;
     public $replays;
     public $files = [];
-
-    protected $rules = [
-        'body' => 'required|string',
-        'files.*' => 'file|max:2048|nullable',
-    ];
 
     public function mount($id): void
     {
@@ -28,7 +25,10 @@ class View extends Component
 
     public function replay()
     {
-        $this->validate();
+        $this->validate([
+            'body' => 'required|string',
+            'files.*' => 'file|max:2048|nullable',
+        ]);
 
         $replay = new \App\Models\Support\TicketReplay();
         $replay->ticket_id = $this->ticket->id;
@@ -63,7 +63,7 @@ class View extends Component
             abort('405');
         }
 
-        return response()->download(storage_path('/app/'.$file->file));
+        return response()->download(storage_path($file->file));
     }
 
     public function render()
