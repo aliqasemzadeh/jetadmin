@@ -64,5 +64,19 @@ return [
         'administrator_setting_category_delete' => 'Administrator Setting Management Category Delete',
 
         'administrator_setting_option_index' => 'Administrator Setting Management Option Index',
+
+        // API permissions
+        'administrator_api_access' => 'Administrator API Access',
+        'administrator_api_ticket_management' => 'Administrator API Ticket Management',
+        'administrator_api_ticket_index' => 'Administrator API Ticket Index',
+        'administrator_api_ticket_view' => 'Administrator API Ticket View',
+        'administrator_api_ticket_replay' => 'Administrator API Ticket Reply',
+        'administrator_api_ticket_categories' => 'Administrator API Ticket Categories',
+        'administrator_api_ticket_download_file' => 'Administrator API Ticket Download File',
+
+        'administrator_api_faq_management' => 'Administrator API FAQ Management',
+        'administrator_api_faq_index' => 'Administrator API FAQ Index',
+        'administrator_api_faq_show' => 'Administrator API FAQ Show',
+        'administrator_api_faq_search' => 'Administrator API FAQ Search',
     ],
 ];

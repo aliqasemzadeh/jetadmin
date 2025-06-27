@@ -111,6 +111,15 @@ return [
         'ticket' => 'Ticket',
     ],
 
+    // API messages
+    'ticket_created_successfully' => 'Ticket created successfully',
+    'reply_sent_successfully' => 'Reply sent successfully',
+    'you_can_only_reply_to_your_own_tickets' => 'You can only reply to your own tickets',
+    'you_can_only_view_your_own_tickets' => 'You can only view your own tickets',
+    'search_keyword_required' => 'Search keyword is required',
+    'file_not_found' => 'File not found',
+    'unauthorized_file_access' => 'You are not authorized to access this file',
+
     'languages' => [
         'en' => 'English',
         'fa' => 'Persian (Farsi)'
