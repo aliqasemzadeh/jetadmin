@@ -38,7 +38,7 @@
                 <p>{{ $replay->body }}</p>
                 @if($replay->files->count() > 0)
                     @foreach($replay->files as $file)
-                        <a href="#downloadFile" wire:click="downloadFile({{ $file }})" class="list-group-item list-group-item-action">{{ $file->title }}</a>
+                        <flux:button wire:click="downloadFile({{ $file }})">{{ $file->title }}</flux:button>
                     @endforeach
                 @endif
             </flux:callout.text>
